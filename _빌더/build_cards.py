@@ -83,25 +83,57 @@ for chno, chname, fn in CHAPTERS:
                           "type": "answer", "q": q, "a": body_txt,
                           "tag": "기출", "src": sid, "axis": head.split("·")[0].strip()})
 
-    # ───────────── ② 공식
-    for sid, stitle, body in secs:
-        for m in re.finditer(r'<div class="fx sp"[^>]*>(.*?)</div>', body, re.S):
-            t = bold(m.group(1))
-            t = re.sub(r"^▸[^|]*\|", "", t).strip()
-            if len(t) < 8: continue
-            lines = [x.strip() for x in t.split("|") if x.strip()]
-            head = lines[0]
-            # 제목처럼 생긴 첫 줄이면 질문으로, 아니면 절 이름으로
-            if len(lines) > 1 and ("—" in head or head.endswith("다") or head.endswith("준")):
-                q = "%s — 식을 써 보세요" % head.split("—")[0].strip()
-                a = "|".join(lines[1:])
-            else:
-                q = "%s — 관련 식을 써 보세요" % stitle.split("—")[0].strip()
-                a = "|".join(lines)
-            CARDS.append({"id": nid("F"), "ch": chname, "sec": stitle,
-                          "type": "formula", "q": q, "a": a, "tag": "공식", "src": sid})
+    # ───────────── ② 공식 — 본문 전역에서 식 하나씩. 쓰기/알아보기 양방향
+    SYM = "γησρφΔΣ√±×÷≤≥≈∝⁰¹²³⁴ₐₑₒₓ₀₁₂₃₄₅₆₇₈₉·−"
+    NOTF = ("가른다","이면","판별법","정도","이상","이하","쓴다","본다","한다","된다",
+            "라고","이라","경우","때문","따라","니까","습니다","입니다","~","기준","구분")
+    def is_formula(t):
+        if "=" not in t: return False
+        if len(t) < 6 or len(t) > 120: return False
+        if t.count("=") > 3: return False
+        L, R = t.split("=", 1)
+        if len(L.strip()) > 28: return False
+        if any(k in t for k in NOTF): return False
+        import re as _re
+        if _re.search(r"[가-힣]{4,}", R): return False
+        return bool(_re.search(r"[+\-−×÷/()·]", R) or _re.search(r"[0-9]", R)
+                    or any(c in R for c in SYM))
 
-    # ───────────── ③ 그림 (SVG 그대로 담는다)
+    seen_f = set()
+    for sid, stitle, body in secs:
+        # fx 블록 + 살/골격 안의 굵은 식까지
+        chunks = []
+        for m in re.finditer(r'<div class="fx sp"[^>]*>(.*?)</div>', body, re.S):
+            chunks.append(bold(m.group(1)))
+        for m in re.finditer(r'<div class="(?:sal|skel) sp"[^>]*>(.*?)</div>', body, re.S):
+            inner = re.sub(r'<span class="lab">.*?</span>', "", m.group(1), flags=re.S)
+            for bm in re.finditer(r"<b>(.*?)</b>", inner, re.S):
+                chunks.append(bold(bm.group(1)))
+        for raw in chunks:
+            raw = re.sub(r"^▸[^|]*\|", "", raw)
+            for ln in raw.split("|"):
+                t = ln.strip().strip("·").strip()
+                t = re.sub(r"^\*\*|\*\*$", "", t).strip()
+                if not is_formula(t): continue
+                key = re.sub(r"[\s*]", "", t)
+                if key in seen_f: continue
+                seen_f.add(key)
+                lhs = re.sub(r"[*]", "", t.split("=")[0]).strip()
+                lhs = re.sub(r"^[★▸]\s*", "", lhs)
+                topic = stitle.split("—")[0].strip()
+                # ⓐ 쓰기
+                qw = "[%s]\n\n%s 를 구하는 식을 써 보세요." % (topic, lhs)
+                qi = "이 식은 무엇이고 어디에 씁니까?\n\n%s" % t
+                CARDS.append({"id": nid("F"), "ch": chname, "sec": stitle, "type": "formula",
+                              "q": qw,
+                              "a": "**" + t + "**", "tag": "공식", "src": sid})
+                # ⓑ 알아보기 — 식을 보여주고 무엇인지
+                CARDS.append({"id": nid("F"), "ch": chname, "sec": stitle, "type": "formula_id",
+                              "q": qi,
+                              "a": "**%s** — %s 에서 쓰는 식입니다.|%s" % (lhs, topic, t),
+                              "tag": "공식", "src": sid})
+
+    # ───────────── ③ 그림 — 그리기 / 알아보기 양방향
     for sid, stitle, body in secs:
         for m in re.finditer(r"<figure>(.*?)</figure>", body, re.S):
             inner = m.group(1)
@@ -110,11 +142,18 @@ for chno, chname, fn in CHAPTERS:
             cap = re.search(r"<figcaption[^>]*>(.*?)</figcaption>", inner, re.S)
             if not (num and svg): continue
             title = clean(num.group(1))
-            CARDS.append({"id": nid("G"), "ch": chname, "sec": stitle,
-                          "type": "figure",
-                          "q": "%s\n\n백지에 그려 보세요." % title,
-                          "a": bold(cap.group(1)) if cap else "",
-                          "svg": svg.group(1), "tag": "그림", "src": sid})
+            name = re.sub(r"^그림\s*\d+\s*·\s*", "", title)
+            name = re.sub(r"\s*\(.*?\)\s*$", "", name).strip()
+            note = bold(cap.group(1)) if cap else ""
+            # ⓐ 그리기
+            CARDS.append({"id": nid("G"), "ch": chname, "sec": stitle, "type": "figure",
+                          "q": "%s\n\n백지에 그려 보세요." % name,
+                          "a": note, "svg": svg.group(1), "tag": "그림", "src": sid})
+            # ⓑ 알아보기 — 그림을 먼저 보여주고 무엇인지
+            CARDS.append({"id": nid("G"), "ch": chname, "sec": stitle, "type": "figure_id",
+                          "q": "이 그림은 무엇입니까?",
+                          "qsvg": svg.group(1),
+                          "a": "**%s**|%s" % (title, note), "tag": "그림", "src": sid})
 
     # ───────────── ④ 인출 프롬프트
     for sid, stitle, body in secs:
@@ -157,11 +196,12 @@ for chno, chname, fn in CHAPTERS:
                           "q": "%s — 비교표를 채워 보세요" % head, "a": a, "tag": "비교표", "src": sid})
 
 # 우선순위 정렬 — 기출·공식·그림이 먼저
-ORDER = {"answer": 0, "formula": 1, "figure": 2, "recall": 3, "table": 4, "sal": 5}
+ORDER = {"answer": 0, "formula": 1, "formula_id": 1, "figure": 2, "figure_id": 2,
+         "recall": 3, "table": 4, "sal": 5}
 CARDS.sort(key=lambda c: (ORDER.get(c["type"], 9), c["id"]))
 
 out = os.path.join(BOT, "cards.json")
-json.dump({"ver": 2, "built": "2026-08-26", "cards": CARDS},
+json.dump({"ver": 3, "built": "2026-08-26", "cards": CARDS},
           io.open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 from collections import Counter

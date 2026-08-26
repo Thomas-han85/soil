@@ -199,7 +199,8 @@ function render(){
     + '<span class="hint" style="margin-left:auto">'+cur.id+'</span></div>'
     + '<p class="q">'+cur.q.replace(/
 /g,'<br>')+'</p>'
-    + '<p class="hint">소리 내어 답해 보세요. 막혀도 버티는 게 효과입니다.</p>'
+    + (cur.qsvg ? '<div class="fig">'+cur.qsvg+'</div>' : '')
+    + '<p class="hint">'+(cur.type==='figure' ? '손으로 그려 보세요. 축·범례·단위까지.' : (cur.type==='answer' ? '넣을 항목을 소리 내어 나열해 보세요.' : '소리 내어 답해 보세요. 막혀도 버티는 게 효과입니다.'))+'</p>'
     + '<div class="timer" id="tm">3</div>'
     + '<div id="ans"></div>'
     + '<div class="acts" id="acts">'
@@ -207,7 +208,7 @@ function render(){
     +   '<button class="skip" onclick="render()">건너뛰기</button>'
     + '</div></div>';
   say(cur.q);
-  left = 3;
+  left = (cur.type === 'figure' || cur.type === 'answer') ? 6 : 3;
   tmr = setInterval(function(){
     left--;
     var t = document.getElementById('tm');

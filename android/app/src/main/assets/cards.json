@@ -1,5 +1,5 @@
 {
- "ver": 2,
+ "ver": 3,
  "built": "2026-08-26",
  "cards": [
   {
@@ -128,333 +128,763 @@
    "ch": "제1장 흙의 성질",
    "sec": "애터버그 한계 · PI · LI · 소성도",
    "type": "formula",
-   "q": "애터버그 한계 · PI · LI · 소성도 — 관련 식을 써 보세요",
-   "a": "**유동지수 FI** = 유동곡선의 기울기 = (w₁−w₂)/log(N₂/N₁)|**터프니스지수 TI = PI / FI**|**컨시스턴시지수 CI = (LL − w) / PI**|**★ LI + CI = 1** — 둘은 서로의 여집합이다",
+   "q": "[애터버그 한계 · PI · LI · 소성도]\n\n터프니스지수 TI 를 구하는 식을 써 보세요.",
+   "a": "**터프니스지수 TI = PI / FI**",
    "tag": "공식",
    "src": "s5"
   },
   {
    "id": "01-F13",
    "ch": "제1장 흙의 성질",
-   "sec": "활성도 ★ 필수논점",
-   "type": "formula",
-   "q": "활성도 ★ 필수논점 — 관련 식을 써 보세요",
-   "a": "**A** = PI ÷ [2μm(0.002mm) 이하 입자의 중량백분율 %]",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\n터프니스지수 TI = PI / FI",
+   "a": "**터프니스지수 TI** — 애터버그 한계 · PI · LI · 소성도 에서 쓰는 식입니다.|터프니스지수 TI = PI / FI",
    "tag": "공식",
-   "src": "s6"
+   "src": "s5"
   },
   {
    "id": "01-F14",
    "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "formula",
+   "q": "[애터버그 한계 · PI · LI · 소성도]\n\n컨시스턴시지수 CI 를 구하는 식을 써 보세요.",
+   "a": "**컨시스턴시지수 CI = (LL − w) / PI**",
+   "tag": "공식",
+   "src": "s5"
+  },
+  {
+   "id": "01-F15",
+   "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\n컨시스턴시지수 CI = (LL − w) / PI",
+   "a": "**컨시스턴시지수 CI** — 애터버그 한계 · PI · LI · 소성도 에서 쓰는 식입니다.|컨시스턴시지수 CI = (LL − w) / PI",
+   "tag": "공식",
+   "src": "s5"
+  },
+  {
+   "id": "01-F16",
+   "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "formula",
+   "q": "[애터버그 한계 · PI · LI · 소성도]\n\nU선 : PI 를 구하는 식을 써 보세요.",
+   "a": "**U선 : PI = 0.9(LL − 8)**",
+   "tag": "공식",
+   "src": "s5"
+  },
+  {
+   "id": "01-F17",
+   "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nU선 : PI = 0.9(LL − 8)",
+   "a": "**U선 : PI** — 애터버그 한계 · PI · LI · 소성도 에서 쓰는 식입니다.|U선 : PI = 0.9(LL − 8)",
+   "tag": "공식",
+   "src": "s5"
+  },
+  {
+   "id": "01-F18",
+   "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "formula",
+   "q": "[애터버그 한계 · PI · LI · 소성도]\n\nLI 를 구하는 식을 써 보세요.",
+   "a": "**LI = (w − PL) / (LL − PL)**",
+   "tag": "공식",
+   "src": "s5"
+  },
+  {
+   "id": "01-F19",
+   "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nLI = (w − PL) / (LL − PL)",
+   "a": "**LI** — 애터버그 한계 · PI · LI · 소성도 에서 쓰는 식입니다.|LI = (w − PL) / (LL − PL)",
+   "tag": "공식",
+   "src": "s5"
+  },
+  {
+   "id": "01-F20",
+   "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "formula",
+   "q": "[애터버그 한계 · PI · LI · 소성도]\n\nDr 를 구하는 식을 써 보세요.",
+   "a": "**Dr = (e_max − e) / (e_max − e_min)**",
+   "tag": "공식",
+   "src": "s5"
+  },
+  {
+   "id": "01-F21",
+   "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nDr = (e_max − e) / (e_max − e_min)",
+   "a": "**Dr** — 애터버그 한계 · PI · LI · 소성도 에서 쓰는 식입니다.|Dr = (e_max − e) / (e_max − e_min)",
+   "tag": "공식",
+   "src": "s5"
+  },
+  {
+   "id": "01-F22",
+   "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "formula",
+   "q": "[애터버그 한계 · PI · LI · 소성도]\n\nIc 를 구하는 식을 써 보세요.",
+   "a": "**Ic = (LL − w)/PI**",
+   "tag": "공식",
+   "src": "s5"
+  },
+  {
+   "id": "01-F23",
+   "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nIc = (LL − w)/PI",
+   "a": "**Ic** — 애터버그 한계 · PI · LI · 소성도 에서 쓰는 식입니다.|Ic = (LL − w)/PI",
+   "tag": "공식",
+   "src": "s5"
+  },
+  {
+   "id": "01-F24",
+   "ch": "제1장 흙의 성질",
    "sec": "예민비 · Quick Clay · 틱소트로피 ★ 필수논점",
    "type": "formula",
-   "q": "예민비 · Quick Clay · 틱소트로피 ★ 필수논점 — 관련 식을 써 보세요",
+   "q": "[예민비 · Quick Clay · 틱소트로피 ★ 필수논점]\n\nSt 를 구하는 식을 써 보세요.",
    "a": "**St** = qu(불교란) ÷ qu(재성형)   ⟹   **St ≥ 8 → Quick Clay**",
    "tag": "공식",
    "src": "s7"
   },
   {
-   "id": "01-F15",
+   "id": "01-F25",
+   "ch": "제1장 흙의 성질",
+   "sec": "예민비 · Quick Clay · 틱소트로피 ★ 필수논점",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nSt** = qu(불교란) ÷ qu(재성형)   ⟹   **St ≥ 8 → Quick Clay",
+   "a": "**St** — 예민비 · Quick Clay · 틱소트로피 ★ 필수논점 에서 쓰는 식입니다.|St** = qu(불교란) ÷ qu(재성형)   ⟹   **St ≥ 8 → Quick Clay",
+   "tag": "공식",
+   "src": "s7"
+  },
+  {
+   "id": "01-F26",
    "ch": "제1장 흙의 성질",
    "sec": "삼상관계 — 관계식 한 판",
    "type": "formula",
-   "q": "삼상관계 — 관련 식을 써 보세요",
-   "a": "▸ 백영식 p13 NOTE — Se = Gs·w 암기법\"식 **Se = Gs·w**는 부피를 무게로, 또는 무게를 부피로 환산해 주는 **대단히 중요한 식**임. 이 중요성 때문에 이 식을 **George Washington = Soils engineer**라고 기억하는 사람도 있음. 독자들은 각자 우리말 version을 만들어 볼 것.\"",
+   "q": "[삼상관계]\n\nn 를 구하는 식을 써 보세요.",
+   "a": "**n = e/(1+e)**",
    "tag": "공식",
    "src": "s9"
   },
   {
-   "id": "01-F16",
+   "id": "01-F27",
    "ch": "제1장 흙의 성질",
-   "sec": "통일분류법 상세 — 문자 두 개가 정해지는 규칙",
-   "type": "formula",
-   "q": "**앞 글자 — 식을 써 보세요",
-   "a": "조립토(50% 미만) : **G** 자갈 · **S** 모래  (#4체 통과량으로 구분)|세립토(50% 이상) : **M** 실트 · **C** 점토 · **O** 유기질토 · **Pt** 이탄",
+   "sec": "삼상관계 — 관계식 한 판",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nn = e/(1+e)",
+   "a": "**n** — 삼상관계 에서 쓰는 식입니다.|n = e/(1+e)",
    "tag": "공식",
-   "src": "sUC"
+   "src": "s9"
   },
   {
-   "id": "01-F17",
+   "id": "01-F28",
    "ch": "제1장 흙의 성질",
-   "sec": "통일분류법 상세 — 문자 두 개가 정해지는 규칙",
+   "sec": "삼상관계 — 관계식 한 판",
    "type": "formula",
-   "q": "**뒷 글자 — 식을 써 보세요",
-   "a": "조립토 #200 < 5% : **W** 입도 양호 · **P** 입도 불량  (Cu·Cc로 판정)|조립토 #200 12~50% : **M** 실트질 · **C** 점토질  (소성도로 판정)|조립토 #200 5~12% : **이중기호** (예: SW-SM, GP-GC)|세립토 #200 ≥ 50% : **L** 저소성 · **H** 고소성  (LL=50 기준)",
+   "q": "[삼상관계]\n\ne 를 구하는 식을 써 보세요.",
+   "a": "**e = n/(1−n)**",
    "tag": "공식",
-   "src": "sUC"
+   "src": "s9"
   },
   {
-   "id": "01-F18",
+   "id": "01-F29",
+   "ch": "제1장 흙의 성질",
+   "sec": "삼상관계 — 관계식 한 판",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\ne = n/(1−n)",
+   "a": "**e** — 삼상관계 에서 쓰는 식입니다.|e = n/(1−n)",
+   "tag": "공식",
+   "src": "s9"
+  },
+  {
+   "id": "01-F30",
+   "ch": "제1장 흙의 성질",
+   "sec": "삼상관계 — 관계식 한 판",
+   "type": "formula",
+   "q": "[삼상관계]\n\n침하량 를 구하는 식을 써 보세요.",
+   "a": "**침하량 = (Δe / (1+e₀)) × H**",
+   "tag": "공식",
+   "src": "s9"
+  },
+  {
+   "id": "01-F31",
+   "ch": "제1장 흙의 성질",
+   "sec": "삼상관계 — 관계식 한 판",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\n침하량 = (Δe / (1+e₀)) × H",
+   "a": "**침하량** — 삼상관계 에서 쓰는 식입니다.|침하량 = (Δe / (1+e₀)) × H",
+   "tag": "공식",
+   "src": "s9"
+  },
+  {
+   "id": "01-F32",
+   "ch": "제1장 흙의 성질",
+   "sec": "삼상관계 — 관계식 한 판",
+   "type": "formula",
+   "q": "[삼상관계]\n\nγw 를 구하는 식을 써 보세요.",
+   "a": "**γw = 9.81 kN/m³**",
+   "tag": "공식",
+   "src": "s9"
+  },
+  {
+   "id": "01-F33",
+   "ch": "제1장 흙의 성질",
+   "sec": "삼상관계 — 관계식 한 판",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nγw = 9.81 kN/m³",
+   "a": "**γw** — 삼상관계 에서 쓰는 식입니다.|γw = 9.81 kN/m³",
+   "tag": "공식",
+   "src": "s9"
+  },
+  {
+   "id": "01-F34",
    "ch": "제1장 흙의 성질",
    "sec": "군지수와 AASHTO — 노상토 적부를 숫자 하나로",
    "type": "formula",
-   "q": "군지수와 AASHTO — 관련 식을 써 보세요",
-   "a": "**GI = 0.2a + 0.005ac + 0.01bd**|a = (#200 통과량 − 35), **0~40** 정수  ·  b = (#200 통과량 − 15), **0~40** 정수|c = (LL − 40), **0~20** 정수  ·  d = (PI − 10), **0~20** 정수",
+   "q": "[군지수와 AASHTO]\n\nGI 를 구하는 식을 써 보세요.",
+   "a": "**GI = 0.2a + 0.005ac + 0.01bd**",
    "tag": "공식",
    "src": "sGI"
   },
   {
-   "id": "01-F19",
+   "id": "01-F35",
+   "ch": "제1장 흙의 성질",
+   "sec": "군지수와 AASHTO — 노상토 적부를 숫자 하나로",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nGI = 0.2a + 0.005ac + 0.01bd",
+   "a": "**GI** — 군지수와 AASHTO 에서 쓰는 식입니다.|GI = 0.2a + 0.005ac + 0.01bd",
+   "tag": "공식",
+   "src": "sGI"
+  },
+  {
+   "id": "01-F36",
    "ch": "제1장 흙의 성질",
    "sec": "에이징 — 시간이 흙을 과압밀로 만든다",
    "type": "formula",
-   "q": "**Aged NC clay** — 식을 써 보세요",
-   "a": "**Young NC clay** — 경시효과가 없는 정규압밀점토|→ **소성지수(PI)가 큰 점토에서 영향이 크다**",
+   "q": "[에이징]\n\nOCR 를 구하는 식을 써 보세요.",
+   "a": "**OCR = Pc/Po > 1**",
    "tag": "공식",
    "src": "sAG"
   },
   {
-   "id": "01-G20",
+   "id": "01-F37",
+   "ch": "제1장 흙의 성질",
+   "sec": "에이징 — 시간이 흙을 과압밀로 만든다",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nOCR = Pc/Po > 1",
+   "a": "**OCR** — 에이징 에서 쓰는 식입니다.|OCR = Pc/Po > 1",
+   "tag": "공식",
+   "src": "sAG"
+  },
+  {
+   "id": "01-F38",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula",
+   "q": "[실제 기출]\n\nA 를 구하는 식을 써 보세요.",
+   "a": "**A = PI ÷ 2μm 통과율**",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F39",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nA = PI ÷ 2μm 통과율",
+   "a": "**A** — 실제 기출 에서 쓰는 식입니다.|A = PI ÷ 2μm 통과율",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F40",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula",
+   "q": "[실제 기출]\n\nPI 를 구하는 식을 써 보세요.",
+   "a": "**PI = LL − PL**",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F41",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nPI = LL − PL",
+   "a": "**PI** — 실제 기출 에서 쓰는 식입니다.|PI = LL − PL",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F42",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula",
+   "q": "[실제 기출]\n\nLI 를 구하는 식을 써 보세요.",
+   "a": "**LI = (w−PL)/PI**",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F43",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nLI = (w−PL)/PI",
+   "a": "**LI** — 실제 기출 에서 쓰는 식입니다.|LI = (w−PL)/PI",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F44",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula",
+   "q": "[실제 기출]\n\nLI + CI 를 구하는 식을 써 보세요.",
+   "a": "**LI + CI = 1**",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F45",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nLI + CI = 1",
+   "a": "**LI + CI** — 실제 기출 에서 쓰는 식입니다.|LI + CI = 1",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F46",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula",
+   "q": "[실제 기출]\n\nNC: LI≥1, OCR 를 구하는 식을 써 보세요.",
+   "a": "**NC: LI≥1, OCR=1**",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F47",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nNC: LI≥1, OCR=1",
+   "a": "**NC: LI≥1, OCR** — 실제 기출 에서 쓰는 식입니다.|NC: LI≥1, OCR=1",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F48",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula",
+   "q": "[실제 기출]\n\nCc 를 구하는 식을 써 보세요.",
+   "a": "**Cc = 0.009(LL−10)**",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F49",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nCc = 0.009(LL−10)",
+   "a": "**Cc** — 실제 기출 에서 쓰는 식입니다.|Cc = 0.009(LL−10)",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F50",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula",
+   "q": "[실제 기출]\n\nsu/p 를 구하는 식을 써 보세요.",
+   "a": "**su/p = 0.11 + 0.0037·PI**",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F51",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nsu/p = 0.11 + 0.0037·PI",
+   "a": "**su/p** — 실제 기출 에서 쓰는 식입니다.|su/p = 0.11 + 0.0037·PI",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F52",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula",
+   "q": "[실제 기출]\n\nSt 를 구하는 식을 써 보세요.",
+   "a": "**St = qu(불교란)/qu(재성형)**",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F53",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nSt = qu(불교란)/qu(재성형)",
+   "a": "**St** — 실제 기출 에서 쓰는 식입니다.|St = qu(불교란)/qu(재성형)",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F54",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula",
+   "q": "[실제 기출]\n\nic 를 구하는 식을 써 보세요.",
+   "a": "**ic=(Gs−1)/(1+e)=(Gs−1)(1−n)**",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F55",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nic=(Gs−1)/(1+e)=(Gs−1)(1−n)",
+   "a": "**ic** — 실제 기출 에서 쓰는 식입니다.|ic=(Gs−1)/(1+e)=(Gs−1)(1−n)",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F56",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula",
+   "q": "[실제 기출]\n\nCu 를 구하는 식을 써 보세요.",
+   "a": "**Cu = D60/D10**",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F57",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nCu = D60/D10",
+   "a": "**Cu** — 실제 기출 에서 쓰는 식입니다.|Cu = D60/D10",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F58",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula",
+   "q": "[실제 기출]\n\nCc 를 구하는 식을 써 보세요.",
+   "a": "**Cc = D30²/(D10D60)**",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F59",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nCc = D30²/(D10D60)",
+   "a": "**Cc** — 실제 기출 에서 쓰는 식입니다.|Cc = D30²/(D10D60)",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F60",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula",
+   "q": "[실제 기출]\n\nw 를 구하는 식을 써 보세요.",
+   "a": "**w = Ww/Ws×100**",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F61",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nw = Ww/Ws×100",
+   "a": "**w** — 실제 기출 에서 쓰는 식입니다.|w = Ww/Ws×100",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F62",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula",
+   "q": "[실제 기출]\n\nS·e 를 구하는 식을 써 보세요.",
+   "a": "**S·e = w·Gs**",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F63",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nS·e = w·Gs",
+   "a": "**S·e** — 실제 기출 에서 쓰는 식입니다.|S·e = w·Gs",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F64",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula",
+   "q": "[실제 기출]\n\nγsub 를 구하는 식을 써 보세요.",
+   "a": "**γsub=(Gs−1)/(1+e)·γw**",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-F65",
+   "ch": "제1장 흙의 성질",
+   "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
+   "type": "formula_id",
+   "q": "이 식은 무엇이고 어디에 씁니까?\n\nγsub=(Gs−1)/(1+e)·γw",
+   "a": "**γsub** — 실제 기출 에서 쓰는 식입니다.|γsub=(Gs−1)/(1+e)·γw",
+   "tag": "공식",
+   "src": "s11"
+  },
+  {
+   "id": "01-G66",
    "ch": "제1장 흙의 성질",
    "sec": "점토광물 — 기본단위·3종·동형치환",
    "type": "figure",
-   "q": "그림 1 · 점토광물 3종 기호도 (시험작도용)\n\n백지에 그려 보세요.",
+   "q": "점토광물 3종 기호도\n\n백지에 그려 보세요.",
    "a": "**작도 요령** — 사다리꼴(Si)과 직사각형(Gib)만 쌓으면 끝. 세 광물의 차이는 **층 사이에 뭐가 있느냐** 하나입니다. **수소결합 / K⁺ / nH₂O+치환성 양이온**. 이 세 단어를 각각 층 사이에 써넣으면 그림 하나로 세 광물이 설명됩니다.",
    "svg": "<svg viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"카올리나이트 일라이트 몬모릴로나이트 기호도\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <!-- Kaolinite -->\n <text x=\"95\" y=\"20\" text-anchor=\"middle\" font-weight=\"700\" font-size=\"13\">Kaolinite (1:1)</text>\n <g transform=\"translate(30,32)\">\n  <path d=\"M14,26 L116,26 L104,4 L26,4 Z\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <rect x=\"14\" y=\"26\" width=\"102\" height=\"22\" fill=\"#fff\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <path d=\"M14,78 L116,78 L104,56 L26,56 Z\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <rect x=\"14\" y=\"78\" width=\"102\" height=\"22\" fill=\"#fff\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <path d=\"M14,130 L116,130 L104,108 L26,108 Z\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <rect x=\"14\" y=\"130\" width=\"102\" height=\"22\" fill=\"#fff\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <text x=\"65\" y=\"20\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1f5fa8\">Si</text>\n  <text x=\"65\" y=\"42\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1f5fa8\">Gib</text>\n  <text x=\"130\" y=\"56\" font-size=\"10\" fill=\"#a8452a\" font-weight=\"700\">H 결합</text>\n  <path d=\"M126,50 L126,58\" stroke=\"#a8452a\" stroke-width=\"1.6\"/>\n  <text x=\"65\" y=\"172\" text-anchor=\"middle\" font-size=\"11\">7.2 Å · 안정</text>\n  <text x=\"65\" y=\"188\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5f6672\">15 m²/g</text>\n </g>\n <!-- Illite -->\n <text x=\"320\" y=\"20\" text-anchor=\"middle\" font-weight=\"700\" font-size=\"13\">Illite (2:1)</text>\n <g transform=\"translate(255,32)\">\n  <path d=\"M14,26 L116,26 L104,4 L26,4 Z\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <rect x=\"14\" y=\"26\" width=\"102\" height=\"20\" fill=\"#fff\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <path d=\"M26,68 L104,68 L116,46 L14,46 Z\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <text x=\"65\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" fill=\"#a8452a\" font-weight=\"700\">K⁺  K⁺  K⁺</text>\n  <path d=\"M14,110 L116,110 L104,88 L26,88 Z\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <rect x=\"14\" y=\"110\" width=\"102\" height=\"20\" fill=\"#fff\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <path d=\"M26,152 L104,152 L116,130 L14,130 Z\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <text x=\"65\" y=\"172\" text-anchor=\"middle\" font-size=\"11\">10 Å · 중간</text>\n  <text x=\"65\" y=\"188\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5f6672\">80 m²/g</text>\n </g>\n <!-- Mont -->\n <text x=\"545\" y=\"20\" text-anchor=\"middle\" font-weight=\"700\" font-size=\"13\">Montmorillonite (2:1)</text>\n <g transform=\"translate(480,32)\">\n  <path d=\"M14,26 L116,26 L104,4 L26,4 Z\" fill=\"#fbeee9\" stroke=\"#a8452a\" stroke-width=\"1.8\"/>\n  <rect x=\"14\" y=\"26\" width=\"102\" height=\"20\" fill=\"#fff\" stroke=\"#a8452a\" stroke-width=\"1.8\"/>\n  <path d=\"M26,68 L104,68 L116,46 L14,46 Z\" fill=\"#fbeee9\" stroke=\"#a8452a\" stroke-width=\"1.8\"/>\n  <text x=\"65\" y=\"85\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">nH₂O + 치환성</text>\n  <path d=\"M14,112 L116,112 L104,90 L26,90 Z\" fill=\"#fbeee9\" stroke=\"#a8452a\" stroke-width=\"1.8\"/>\n  <rect x=\"14\" y=\"112\" width=\"102\" height=\"20\" fill=\"#fff\" stroke=\"#a8452a\" stroke-width=\"1.8\"/>\n  <path d=\"M26,154 L104,154 L116,132 L14,132 Z\" fill=\"#fbeee9\" stroke=\"#a8452a\" stroke-width=\"1.8\"/>\n  <path d=\"M124,50 L146,50 M124,64 L146,64\" stroke=\"#a8452a\" stroke-width=\"1.6\" stroke-dasharray=\"3 2\"/>\n  <text x=\"150\" y=\"60\" font-size=\"10\" fill=\"#a8452a\" font-weight=\"700\">팽창↕</text>\n  <text x=\"65\" y=\"174\" text-anchor=\"middle\" font-size=\"11\">가변(9.6 Å~) · 불안정</text>\n  <text x=\"65\" y=\"190\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5f6672\">800 m²/g</text>\n </g>\n <text x=\"320\" y=\"248\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#5f6672\">사다리꼴 = Silica sheet &nbsp;/&nbsp; 직사각형 = Gibbsite sheet</text>\n</g>\n</svg>",
    "tag": "그림",
    "src": "s2"
   },
   {
-   "id": "01-G21",
+   "id": "01-G67",
+   "ch": "제1장 흙의 성질",
+   "sec": "점토광물 — 기본단위·3종·동형치환",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 640 260\" role=\"img\" aria-label=\"카올리나이트 일라이트 몬모릴로나이트 기호도\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <!-- Kaolinite -->\n <text x=\"95\" y=\"20\" text-anchor=\"middle\" font-weight=\"700\" font-size=\"13\">Kaolinite (1:1)</text>\n <g transform=\"translate(30,32)\">\n  <path d=\"M14,26 L116,26 L104,4 L26,4 Z\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <rect x=\"14\" y=\"26\" width=\"102\" height=\"22\" fill=\"#fff\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <path d=\"M14,78 L116,78 L104,56 L26,56 Z\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <rect x=\"14\" y=\"78\" width=\"102\" height=\"22\" fill=\"#fff\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <path d=\"M14,130 L116,130 L104,108 L26,108 Z\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <rect x=\"14\" y=\"130\" width=\"102\" height=\"22\" fill=\"#fff\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <text x=\"65\" y=\"20\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1f5fa8\">Si</text>\n  <text x=\"65\" y=\"42\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1f5fa8\">Gib</text>\n  <text x=\"130\" y=\"56\" font-size=\"10\" fill=\"#a8452a\" font-weight=\"700\">H 결합</text>\n  <path d=\"M126,50 L126,58\" stroke=\"#a8452a\" stroke-width=\"1.6\"/>\n  <text x=\"65\" y=\"172\" text-anchor=\"middle\" font-size=\"11\">7.2 Å · 안정</text>\n  <text x=\"65\" y=\"188\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5f6672\">15 m²/g</text>\n </g>\n <!-- Illite -->\n <text x=\"320\" y=\"20\" text-anchor=\"middle\" font-weight=\"700\" font-size=\"13\">Illite (2:1)</text>\n <g transform=\"translate(255,32)\">\n  <path d=\"M14,26 L116,26 L104,4 L26,4 Z\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <rect x=\"14\" y=\"26\" width=\"102\" height=\"20\" fill=\"#fff\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <path d=\"M26,68 L104,68 L116,46 L14,46 Z\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <text x=\"65\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" fill=\"#a8452a\" font-weight=\"700\">K⁺  K⁺  K⁺</text>\n  <path d=\"M14,110 L116,110 L104,88 L26,88 Z\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <rect x=\"14\" y=\"110\" width=\"102\" height=\"20\" fill=\"#fff\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <path d=\"M26,152 L104,152 L116,130 L14,130 Z\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.8\"/>\n  <text x=\"65\" y=\"172\" text-anchor=\"middle\" font-size=\"11\">10 Å · 중간</text>\n  <text x=\"65\" y=\"188\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5f6672\">80 m²/g</text>\n </g>\n <!-- Mont -->\n <text x=\"545\" y=\"20\" text-anchor=\"middle\" font-weight=\"700\" font-size=\"13\">Montmorillonite (2:1)</text>\n <g transform=\"translate(480,32)\">\n  <path d=\"M14,26 L116,26 L104,4 L26,4 Z\" fill=\"#fbeee9\" stroke=\"#a8452a\" stroke-width=\"1.8\"/>\n  <rect x=\"14\" y=\"26\" width=\"102\" height=\"20\" fill=\"#fff\" stroke=\"#a8452a\" stroke-width=\"1.8\"/>\n  <path d=\"M26,68 L104,68 L116,46 L14,46 Z\" fill=\"#fbeee9\" stroke=\"#a8452a\" stroke-width=\"1.8\"/>\n  <text x=\"65\" y=\"85\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">nH₂O + 치환성</text>\n  <path d=\"M14,112 L116,112 L104,90 L26,90 Z\" fill=\"#fbeee9\" stroke=\"#a8452a\" stroke-width=\"1.8\"/>\n  <rect x=\"14\" y=\"112\" width=\"102\" height=\"20\" fill=\"#fff\" stroke=\"#a8452a\" stroke-width=\"1.8\"/>\n  <path d=\"M26,154 L104,154 L116,132 L14,132 Z\" fill=\"#fbeee9\" stroke=\"#a8452a\" stroke-width=\"1.8\"/>\n  <path d=\"M124,50 L146,50 M124,64 L146,64\" stroke=\"#a8452a\" stroke-width=\"1.6\" stroke-dasharray=\"3 2\"/>\n  <text x=\"150\" y=\"60\" font-size=\"10\" fill=\"#a8452a\" font-weight=\"700\">팽창↕</text>\n  <text x=\"65\" y=\"174\" text-anchor=\"middle\" font-size=\"11\">가변(9.6 Å~) · 불안정</text>\n  <text x=\"65\" y=\"190\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5f6672\">800 m²/g</text>\n </g>\n <text x=\"320\" y=\"248\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#5f6672\">사다리꼴 = Silica sheet &nbsp;/&nbsp; 직사각형 = Gibbsite sheet</text>\n</g>\n</svg>",
+   "a": "**그림 1 · 점토광물 3종 기호도 (시험작도용)**|**작도 요령** — 사다리꼴(Si)과 직사각형(Gib)만 쌓으면 끝. 세 광물의 차이는 **층 사이에 뭐가 있느냐** 하나입니다. **수소결합 / K⁺ / nH₂O+치환성 양이온**. 이 세 단어를 각각 층 사이에 써넣으면 그림 하나로 세 광물이 설명됩니다.",
+   "tag": "그림",
+   "src": "s2"
+  },
+  {
+   "id": "01-G68",
    "ch": "제1장 흙의 성질",
    "sec": "확산이중층과 흡착수",
    "type": "figure",
-   "q": "그림 2 · 확산이중층 (시험작도용)\n\n백지에 그려 보세요.",
+   "q": "확산이중층\n\n백지에 그려 보세요.",
    "a": "**작도 요령** — 왼쪽에 세로 막대(점토, −부호 5개) → 오른쪽으로 **흡착수 / 확산수 / 자유수** 3구역을 띠로 나누고 +부호를 **가까울수록 촘촘히** 찍습니다. 옆에 이온농도 곡선(양이온은 급감, 음이온은 완만 증가, 결국 만남) 하나. 이 두 개면 25점짜리 그림 몫을 합니다.",
    "svg": "<svg viewBox=\"0 0 640 250\" role=\"img\" aria-label=\"확산이중층 모식도와 이온농도 곡선\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <!-- clay plate -->\n <rect x=\"30\" y=\"30\" width=\"26\" height=\"170\" fill=\"#4a5568\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"43\" y=\"220\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\">점토입자</text>\n <text x=\"43\" y=\"235\" text-anchor=\"middle\" font-size=\"11\" fill=\"#a8452a\" font-weight=\"700\">(−)대전</text>\n <g fill=\"#fff\" font-size=\"13\" font-weight=\"700\">\n  <text x=\"43\" y=\"55\" text-anchor=\"middle\">−</text><text x=\"43\" y=\"85\" text-anchor=\"middle\">−</text>\n  <text x=\"43\" y=\"115\" text-anchor=\"middle\">−</text><text x=\"43\" y=\"145\" text-anchor=\"middle\">−</text>\n  <text x=\"43\" y=\"175\" text-anchor=\"middle\">−</text></g>\n <!-- zones -->\n <rect x=\"56\" y=\"30\" width=\"34\" height=\"170\" fill=\"#c8d8ec\" stroke=\"#1f5fa8\" stroke-width=\"1.2\"/>\n <rect x=\"90\" y=\"30\" width=\"104\" height=\"170\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/>\n <rect x=\"194\" y=\"30\" width=\"96\" height=\"170\" fill=\"#f7f9fb\" stroke=\"#9aa2ae\" stroke-width=\"1.1\"/>\n <text x=\"73\" y=\"22\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#1f5fa8\">흡착수</text>\n <text x=\"73\" y=\"215\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1f5fa8\">≈10Å</text>\n <text x=\"142\" y=\"22\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#1f5fa8\">확산수(이온층)</text>\n <text x=\"242\" y=\"22\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#5f6672\">자유수</text>\n <text x=\"142\" y=\"215\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1f5fa8\">전기력 영향권</text>\n <text x=\"242\" y=\"215\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5f6672\">영향권 밖</text>\n <path d=\"M56,208 L194,208\" stroke=\"#a8452a\" stroke-width=\"1.6\"/>\n <path d=\"M56,204 L56,212 M194,204 L194,212\" stroke=\"#a8452a\" stroke-width=\"1.6\"/>\n <text x=\"125\" y=\"245\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#a8452a\">확산이중층 두께</text>\n <!-- cations -->\n <g font-size=\"11\" font-weight=\"700\" fill=\"#a8452a\">\n  <text x=\"66\" y=\"52\">+</text><text x=\"78\" y=\"70\">+</text><text x=\"68\" y=\"95\">+</text><text x=\"80\" y=\"120\">+</text>\n  <text x=\"66\" y=\"145\">+</text><text x=\"78\" y=\"170\">+</text><text x=\"70\" y=\"190\">+</text>\n  <text x=\"100\" y=\"60\">+</text><text x=\"122\" y=\"88\">+</text><text x=\"106\" y=\"128\">+</text><text x=\"134\" y=\"160\">+</text><text x=\"112\" y=\"186\">+</text>\n  <text x=\"160\" y=\"72\">+</text><text x=\"176\" y=\"140\">+</text></g>\n <!-- concentration curve -->\n <g transform=\"translate(330,20)\">\n  <path d=\"M0,180 L0,0\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n  <path d=\"M0,180 L280,180\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n  <path d=\"M0,18 C60,40 110,120 280,152\" fill=\"none\" stroke=\"#a8452a\" stroke-width=\"2.4\"/>\n  <path d=\"M0,172 C70,168 120,160 280,152\" fill=\"none\" stroke=\"#1f5fa8\" stroke-width=\"2.2\" stroke-dasharray=\"5 4\"/>\n  <text x=\"112\" y=\"42\" font-size=\"11.5\" fill=\"#a8452a\" font-weight=\"700\">양이온</text>\n  <text x=\"112\" y=\"182\" font-size=\"11.5\" fill=\"#1f5fa8\" font-weight=\"700\" dy=\"-8\">음이온</text>\n  <text x=\"140\" y=\"200\" text-anchor=\"middle\" font-size=\"11.5\">점토입자로부터의 거리 →</text>\n  <text x=\"-8\" y=\"8\" text-anchor=\"end\" font-size=\"11.5\">이온농도</text>\n  <line x1=\"280\" y1=\"145\" x2=\"280\" y2=\"160\" stroke=\"#5f6672\" stroke-width=\"1\"/>\n  <text x=\"280\" y=\"140\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5f6672\">평형</text>\n </g>\n</g>\n</svg>",
    "tag": "그림",
    "src": "s3"
   },
   {
-   "id": "01-G22",
+   "id": "01-G69",
+   "ch": "제1장 흙의 성질",
+   "sec": "확산이중층과 흡착수",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 640 250\" role=\"img\" aria-label=\"확산이중층 모식도와 이온농도 곡선\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <!-- clay plate -->\n <rect x=\"30\" y=\"30\" width=\"26\" height=\"170\" fill=\"#4a5568\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"43\" y=\"220\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\">점토입자</text>\n <text x=\"43\" y=\"235\" text-anchor=\"middle\" font-size=\"11\" fill=\"#a8452a\" font-weight=\"700\">(−)대전</text>\n <g fill=\"#fff\" font-size=\"13\" font-weight=\"700\">\n  <text x=\"43\" y=\"55\" text-anchor=\"middle\">−</text><text x=\"43\" y=\"85\" text-anchor=\"middle\">−</text>\n  <text x=\"43\" y=\"115\" text-anchor=\"middle\">−</text><text x=\"43\" y=\"145\" text-anchor=\"middle\">−</text>\n  <text x=\"43\" y=\"175\" text-anchor=\"middle\">−</text></g>\n <!-- zones -->\n <rect x=\"56\" y=\"30\" width=\"34\" height=\"170\" fill=\"#c8d8ec\" stroke=\"#1f5fa8\" stroke-width=\"1.2\"/>\n <rect x=\"90\" y=\"30\" width=\"104\" height=\"170\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/>\n <rect x=\"194\" y=\"30\" width=\"96\" height=\"170\" fill=\"#f7f9fb\" stroke=\"#9aa2ae\" stroke-width=\"1.1\"/>\n <text x=\"73\" y=\"22\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#1f5fa8\">흡착수</text>\n <text x=\"73\" y=\"215\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1f5fa8\">≈10Å</text>\n <text x=\"142\" y=\"22\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#1f5fa8\">확산수(이온층)</text>\n <text x=\"242\" y=\"22\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#5f6672\">자유수</text>\n <text x=\"142\" y=\"215\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1f5fa8\">전기력 영향권</text>\n <text x=\"242\" y=\"215\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5f6672\">영향권 밖</text>\n <path d=\"M56,208 L194,208\" stroke=\"#a8452a\" stroke-width=\"1.6\"/>\n <path d=\"M56,204 L56,212 M194,204 L194,212\" stroke=\"#a8452a\" stroke-width=\"1.6\"/>\n <text x=\"125\" y=\"245\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#a8452a\">확산이중층 두께</text>\n <!-- cations -->\n <g font-size=\"11\" font-weight=\"700\" fill=\"#a8452a\">\n  <text x=\"66\" y=\"52\">+</text><text x=\"78\" y=\"70\">+</text><text x=\"68\" y=\"95\">+</text><text x=\"80\" y=\"120\">+</text>\n  <text x=\"66\" y=\"145\">+</text><text x=\"78\" y=\"170\">+</text><text x=\"70\" y=\"190\">+</text>\n  <text x=\"100\" y=\"60\">+</text><text x=\"122\" y=\"88\">+</text><text x=\"106\" y=\"128\">+</text><text x=\"134\" y=\"160\">+</text><text x=\"112\" y=\"186\">+</text>\n  <text x=\"160\" y=\"72\">+</text><text x=\"176\" y=\"140\">+</text></g>\n <!-- concentration curve -->\n <g transform=\"translate(330,20)\">\n  <path d=\"M0,180 L0,0\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n  <path d=\"M0,180 L280,180\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n  <path d=\"M0,18 C60,40 110,120 280,152\" fill=\"none\" stroke=\"#a8452a\" stroke-width=\"2.4\"/>\n  <path d=\"M0,172 C70,168 120,160 280,152\" fill=\"none\" stroke=\"#1f5fa8\" stroke-width=\"2.2\" stroke-dasharray=\"5 4\"/>\n  <text x=\"112\" y=\"42\" font-size=\"11.5\" fill=\"#a8452a\" font-weight=\"700\">양이온</text>\n  <text x=\"112\" y=\"182\" font-size=\"11.5\" fill=\"#1f5fa8\" font-weight=\"700\" dy=\"-8\">음이온</text>\n  <text x=\"140\" y=\"200\" text-anchor=\"middle\" font-size=\"11.5\">점토입자로부터의 거리 →</text>\n  <text x=\"-8\" y=\"8\" text-anchor=\"end\" font-size=\"11.5\">이온농도</text>\n  <line x1=\"280\" y1=\"145\" x2=\"280\" y2=\"160\" stroke=\"#5f6672\" stroke-width=\"1\"/>\n  <text x=\"280\" y=\"140\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5f6672\">평형</text>\n </g>\n</g>\n</svg>",
+   "a": "**그림 2 · 확산이중층 (시험작도용)**|**작도 요령** — 왼쪽에 세로 막대(점토, −부호 5개) → 오른쪽으로 **흡착수 / 확산수 / 자유수** 3구역을 띠로 나누고 +부호를 **가까울수록 촘촘히** 찍습니다. 옆에 이온농도 곡선(양이온은 급감, 음이온은 완만 증가, 결국 만남) 하나. 이 두 개면 25점짜리 그림 몫을 합니다.",
+   "tag": "그림",
+   "src": "s3"
+  },
+  {
+   "id": "01-G70",
    "ch": "제1장 흙의 성질",
    "sec": "면모구조 vs 이산구조 ★ 필수논점",
    "type": "figure",
-   "q": "그림 3 · 점토의 구조 3종 (이인모 그림 2.13 간략형)\n\n백지에 그려 보세요.",
+   "q": "점토의 구조 3종\n\n백지에 그려 보세요.",
    "a": "**작도 요령** — 짧은 선분(점토 판)만 그리면 됩니다. **(a)는 나란히 눕히고, (b)는 끝이 다른 선의 중간에 닿게 어긋나게, (c)는 (b)보다 더 빽빽하게**. 3분할 그림 하나가 \"이해했다\"는 증거가 됩니다.",
    "svg": "<svg viewBox=\"0 0 640 200\" role=\"img\" aria-label=\"이산구조 면모구조 염분면모구조\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\" stroke-linecap=\"round\">\n <!-- (a) 이산 -->\n <g stroke=\"#1f5fa8\" stroke-width=\"2.6\">\n  <path d=\"M30,42 L118,38\"/><path d=\"M32,62 L120,60\"/><path d=\"M28,84 L116,80\"/>\n  <path d=\"M34,104 L122,102\"/><path d=\"M30,126 L118,122\"/><path d=\"M32,146 L120,144\"/>\n </g>\n <text x=\"75\" y=\"176\" text-anchor=\"middle\" font-weight=\"700\">(a) 이산구조</text>\n <text x=\"75\" y=\"192\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5f6672\">반발력 우세 · 면대면 평행</text>\n <!-- (b) 면모 -->\n <g stroke=\"#a8452a\" stroke-width=\"2.6\">\n  <path d=\"M240,40 L300,66\"/><path d=\"M300,66 L286,124\"/><path d=\"M300,66 L358,52\"/>\n  <path d=\"M286,124 L232,140\"/><path d=\"M286,124 L344,146\"/><path d=\"M358,52 L372,110\"/>\n  <path d=\"M372,110 L344,146\"/><path d=\"M232,140 L246,92\"/><path d=\"M246,92 L240,40\"/>\n </g>\n <text x=\"302\" y=\"176\" text-anchor=\"middle\" font-weight=\"700\">(b) 면모구조</text>\n <text x=\"302\" y=\"192\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5f6672\">인력 우세 · 단부-면(edge-face) 엉킴</text>\n <!-- (c) 염분면모 -->\n <g stroke=\"#a8452a\" stroke-width=\"2.6\">\n  <path d=\"M450,44 L510,58\"/><path d=\"M510,58 L516,104\"/><path d=\"M516,104 L470,130\"/>\n  <path d=\"M470,130 L456,88\"/><path d=\"M456,88 L450,44\"/>\n  <path d=\"M516,104 L572,90\"/><path d=\"M572,90 L578,46\"/><path d=\"M572,90 L560,140\"/>\n  <path d=\"M470,130 L520,148\"/><path d=\"M520,148 L560,140\"/>\n  <path d=\"M510,58 L556,44\"/>\n </g>\n <text x=\"514\" y=\"176\" text-anchor=\"middle\" font-weight=\"700\">(c) 염분 면모구조</text>\n <text x=\"514\" y=\"192\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5f6672\">이중층↓ → 면-면 인력까지 → <tspan font-weight=\"700\" fill=\"#a8452a\">더 면모화</tspan></text>\n</g>\n</svg>",
    "tag": "그림",
    "src": "s4"
   },
   {
-   "id": "01-G23",
+   "id": "01-G71",
+   "ch": "제1장 흙의 성질",
+   "sec": "면모구조 vs 이산구조 ★ 필수논점",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 640 200\" role=\"img\" aria-label=\"이산구조 면모구조 염분면모구조\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\" stroke-linecap=\"round\">\n <!-- (a) 이산 -->\n <g stroke=\"#1f5fa8\" stroke-width=\"2.6\">\n  <path d=\"M30,42 L118,38\"/><path d=\"M32,62 L120,60\"/><path d=\"M28,84 L116,80\"/>\n  <path d=\"M34,104 L122,102\"/><path d=\"M30,126 L118,122\"/><path d=\"M32,146 L120,144\"/>\n </g>\n <text x=\"75\" y=\"176\" text-anchor=\"middle\" font-weight=\"700\">(a) 이산구조</text>\n <text x=\"75\" y=\"192\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5f6672\">반발력 우세 · 면대면 평행</text>\n <!-- (b) 면모 -->\n <g stroke=\"#a8452a\" stroke-width=\"2.6\">\n  <path d=\"M240,40 L300,66\"/><path d=\"M300,66 L286,124\"/><path d=\"M300,66 L358,52\"/>\n  <path d=\"M286,124 L232,140\"/><path d=\"M286,124 L344,146\"/><path d=\"M358,52 L372,110\"/>\n  <path d=\"M372,110 L344,146\"/><path d=\"M232,140 L246,92\"/><path d=\"M246,92 L240,40\"/>\n </g>\n <text x=\"302\" y=\"176\" text-anchor=\"middle\" font-weight=\"700\">(b) 면모구조</text>\n <text x=\"302\" y=\"192\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5f6672\">인력 우세 · 단부-면(edge-face) 엉킴</text>\n <!-- (c) 염분면모 -->\n <g stroke=\"#a8452a\" stroke-width=\"2.6\">\n  <path d=\"M450,44 L510,58\"/><path d=\"M510,58 L516,104\"/><path d=\"M516,104 L470,130\"/>\n  <path d=\"M470,130 L456,88\"/><path d=\"M456,88 L450,44\"/>\n  <path d=\"M516,104 L572,90\"/><path d=\"M572,90 L578,46\"/><path d=\"M572,90 L560,140\"/>\n  <path d=\"M470,130 L520,148\"/><path d=\"M520,148 L560,140\"/>\n  <path d=\"M510,58 L556,44\"/>\n </g>\n <text x=\"514\" y=\"176\" text-anchor=\"middle\" font-weight=\"700\">(c) 염분 면모구조</text>\n <text x=\"514\" y=\"192\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5f6672\">이중층↓ → 면-면 인력까지 → <tspan font-weight=\"700\" fill=\"#a8452a\">더 면모화</tspan></text>\n</g>\n</svg>",
+   "a": "**그림 3 · 점토의 구조 3종 (이인모 그림 2.13 간략형)**|**작도 요령** — 짧은 선분(점토 판)만 그리면 됩니다. **(a)는 나란히 눕히고, (b)는 끝이 다른 선의 중간에 닿게 어긋나게, (c)는 (b)보다 더 빽빽하게**. 3분할 그림 하나가 \"이해했다\"는 증거가 됩니다.",
+   "tag": "그림",
+   "src": "s4"
+  },
+  {
+   "id": "01-G72",
    "ch": "제1장 흙의 성질",
    "sec": "면모구조 vs 이산구조 ★ 필수논점",
    "type": "figure",
-   "q": "그림 4 · 다짐함수비에 따른 구조 변화 (이인모 그림 4.5 간략형)\n\n백지에 그려 보세요.",
+   "q": "다짐함수비에 따른 구조 변화\n\n백지에 그려 보세요.",
    "a": "**작도 요령** — 다짐곡선(종형) 하나 그리고 왼쪽 어깨에 **A(면모)**, 꼭짓점에 **B(OMC)**, 오른쪽 어깨에 **C(이산)**. 위쪽에 엉킨 선(면모)과 나란한 선(이산) 작은 스케치. **\"OMC = 면모→이산 전환점\"** 한 줄이 결론입니다.",
    "svg": "<svg viewBox=\"0 0 620 280\" role=\"img\" aria-label=\"다짐곡선과 면모 이산 구조 변화\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <path d=\"M60,240 L60,30\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M60,240 L470,240\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"30\" y=\"120\" font-size=\"12\" transform=\"rotate(-90 30,120)\" text-anchor=\"middle\">건조단위중량 γd</text>\n <text x=\"265\" y=\"266\" text-anchor=\"middle\">다짐 함수비 w (%)</text>\n <!-- low energy curve -->\n <path d=\"M95,215 C150,190 200,140 250,132 C300,140 360,190 420,222\" fill=\"none\" stroke=\"#1f5fa8\" stroke-width=\"2.4\"/>\n <!-- high energy curve -->\n <path d=\"M85,180 C130,145 175,95 215,88 C260,96 320,150 380,200\" fill=\"none\" stroke=\"#a8452a\" stroke-width=\"2.4\" stroke-dasharray=\"6 4\"/>\n <text x=\"430\" y=\"218\" font-size=\"11\" fill=\"#1f5fa8\">낮은 E</text>\n <text x=\"386\" y=\"196\" font-size=\"11\" fill=\"#a8452a\">높은 E</text>\n <!-- points -->\n <circle cx=\"140\" cy=\"194\" r=\"5\" fill=\"#a8452a\"/><text x=\"132\" y=\"186\" font-weight=\"700\" fill=\"#a8452a\">A</text>\n <circle cx=\"250\" cy=\"132\" r=\"5\" fill=\"#2c6e49\"/><text x=\"244\" y=\"122\" font-weight=\"700\" fill=\"#2c6e49\">B</text>\n <circle cx=\"350\" cy=\"182\" r=\"5\" fill=\"#1f5fa8\"/><text x=\"356\" y=\"176\" font-weight=\"700\" fill=\"#1f5fa8\">C</text>\n <line x1=\"250\" y1=\"132\" x2=\"250\" y2=\"240\" stroke=\"#2c6e49\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n <text x=\"250\" y=\"255\" text-anchor=\"middle\" font-size=\"11\" fill=\"#2c6e49\" font-weight=\"700\">OMC</text>\n <!-- structure sketches -->\n <g stroke-width=\"2\" stroke-linecap=\"round\">\n  <g stroke=\"#a8452a\" transform=\"translate(96,50)\">\n   <path d=\"M0,10 L22,20\"/><path d=\"M22,20 L18,44\"/><path d=\"M22,20 L44,8\"/><path d=\"M18,44 L40,50\"/><path d=\"M0,10 L4,34\"/>\n  </g>\n  <text x=\"118\" y=\"42\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#a8452a\">면모</text>\n  <g stroke=\"#1f5fa8\" transform=\"translate(300,46)\">\n   <path d=\"M0,8 L44,6\"/><path d=\"M2,20 L46,18\"/><path d=\"M0,32 L44,30\"/><path d=\"M2,44 L46,42\"/>\n  </g>\n  <text x=\"322\" y=\"40\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#1f5fa8\">이산</text>\n </g>\n <path d=\"M170,62 L292,62\" stroke=\"#5f6672\" stroke-width=\"1.4\" marker-end=\"url(#arh)\"/>\n <defs><marker id=\"arh\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#5f6672\"/></marker></defs>\n <text x=\"231\" y=\"55\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5f6672\">이중층수 생성 → 반발력↑</text>\n <text x=\"490\" y=\"100\" font-size=\"11\" font-weight=\"700\" fill=\"#2c6e49\">OMC =</text>\n <text x=\"490\" y=\"118\" font-size=\"11\" fill=\"#2c6e49\">면모 → 이산</text>\n <text x=\"490\" y=\"136\" font-size=\"11\" fill=\"#2c6e49\">넘어가는 순간</text>\n</g>\n</svg>",
    "tag": "그림",
    "src": "s4"
   },
   {
-   "id": "01-G24",
+   "id": "01-G73",
+   "ch": "제1장 흙의 성질",
+   "sec": "면모구조 vs 이산구조 ★ 필수논점",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 620 280\" role=\"img\" aria-label=\"다짐곡선과 면모 이산 구조 변화\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <path d=\"M60,240 L60,30\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M60,240 L470,240\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"30\" y=\"120\" font-size=\"12\" transform=\"rotate(-90 30,120)\" text-anchor=\"middle\">건조단위중량 γd</text>\n <text x=\"265\" y=\"266\" text-anchor=\"middle\">다짐 함수비 w (%)</text>\n <!-- low energy curve -->\n <path d=\"M95,215 C150,190 200,140 250,132 C300,140 360,190 420,222\" fill=\"none\" stroke=\"#1f5fa8\" stroke-width=\"2.4\"/>\n <!-- high energy curve -->\n <path d=\"M85,180 C130,145 175,95 215,88 C260,96 320,150 380,200\" fill=\"none\" stroke=\"#a8452a\" stroke-width=\"2.4\" stroke-dasharray=\"6 4\"/>\n <text x=\"430\" y=\"218\" font-size=\"11\" fill=\"#1f5fa8\">낮은 E</text>\n <text x=\"386\" y=\"196\" font-size=\"11\" fill=\"#a8452a\">높은 E</text>\n <!-- points -->\n <circle cx=\"140\" cy=\"194\" r=\"5\" fill=\"#a8452a\"/><text x=\"132\" y=\"186\" font-weight=\"700\" fill=\"#a8452a\">A</text>\n <circle cx=\"250\" cy=\"132\" r=\"5\" fill=\"#2c6e49\"/><text x=\"244\" y=\"122\" font-weight=\"700\" fill=\"#2c6e49\">B</text>\n <circle cx=\"350\" cy=\"182\" r=\"5\" fill=\"#1f5fa8\"/><text x=\"356\" y=\"176\" font-weight=\"700\" fill=\"#1f5fa8\">C</text>\n <line x1=\"250\" y1=\"132\" x2=\"250\" y2=\"240\" stroke=\"#2c6e49\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n <text x=\"250\" y=\"255\" text-anchor=\"middle\" font-size=\"11\" fill=\"#2c6e49\" font-weight=\"700\">OMC</text>\n <!-- structure sketches -->\n <g stroke-width=\"2\" stroke-linecap=\"round\">\n  <g stroke=\"#a8452a\" transform=\"translate(96,50)\">\n   <path d=\"M0,10 L22,20\"/><path d=\"M22,20 L18,44\"/><path d=\"M22,20 L44,8\"/><path d=\"M18,44 L40,50\"/><path d=\"M0,10 L4,34\"/>\n  </g>\n  <text x=\"118\" y=\"42\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#a8452a\">면모</text>\n  <g stroke=\"#1f5fa8\" transform=\"translate(300,46)\">\n   <path d=\"M0,8 L44,6\"/><path d=\"M2,20 L46,18\"/><path d=\"M0,32 L44,30\"/><path d=\"M2,44 L46,42\"/>\n  </g>\n  <text x=\"322\" y=\"40\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#1f5fa8\">이산</text>\n </g>\n <path d=\"M170,62 L292,62\" stroke=\"#5f6672\" stroke-width=\"1.4\" marker-end=\"url(#arh)\"/>\n <defs><marker id=\"arh\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#5f6672\"/></marker></defs>\n <text x=\"231\" y=\"55\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5f6672\">이중층수 생성 → 반발력↑</text>\n <text x=\"490\" y=\"100\" font-size=\"11\" font-weight=\"700\" fill=\"#2c6e49\">OMC =</text>\n <text x=\"490\" y=\"118\" font-size=\"11\" fill=\"#2c6e49\">면모 → 이산</text>\n <text x=\"490\" y=\"136\" font-size=\"11\" fill=\"#2c6e49\">넘어가는 순간</text>\n</g>\n</svg>",
+   "a": "**그림 4 · 다짐함수비에 따른 구조 변화 (이인모 그림 4.5 간략형)**|**작도 요령** — 다짐곡선(종형) 하나 그리고 왼쪽 어깨에 **A(면모)**, 꼭짓점에 **B(OMC)**, 오른쪽 어깨에 **C(이산)**. 위쪽에 엉킨 선(면모)과 나란한 선(이산) 작은 스케치. **\"OMC = 면모→이산 전환점\"** 한 줄이 결론입니다.",
+   "tag": "그림",
+   "src": "s4"
+  },
+  {
+   "id": "01-G74",
    "ch": "제1장 흙의 성질",
    "sec": "애터버그 한계 · PI · LI · 소성도",
    "type": "figure",
-   "q": "그림 5 · 애터버그 한계와 체적변화 (이인모 그림 2.3+2.6 통합 간략형)\n\n백지에 그려 보세요.",
+   "q": "애터버그 한계와 체적변화\n\n백지에 그려 보세요.",
    "a": "**작도 요령** — 위에 4상태 띠, 아래 체적–함수비 곡선. **SL 왼쪽이 수평(체적 불변)**인 게 수축한계의 정의 그 자체입니다. 이 수평 구간을 그리면 \"이해했다\"는 신호가 됩니다.",
    "svg": "<svg viewBox=\"0 0 620 280\" role=\"img\" aria-label=\"애터버그 한계 4상태와 체적변화 곡선\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <!-- 4 states bar -->\n <rect x=\"55\" y=\"24\" width=\"120\" height=\"30\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\"/>\n <rect x=\"175\" y=\"24\" width=\"115\" height=\"30\" fill=\"#e7f2ea\" stroke=\"#2c6e49\"/>\n <rect x=\"290\" y=\"24\" width=\"150\" height=\"30\" fill=\"#fbf3dd\" stroke=\"#8a6a1f\"/>\n <rect x=\"440\" y=\"24\" width=\"120\" height=\"30\" fill=\"#fbeee9\" stroke=\"#a8452a\"/>\n <text x=\"115\" y=\"44\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\">고체</text>\n <text x=\"232\" y=\"44\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\">반고체</text>\n <text x=\"365\" y=\"44\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\">소성체</text>\n <text x=\"500\" y=\"44\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\">액체</text>\n <g stroke=\"#1b1d21\" stroke-width=\"1.4\">\n  <path d=\"M175,54 L175,68\"/><path d=\"M290,54 L290,68\"/><path d=\"M440,54 L440,68\"/></g>\n <text x=\"175\" y=\"82\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\">SL</text>\n <text x=\"290\" y=\"82\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\">PL</text>\n <text x=\"440\" y=\"82\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\">LL</text>\n <path d=\"M300,96 L432,96\" stroke=\"#a8452a\" stroke-width=\"1.6\"/>\n <path d=\"M300,92 L300,100 M432,92 L432,100\" stroke=\"#a8452a\" stroke-width=\"1.6\"/>\n <text x=\"366\" y=\"90\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#a8452a\">PI = LL − PL</text>\n <path d=\"M55,14 L560,14\" stroke=\"#5f6672\" stroke-width=\"1.2\" marker-end=\"url(#arw)\"/>\n <defs><marker id=\"arw\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#5f6672\"/></marker></defs>\n <text x=\"560\" y=\"10\" text-anchor=\"end\" font-size=\"11\" fill=\"#5f6672\">함수비 증가 →</text>\n <!-- volume curve -->\n <path d=\"M55,250 L55,120\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n <path d=\"M55,250 L560,250\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n <text x=\"30\" y=\"188\" font-size=\"11.5\" transform=\"rotate(-90 30,188)\" text-anchor=\"middle\">흙의 체적 V</text>\n <text x=\"308\" y=\"272\" text-anchor=\"middle\" font-size=\"11.5\">함수비 w (%)</text>\n <path d=\"M100,232 L175,232\" fill=\"none\" stroke=\"#1f5fa8\" stroke-width=\"2.6\"/>\n <path d=\"M175,232 C210,222 260,196 290,180\" fill=\"none\" stroke=\"#1f5fa8\" stroke-width=\"2.6\"/>\n <path d=\"M290,180 L500,132\" fill=\"none\" stroke=\"#1f5fa8\" stroke-width=\"2.6\"/>\n <line x1=\"175\" y1=\"120\" x2=\"175\" y2=\"250\" stroke=\"#5f6672\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n <line x1=\"290\" y1=\"120\" x2=\"290\" y2=\"250\" stroke=\"#5f6672\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n <line x1=\"440\" y1=\"120\" x2=\"440\" y2=\"250\" stroke=\"#5f6672\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n <text x=\"112\" y=\"224\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">체적 불변</text>\n <text x=\"120\" y=\"146\" font-size=\"11\" fill=\"#1f5fa8\">SL 이하 = 아무리 말려도</text>\n <text x=\"120\" y=\"162\" font-size=\"11\" fill=\"#1f5fa8\">체적이 안 줄어든다</text>\n</g>\n</svg>",
    "tag": "그림",
    "src": "s5"
   },
   {
-   "id": "01-G25",
+   "id": "01-G75",
+   "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 620 280\" role=\"img\" aria-label=\"애터버그 한계 4상태와 체적변화 곡선\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <!-- 4 states bar -->\n <rect x=\"55\" y=\"24\" width=\"120\" height=\"30\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\"/>\n <rect x=\"175\" y=\"24\" width=\"115\" height=\"30\" fill=\"#e7f2ea\" stroke=\"#2c6e49\"/>\n <rect x=\"290\" y=\"24\" width=\"150\" height=\"30\" fill=\"#fbf3dd\" stroke=\"#8a6a1f\"/>\n <rect x=\"440\" y=\"24\" width=\"120\" height=\"30\" fill=\"#fbeee9\" stroke=\"#a8452a\"/>\n <text x=\"115\" y=\"44\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\">고체</text>\n <text x=\"232\" y=\"44\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\">반고체</text>\n <text x=\"365\" y=\"44\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\">소성체</text>\n <text x=\"500\" y=\"44\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\">액체</text>\n <g stroke=\"#1b1d21\" stroke-width=\"1.4\">\n  <path d=\"M175,54 L175,68\"/><path d=\"M290,54 L290,68\"/><path d=\"M440,54 L440,68\"/></g>\n <text x=\"175\" y=\"82\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\">SL</text>\n <text x=\"290\" y=\"82\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\">PL</text>\n <text x=\"440\" y=\"82\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\">LL</text>\n <path d=\"M300,96 L432,96\" stroke=\"#a8452a\" stroke-width=\"1.6\"/>\n <path d=\"M300,92 L300,100 M432,92 L432,100\" stroke=\"#a8452a\" stroke-width=\"1.6\"/>\n <text x=\"366\" y=\"90\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#a8452a\">PI = LL − PL</text>\n <path d=\"M55,14 L560,14\" stroke=\"#5f6672\" stroke-width=\"1.2\" marker-end=\"url(#arw)\"/>\n <defs><marker id=\"arw\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#5f6672\"/></marker></defs>\n <text x=\"560\" y=\"10\" text-anchor=\"end\" font-size=\"11\" fill=\"#5f6672\">함수비 증가 →</text>\n <!-- volume curve -->\n <path d=\"M55,250 L55,120\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n <path d=\"M55,250 L560,250\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n <text x=\"30\" y=\"188\" font-size=\"11.5\" transform=\"rotate(-90 30,188)\" text-anchor=\"middle\">흙의 체적 V</text>\n <text x=\"308\" y=\"272\" text-anchor=\"middle\" font-size=\"11.5\">함수비 w (%)</text>\n <path d=\"M100,232 L175,232\" fill=\"none\" stroke=\"#1f5fa8\" stroke-width=\"2.6\"/>\n <path d=\"M175,232 C210,222 260,196 290,180\" fill=\"none\" stroke=\"#1f5fa8\" stroke-width=\"2.6\"/>\n <path d=\"M290,180 L500,132\" fill=\"none\" stroke=\"#1f5fa8\" stroke-width=\"2.6\"/>\n <line x1=\"175\" y1=\"120\" x2=\"175\" y2=\"250\" stroke=\"#5f6672\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n <line x1=\"290\" y1=\"120\" x2=\"290\" y2=\"250\" stroke=\"#5f6672\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n <line x1=\"440\" y1=\"120\" x2=\"440\" y2=\"250\" stroke=\"#5f6672\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n <text x=\"112\" y=\"224\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">체적 불변</text>\n <text x=\"120\" y=\"146\" font-size=\"11\" fill=\"#1f5fa8\">SL 이하 = 아무리 말려도</text>\n <text x=\"120\" y=\"162\" font-size=\"11\" fill=\"#1f5fa8\">체적이 안 줄어든다</text>\n</g>\n</svg>",
+   "a": "**그림 5 · 애터버그 한계와 체적변화 (이인모 그림 2.3+2.6 통합 간략형)**|**작도 요령** — 위에 4상태 띠, 아래 체적–함수비 곡선. **SL 왼쪽이 수평(체적 불변)**인 게 수축한계의 정의 그 자체입니다. 이 수평 구간을 그리면 \"이해했다\"는 신호가 됩니다.",
+   "tag": "그림",
+   "src": "s5"
+  },
+  {
+   "id": "01-G76",
    "ch": "제1장 흙의 성질",
    "sec": "애터버그 한계 · PI · LI · 소성도",
    "type": "figure",
-   "q": "그림 6 · 소성도 (이인모 그림 2.10 간략형 · 그대로 외워 그릴 것)\n\n백지에 그려 보세요.",
+   "q": "소성도\n\n백지에 그려 보세요.",
    "a": "**이 그림은 통째로 외워서 그릴 것.** 축 두 개 + 직선 세 개 + 구역 이름 4개면 끝입니다. **A선 PI=0.73(LL−20)**, **U선 PI=0.9(LL−8)**, **B선 LL=50**. 세립토 분류 문제는 이 그림 하나로 다 풀립니다.",
    "svg": "<svg viewBox=\"0 0 620 320\" role=\"img\" aria-label=\"소성도 A선 U선 B선\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <path d=\"M70,280 L70,25\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M70,280 L580,280\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"36\" y=\"150\" font-size=\"12\" transform=\"rotate(-90 36,150)\" text-anchor=\"middle\">소성지수 PI (%)</text>\n <text x=\"325\" y=\"308\" text-anchor=\"middle\">액성한계 LL (%)</text>\n <g font-size=\"10.5\" fill=\"#5f6672\">\n  <text x=\"70\" y=\"296\" text-anchor=\"middle\">0</text>\n  <text x=\"172\" y=\"296\" text-anchor=\"middle\">20</text>\n  <text x=\"274\" y=\"296\" text-anchor=\"middle\">40</text>\n  <text x=\"325\" y=\"296\" text-anchor=\"middle\">50</text>\n  <text x=\"427\" y=\"296\" text-anchor=\"middle\">70</text>\n  <text x=\"529\" y=\"296\" text-anchor=\"middle\">90</text>\n  <text x=\"62\" y=\"284\" text-anchor=\"end\">0</text>\n  <text x=\"62\" y=\"234\" text-anchor=\"end\">10</text>\n  <text x=\"62\" y=\"184\" text-anchor=\"end\">20</text>\n  <text x=\"62\" y=\"134\" text-anchor=\"end\">30</text>\n  <text x=\"62\" y=\"84\" text-anchor=\"end\">40</text>\n  <text x=\"62\" y=\"44\" text-anchor=\"end\">50</text>\n </g>\n <!-- A line: PI=0.73(LL-20) ; x=70+5.1*LL, y=280-5*PI -->\n <path d=\"M172,280 L580,131\" stroke=\"#a8452a\" stroke-width=\"2.4\"/>\n <text x=\"470\" y=\"182\" font-size=\"11.5\" font-weight=\"700\" fill=\"#a8452a\">A선</text>\n <text x=\"418\" y=\"200\" font-size=\"11\" fill=\"#a8452a\">PI = 0.73(LL−20)</text>\n <!-- U line: PI=0.9(LL-8) -->\n <path d=\"M111,280 L468,25\" stroke=\"#1f5fa8\" stroke-width=\"2.4\" stroke-dasharray=\"7 4\"/>\n <text x=\"360\" y=\"58\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1f5fa8\">U선</text>\n <text x=\"300\" y=\"42\" font-size=\"11\" fill=\"#1f5fa8\">PI = 0.9(LL−8)</text>\n <!-- B line LL=50 -->\n <path d=\"M325,280 L325,25\" stroke=\"#2c6e49\" stroke-width=\"2\" stroke-dasharray=\"4 4\"/>\n <text x=\"332\" y=\"38\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2c6e49\">B선 LL=50</text>\n <!-- zone labels -->\n <text x=\"250\" y=\"205\" font-size=\"13\" font-weight=\"700\">CL</text>\n <text x=\"430\" y=\"105\" font-size=\"13\" font-weight=\"700\">CH</text>\n <text x=\"230\" y=\"258\" font-size=\"13\" font-weight=\"700\">ML / OL</text>\n <text x=\"440\" y=\"235\" font-size=\"13\" font-weight=\"700\">MH / OH</text>\n <rect x=\"172\" y=\"256\" width=\"34\" height=\"15\" fill=\"#5f6672\" opacity=\".25\"/>\n <text x=\"150\" y=\"252\" font-size=\"10\" fill=\"#5f6672\">CL-ML</text>\n <text x=\"500\" y=\"60\" font-size=\"10.5\" fill=\"#1f5fa8\">U선 위 = 존재불가</text>\n</g>\n</svg>",
    "tag": "그림",
    "src": "s5"
   },
   {
-   "id": "01-G26",
+   "id": "01-G77",
+   "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 620 320\" role=\"img\" aria-label=\"소성도 A선 U선 B선\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <path d=\"M70,280 L70,25\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M70,280 L580,280\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"36\" y=\"150\" font-size=\"12\" transform=\"rotate(-90 36,150)\" text-anchor=\"middle\">소성지수 PI (%)</text>\n <text x=\"325\" y=\"308\" text-anchor=\"middle\">액성한계 LL (%)</text>\n <g font-size=\"10.5\" fill=\"#5f6672\">\n  <text x=\"70\" y=\"296\" text-anchor=\"middle\">0</text>\n  <text x=\"172\" y=\"296\" text-anchor=\"middle\">20</text>\n  <text x=\"274\" y=\"296\" text-anchor=\"middle\">40</text>\n  <text x=\"325\" y=\"296\" text-anchor=\"middle\">50</text>\n  <text x=\"427\" y=\"296\" text-anchor=\"middle\">70</text>\n  <text x=\"529\" y=\"296\" text-anchor=\"middle\">90</text>\n  <text x=\"62\" y=\"284\" text-anchor=\"end\">0</text>\n  <text x=\"62\" y=\"234\" text-anchor=\"end\">10</text>\n  <text x=\"62\" y=\"184\" text-anchor=\"end\">20</text>\n  <text x=\"62\" y=\"134\" text-anchor=\"end\">30</text>\n  <text x=\"62\" y=\"84\" text-anchor=\"end\">40</text>\n  <text x=\"62\" y=\"44\" text-anchor=\"end\">50</text>\n </g>\n <!-- A line: PI=0.73(LL-20) ; x=70+5.1*LL, y=280-5*PI -->\n <path d=\"M172,280 L580,131\" stroke=\"#a8452a\" stroke-width=\"2.4\"/>\n <text x=\"470\" y=\"182\" font-size=\"11.5\" font-weight=\"700\" fill=\"#a8452a\">A선</text>\n <text x=\"418\" y=\"200\" font-size=\"11\" fill=\"#a8452a\">PI = 0.73(LL−20)</text>\n <!-- U line: PI=0.9(LL-8) -->\n <path d=\"M111,280 L468,25\" stroke=\"#1f5fa8\" stroke-width=\"2.4\" stroke-dasharray=\"7 4\"/>\n <text x=\"360\" y=\"58\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1f5fa8\">U선</text>\n <text x=\"300\" y=\"42\" font-size=\"11\" fill=\"#1f5fa8\">PI = 0.9(LL−8)</text>\n <!-- B line LL=50 -->\n <path d=\"M325,280 L325,25\" stroke=\"#2c6e49\" stroke-width=\"2\" stroke-dasharray=\"4 4\"/>\n <text x=\"332\" y=\"38\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2c6e49\">B선 LL=50</text>\n <!-- zone labels -->\n <text x=\"250\" y=\"205\" font-size=\"13\" font-weight=\"700\">CL</text>\n <text x=\"430\" y=\"105\" font-size=\"13\" font-weight=\"700\">CH</text>\n <text x=\"230\" y=\"258\" font-size=\"13\" font-weight=\"700\">ML / OL</text>\n <text x=\"440\" y=\"235\" font-size=\"13\" font-weight=\"700\">MH / OH</text>\n <rect x=\"172\" y=\"256\" width=\"34\" height=\"15\" fill=\"#5f6672\" opacity=\".25\"/>\n <text x=\"150\" y=\"252\" font-size=\"10\" fill=\"#5f6672\">CL-ML</text>\n <text x=\"500\" y=\"60\" font-size=\"10.5\" fill=\"#1f5fa8\">U선 위 = 존재불가</text>\n</g>\n</svg>",
+   "a": "**그림 6 · 소성도 (이인모 그림 2.10 간략형 · 그대로 외워 그릴 것)**|**이 그림은 통째로 외워서 그릴 것.** 축 두 개 + 직선 세 개 + 구역 이름 4개면 끝입니다. **A선 PI=0.73(LL−20)**, **U선 PI=0.9(LL−8)**, **B선 LL=50**. 세립토 분류 문제는 이 그림 하나로 다 풀립니다.",
+   "tag": "그림",
+   "src": "s5"
+  },
+  {
+   "id": "01-G78",
    "ch": "제1장 흙의 성질",
    "sec": "활성도 ★ 필수논점",
    "type": "figure",
-   "q": "그림 7 · 활성도 (이인모 그림 2.8 + 김상규 경계선)\n\n백지에 그려 보세요.",
+   "q": "활성도\n\n백지에 그려 보세요.",
    "a": "**작도 요령** — **원점에서 뻗는 직선들**이 전부입니다. 기울기 = A. 경계선 두 개(**0.75 / 1.25**)를 점선으로 넣고 세 광물 직선을 그리면 완성. \"활성도\" 문제는 이 그림 + 정의식 + 구간값이면 만점입니다.",
    "svg": "<svg viewBox=\"0 0 600 300\" role=\"img\" aria-label=\"소성지수 대 점토함유율 활성도 그래프\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <path d=\"M70,260 L70,25\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M70,260 L540,260\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"36\" y=\"140\" font-size=\"12\" transform=\"rotate(-90 36,140)\" text-anchor=\"middle\">소성지수 PI (%)</text>\n <text x=\"305\" y=\"290\" text-anchor=\"middle\">점토 함유율 (&lt; 2μm), %</text>\n <g font-size=\"10.5\" fill=\"#5f6672\">\n  <text x=\"164\" y=\"276\" text-anchor=\"middle\">20</text><text x=\"258\" y=\"276\" text-anchor=\"middle\">40</text>\n  <text x=\"352\" y=\"276\" text-anchor=\"middle\">60</text><text x=\"446\" y=\"276\" text-anchor=\"middle\">80</text>\n  <text x=\"62\" y=\"264\" text-anchor=\"end\">0</text><text x=\"62\" y=\"205\" text-anchor=\"end\">20</text>\n  <text x=\"62\" y=\"150\" text-anchor=\"end\">40</text><text x=\"62\" y=\"95\" text-anchor=\"end\">60</text>\n </g>\n <!-- Na-Mont A=4 -->\n <path d=\"M70,260 L180,40\" stroke=\"#a8452a\" stroke-width=\"2.6\"/>\n <text x=\"184\" y=\"46\" font-size=\"11.5\" font-weight=\"700\" fill=\"#a8452a\">Na-Mont A=4~7</text>\n <!-- boundary 1.25 -->\n <path d=\"M70,260 L400,40\" stroke=\"#8a6a1f\" stroke-width=\"1.8\" stroke-dasharray=\"6 4\"/>\n <text x=\"404\" y=\"44\" font-size=\"11\" font-weight=\"700\" fill=\"#8a6a1f\">A = 1.25 (활성 경계)</text>\n <!-- Illite ~0.9 -->\n <path d=\"M70,260 L510,116\" stroke=\"#1f5fa8\" stroke-width=\"2.4\"/>\n <text x=\"470\" y=\"108\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1f5fa8\">Illite A≈0.9</text>\n <!-- boundary 0.75 -->\n <path d=\"M70,260 L520,140\" stroke=\"#8a6a1f\" stroke-width=\"1.8\" stroke-dasharray=\"6 4\"/>\n <text x=\"430\" y=\"156\" font-size=\"11\" font-weight=\"700\" fill=\"#8a6a1f\">A = 0.75 (비활성 경계)</text>\n <!-- Kaolinite 0.38 -->\n <path d=\"M70,260 L530,190\" stroke=\"#2c6e49\" stroke-width=\"2.4\"/>\n <text x=\"440\" y=\"206\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2c6e49\">Kaolinite A≈0.38</text>\n <text x=\"150\" y=\"120\" font-size=\"11\" fill=\"#5f6672\">기울기 = A</text>\n <path d=\"M132,132 C126,160 120,180 110,200\" fill=\"none\" stroke=\"#5f6672\" stroke-width=\"1.2\" marker-end=\"url(#ar2)\"/>\n <defs><marker id=\"ar2\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#5f6672\"/></marker></defs>\n <text x=\"250\" y=\"238\" font-size=\"11\" fill=\"#5f6672\">비활성</text>\n <text x=\"250\" y=\"150\" font-size=\"11\" fill=\"#5f6672\">보통</text>\n <text x=\"180\" y=\"90\" font-size=\"11\" fill=\"#5f6672\">활성</text>\n</g>\n</svg>",
    "tag": "그림",
    "src": "s6"
   },
   {
-   "id": "01-G27",
+   "id": "01-G79",
+   "ch": "제1장 흙의 성질",
+   "sec": "활성도 ★ 필수논점",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 600 300\" role=\"img\" aria-label=\"소성지수 대 점토함유율 활성도 그래프\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <path d=\"M70,260 L70,25\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M70,260 L540,260\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"36\" y=\"140\" font-size=\"12\" transform=\"rotate(-90 36,140)\" text-anchor=\"middle\">소성지수 PI (%)</text>\n <text x=\"305\" y=\"290\" text-anchor=\"middle\">점토 함유율 (&lt; 2μm), %</text>\n <g font-size=\"10.5\" fill=\"#5f6672\">\n  <text x=\"164\" y=\"276\" text-anchor=\"middle\">20</text><text x=\"258\" y=\"276\" text-anchor=\"middle\">40</text>\n  <text x=\"352\" y=\"276\" text-anchor=\"middle\">60</text><text x=\"446\" y=\"276\" text-anchor=\"middle\">80</text>\n  <text x=\"62\" y=\"264\" text-anchor=\"end\">0</text><text x=\"62\" y=\"205\" text-anchor=\"end\">20</text>\n  <text x=\"62\" y=\"150\" text-anchor=\"end\">40</text><text x=\"62\" y=\"95\" text-anchor=\"end\">60</text>\n </g>\n <!-- Na-Mont A=4 -->\n <path d=\"M70,260 L180,40\" stroke=\"#a8452a\" stroke-width=\"2.6\"/>\n <text x=\"184\" y=\"46\" font-size=\"11.5\" font-weight=\"700\" fill=\"#a8452a\">Na-Mont A=4~7</text>\n <!-- boundary 1.25 -->\n <path d=\"M70,260 L400,40\" stroke=\"#8a6a1f\" stroke-width=\"1.8\" stroke-dasharray=\"6 4\"/>\n <text x=\"404\" y=\"44\" font-size=\"11\" font-weight=\"700\" fill=\"#8a6a1f\">A = 1.25 (활성 경계)</text>\n <!-- Illite ~0.9 -->\n <path d=\"M70,260 L510,116\" stroke=\"#1f5fa8\" stroke-width=\"2.4\"/>\n <text x=\"470\" y=\"108\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1f5fa8\">Illite A≈0.9</text>\n <!-- boundary 0.75 -->\n <path d=\"M70,260 L520,140\" stroke=\"#8a6a1f\" stroke-width=\"1.8\" stroke-dasharray=\"6 4\"/>\n <text x=\"430\" y=\"156\" font-size=\"11\" font-weight=\"700\" fill=\"#8a6a1f\">A = 0.75 (비활성 경계)</text>\n <!-- Kaolinite 0.38 -->\n <path d=\"M70,260 L530,190\" stroke=\"#2c6e49\" stroke-width=\"2.4\"/>\n <text x=\"440\" y=\"206\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2c6e49\">Kaolinite A≈0.38</text>\n <text x=\"150\" y=\"120\" font-size=\"11\" fill=\"#5f6672\">기울기 = A</text>\n <path d=\"M132,132 C126,160 120,180 110,200\" fill=\"none\" stroke=\"#5f6672\" stroke-width=\"1.2\" marker-end=\"url(#ar2)\"/>\n <defs><marker id=\"ar2\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#5f6672\"/></marker></defs>\n <text x=\"250\" y=\"238\" font-size=\"11\" fill=\"#5f6672\">비활성</text>\n <text x=\"250\" y=\"150\" font-size=\"11\" fill=\"#5f6672\">보통</text>\n <text x=\"180\" y=\"90\" font-size=\"11\" fill=\"#5f6672\">활성</text>\n</g>\n</svg>",
+   "a": "**그림 7 · 활성도 (이인모 그림 2.8 + 김상규 경계선)**|**작도 요령** — **원점에서 뻗는 직선들**이 전부입니다. 기울기 = A. 경계선 두 개(**0.75 / 1.25**)를 점선으로 넣고 세 광물 직선을 그리면 완성. \"활성도\" 문제는 이 그림 + 정의식 + 구간값이면 만점입니다.",
+   "tag": "그림",
+   "src": "s6"
+  },
+  {
+   "id": "01-G80",
    "ch": "제1장 흙의 성질",
    "sec": "예민비 · Quick Clay · 틱소트로피 ★ 필수논점",
    "type": "figure",
-   "q": "그림 8 · 예민비와 틱소트로피 (이인모 그림 10.22 간략형)\n\n백지에 그려 보세요.",
+   "q": "예민비와 틱소트로피\n\n백지에 그려 보세요.",
    "a": "**작도 요령** — 왼쪽: 응력–변형률 곡선 두 개(불교란은 **뾰족하게 솟았다 급락**, 재성형은 **낮고 완만**). 두 피크의 비가 St. 오른쪽: 시간축에 강도가 **서서히 올라가되 원래 선까지는 못 닿는** 곡선. 이 두 장으로 예민비+틱소트로피가 동시에 설명됩니다.",
    "svg": "<svg viewBox=\"0 0 620 250\" role=\"img\" aria-label=\"불교란 재성형 응력변형률 곡선과 틱소트로피\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <path d=\"M60,210 L60,25\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M60,210 L330,210\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"30\" y=\"118\" font-size=\"11.5\" transform=\"rotate(-90 30,118)\" text-anchor=\"middle\">일축압축응력</text>\n <text x=\"196\" y=\"236\" text-anchor=\"middle\" font-size=\"11.5\">축방향 변형률 ε</text>\n <path d=\"M60,210 C82,90 96,52 118,50 C150,52 200,120 300,170\" fill=\"none\" stroke=\"#a8452a\" stroke-width=\"2.6\"/>\n <path d=\"M60,210 C90,182 120,166 160,162 C210,160 260,164 300,168\" fill=\"none\" stroke=\"#1f5fa8\" stroke-width=\"2.4\" stroke-dasharray=\"6 4\"/>\n <line x1=\"60\" y1=\"50\" x2=\"118\" y2=\"50\" stroke=\"#a8452a\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n <line x1=\"60\" y1=\"162\" x2=\"160\" y2=\"162\" stroke=\"#1f5fa8\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n <text x=\"126\" y=\"44\" font-size=\"11.5\" font-weight=\"700\" fill=\"#a8452a\">불교란 q<tspan font-size=\"9\" dy=\"3\">u</tspan></text>\n <text x=\"196\" y=\"152\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1f5fa8\">재성형 q<tspan font-size=\"9\" dy=\"3\">ur</tspan></text>\n <path d=\"M40,50 L40,162\" stroke=\"#2c6e49\" stroke-width=\"1.6\"/>\n <path d=\"M36,50 L44,50 M36,162 L44,162\" stroke=\"#2c6e49\" stroke-width=\"1.6\"/>\n <text x=\"18\" y=\"112\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2c6e49\" transform=\"rotate(-90 18,112)\" text-anchor=\"middle\">S t</text>\n <!-- thixotropy -->\n <path d=\"M390,210 L390,25\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M390,210 L590,210\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"490\" y=\"236\" text-anchor=\"middle\" font-size=\"11.5\">시간 (log t)</text>\n <text x=\"366\" y=\"118\" font-size=\"11.5\" transform=\"rotate(-90 366,118)\" text-anchor=\"middle\">강도</text>\n <line x1=\"390\" y1=\"50\" x2=\"590\" y2=\"50\" stroke=\"#a8452a\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/>\n <text x=\"524\" y=\"44\" font-size=\"10.5\" fill=\"#a8452a\">원래 강도(불교란)</text>\n <path d=\"M390,178 C440,150 500,120 590,104\" fill=\"none\" stroke=\"#2c6e49\" stroke-width=\"2.6\"/>\n <circle cx=\"390\" cy=\"178\" r=\"4\" fill=\"#1f5fa8\"/>\n <text x=\"396\" y=\"196\" font-size=\"10.5\" fill=\"#1f5fa8\">교란 직후</text>\n <text x=\"470\" y=\"132\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2c6e49\">Thixotropy</text>\n <text x=\"480\" y=\"88\" font-size=\"10.5\" fill=\"#5f6672\">원상 회복은 못 함</text>\n</g>\n</svg>",
    "tag": "그림",
    "src": "s7"
   },
   {
-   "id": "01-G28",
+   "id": "01-G81",
+   "ch": "제1장 흙의 성질",
+   "sec": "예민비 · Quick Clay · 틱소트로피 ★ 필수논점",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 620 250\" role=\"img\" aria-label=\"불교란 재성형 응력변형률 곡선과 틱소트로피\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <path d=\"M60,210 L60,25\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M60,210 L330,210\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"30\" y=\"118\" font-size=\"11.5\" transform=\"rotate(-90 30,118)\" text-anchor=\"middle\">일축압축응력</text>\n <text x=\"196\" y=\"236\" text-anchor=\"middle\" font-size=\"11.5\">축방향 변형률 ε</text>\n <path d=\"M60,210 C82,90 96,52 118,50 C150,52 200,120 300,170\" fill=\"none\" stroke=\"#a8452a\" stroke-width=\"2.6\"/>\n <path d=\"M60,210 C90,182 120,166 160,162 C210,160 260,164 300,168\" fill=\"none\" stroke=\"#1f5fa8\" stroke-width=\"2.4\" stroke-dasharray=\"6 4\"/>\n <line x1=\"60\" y1=\"50\" x2=\"118\" y2=\"50\" stroke=\"#a8452a\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n <line x1=\"60\" y1=\"162\" x2=\"160\" y2=\"162\" stroke=\"#1f5fa8\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/>\n <text x=\"126\" y=\"44\" font-size=\"11.5\" font-weight=\"700\" fill=\"#a8452a\">불교란 q<tspan font-size=\"9\" dy=\"3\">u</tspan></text>\n <text x=\"196\" y=\"152\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1f5fa8\">재성형 q<tspan font-size=\"9\" dy=\"3\">ur</tspan></text>\n <path d=\"M40,50 L40,162\" stroke=\"#2c6e49\" stroke-width=\"1.6\"/>\n <path d=\"M36,50 L44,50 M36,162 L44,162\" stroke=\"#2c6e49\" stroke-width=\"1.6\"/>\n <text x=\"18\" y=\"112\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2c6e49\" transform=\"rotate(-90 18,112)\" text-anchor=\"middle\">S t</text>\n <!-- thixotropy -->\n <path d=\"M390,210 L390,25\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M390,210 L590,210\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"490\" y=\"236\" text-anchor=\"middle\" font-size=\"11.5\">시간 (log t)</text>\n <text x=\"366\" y=\"118\" font-size=\"11.5\" transform=\"rotate(-90 366,118)\" text-anchor=\"middle\">강도</text>\n <line x1=\"390\" y1=\"50\" x2=\"590\" y2=\"50\" stroke=\"#a8452a\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/>\n <text x=\"524\" y=\"44\" font-size=\"10.5\" fill=\"#a8452a\">원래 강도(불교란)</text>\n <path d=\"M390,178 C440,150 500,120 590,104\" fill=\"none\" stroke=\"#2c6e49\" stroke-width=\"2.6\"/>\n <circle cx=\"390\" cy=\"178\" r=\"4\" fill=\"#1f5fa8\"/>\n <text x=\"396\" y=\"196\" font-size=\"10.5\" fill=\"#1f5fa8\">교란 직후</text>\n <text x=\"470\" y=\"132\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2c6e49\">Thixotropy</text>\n <text x=\"480\" y=\"88\" font-size=\"10.5\" fill=\"#5f6672\">원상 회복은 못 함</text>\n</g>\n</svg>",
+   "a": "**그림 8 · 예민비와 틱소트로피 (이인모 그림 10.22 간략형)**|**작도 요령** — 왼쪽: 응력–변형률 곡선 두 개(불교란은 **뾰족하게 솟았다 급락**, 재성형은 **낮고 완만**). 두 피크의 비가 St. 오른쪽: 시간축에 강도가 **서서히 올라가되 원래 선까지는 못 닿는** 곡선. 이 두 장으로 예민비+틱소트로피가 동시에 설명됩니다.",
+   "tag": "그림",
+   "src": "s7"
+  },
+  {
+   "id": "01-G82",
    "ch": "제1장 흙의 성질",
    "sec": "팽창토와 활성영역 ★ 필수논점",
    "type": "figure",
-   "q": "그림 9 · 팽창 2단계와 활성영역\n\n백지에 그려 보세요.",
+   "q": "팽창 2단계와 활성영역\n\n백지에 그려 보세요.",
    "a": "**작도 요령** — 왼쪽 두 컷은 **선(점토판)+동그라미(물)**만으로 1·2단계 대비. 오른쪽은 **지층 3단(지표 / 활성영역 / 안정심도)**과 기초. **\"기초는 활성영역 아래로\"** 화살표 한 개가 대책의 결론입니다.",
    "svg": "<svg viewBox=\"0 0 620 260\" role=\"img\" aria-label=\"팽창 2단계와 활성영역 모식도\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <!-- stage 1 -->\n <text x=\"90\" y=\"20\" text-anchor=\"middle\" font-weight=\"700\" font-size=\"12.5\">1단계 · 간극 채움</text>\n <g stroke=\"#1f5fa8\" stroke-width=\"2.4\">\n  <path d=\"M30,44 L74,42\"/><path d=\"M32,66 L76,64\"/><path d=\"M30,88 L74,86\"/><path d=\"M32,110 L76,108\"/>\n  <path d=\"M100,44 L144,42\"/><path d=\"M102,66 L146,64\"/><path d=\"M100,88 L144,86\"/><path d=\"M102,110 L146,108\"/>\n </g>\n <g fill=\"#6fa8e8\" opacity=\".55\"><circle cx=\"88\" cy=\"54\" r=\"5\"/><circle cx=\"88\" cy=\"76\" r=\"5\"/><circle cx=\"88\" cy=\"98\" r=\"5\"/></g>\n <text x=\"90\" y=\"136\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5f6672\">간극수 채움 · 부피변화 작음</text>\n <!-- arrow -->\n <path d=\"M170,80 L214,80\" stroke=\"#a8452a\" stroke-width=\"2.2\" marker-end=\"url(#ar3)\"/>\n <defs><marker id=\"ar3\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#a8452a\"/></marker></defs>\n <text x=\"192\" y=\"72\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#a8452a\">w↑</text>\n <!-- stage 2 -->\n <text x=\"300\" y=\"20\" text-anchor=\"middle\" font-weight=\"700\" font-size=\"12.5\">2단계 · 광물 흡수 팽창</text>\n <g stroke=\"#a8452a\" stroke-width=\"2.4\">\n  <path d=\"M236,36 L280,34\"/><path d=\"M238,68 L282,66\"/><path d=\"M236,100 L280,98\"/><path d=\"M238,132 L282,130\"/>\n  <path d=\"M312,36 L356,34\"/><path d=\"M314,68 L358,66\"/><path d=\"M312,100 L356,98\"/><path d=\"M314,132 L358,130\"/>\n </g>\n <g fill=\"#e08b6c\" opacity=\".7\">\n  <circle cx=\"258\" cy=\"51\" r=\"4.5\"/><circle cx=\"258\" cy=\"83\" r=\"4.5\"/><circle cx=\"258\" cy=\"115\" r=\"4.5\"/>\n  <circle cx=\"334\" cy=\"51\" r=\"4.5\"/><circle cx=\"334\" cy=\"83\" r=\"4.5\"/><circle cx=\"334\" cy=\"115\" r=\"4.5\"/>\n  <circle cx=\"296\" cy=\"60\" r=\"5\"/><circle cx=\"296\" cy=\"106\" r=\"5\"/></g>\n <path d=\"M370,36 L370,132\" stroke=\"#a8452a\" stroke-width=\"1.6\"/>\n <path d=\"M366,36 L374,36 M366,132 L374,132\" stroke=\"#a8452a\" stroke-width=\"1.6\"/>\n <text x=\"378\" y=\"88\" font-size=\"11\" font-weight=\"700\" fill=\"#a8452a\">부피↑↑</text>\n <text x=\"300\" y=\"156\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5f6672\">2:1 층간 물 흡수 → 입자 자체 팽창</text>\n <!-- active zone -->\n <g transform=\"translate(430,26)\">\n  <rect x=\"0\" y=\"0\" width=\"160\" height=\"34\" fill=\"#fbf3dd\" stroke=\"#8a6a1f\" stroke-width=\"1.6\"/>\n  <rect x=\"0\" y=\"34\" width=\"160\" height=\"52\" fill=\"#fbeee9\" stroke=\"#a8452a\" stroke-width=\"1.8\"/>\n  <rect x=\"0\" y=\"86\" width=\"160\" height=\"70\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.4\"/>\n  <text x=\"80\" y=\"22\" text-anchor=\"middle\" font-size=\"10.5\">지표 · 증발/강우</text>\n  <text x=\"80\" y=\"58\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#a8452a\">활성영역</text>\n  <text x=\"80\" y=\"76\" text-anchor=\"middle\" font-size=\"10\" fill=\"#a8452a\">함수비 변화 반복 심도</text>\n  <text x=\"80\" y=\"112\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#1f5fa8\">함수비 일정</text>\n  <text x=\"80\" y=\"130\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#1f5fa8\">(안정 심도)</text>\n  <rect x=\"46\" y=\"-14\" width=\"68\" height=\"14\" fill=\"#4a5568\"/>\n  <text x=\"80\" y=\"-18\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\">기초</text>\n  <path d=\"M170,34 L170,86\" stroke=\"#2c6e49\" stroke-width=\"1.8\"/>\n  <path d=\"M166,34 L174,34 M166,86 L174,86\" stroke=\"#2c6e49\" stroke-width=\"1.8\"/>\n  <text x=\"180\" y=\"64\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2c6e49\">기초는</text>\n  <text x=\"180\" y=\"78\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2c6e49\">이 아래로</text>\n </g>\n</g>\n</svg>",
    "tag": "그림",
    "src": "s8"
   },
   {
-   "id": "01-G29",
+   "id": "01-G83",
+   "ch": "제1장 흙의 성질",
+   "sec": "팽창토와 활성영역 ★ 필수논점",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 620 260\" role=\"img\" aria-label=\"팽창 2단계와 활성영역 모식도\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <!-- stage 1 -->\n <text x=\"90\" y=\"20\" text-anchor=\"middle\" font-weight=\"700\" font-size=\"12.5\">1단계 · 간극 채움</text>\n <g stroke=\"#1f5fa8\" stroke-width=\"2.4\">\n  <path d=\"M30,44 L74,42\"/><path d=\"M32,66 L76,64\"/><path d=\"M30,88 L74,86\"/><path d=\"M32,110 L76,108\"/>\n  <path d=\"M100,44 L144,42\"/><path d=\"M102,66 L146,64\"/><path d=\"M100,88 L144,86\"/><path d=\"M102,110 L146,108\"/>\n </g>\n <g fill=\"#6fa8e8\" opacity=\".55\"><circle cx=\"88\" cy=\"54\" r=\"5\"/><circle cx=\"88\" cy=\"76\" r=\"5\"/><circle cx=\"88\" cy=\"98\" r=\"5\"/></g>\n <text x=\"90\" y=\"136\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5f6672\">간극수 채움 · 부피변화 작음</text>\n <!-- arrow -->\n <path d=\"M170,80 L214,80\" stroke=\"#a8452a\" stroke-width=\"2.2\" marker-end=\"url(#ar3)\"/>\n <defs><marker id=\"ar3\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#a8452a\"/></marker></defs>\n <text x=\"192\" y=\"72\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#a8452a\">w↑</text>\n <!-- stage 2 -->\n <text x=\"300\" y=\"20\" text-anchor=\"middle\" font-weight=\"700\" font-size=\"12.5\">2단계 · 광물 흡수 팽창</text>\n <g stroke=\"#a8452a\" stroke-width=\"2.4\">\n  <path d=\"M236,36 L280,34\"/><path d=\"M238,68 L282,66\"/><path d=\"M236,100 L280,98\"/><path d=\"M238,132 L282,130\"/>\n  <path d=\"M312,36 L356,34\"/><path d=\"M314,68 L358,66\"/><path d=\"M312,100 L356,98\"/><path d=\"M314,132 L358,130\"/>\n </g>\n <g fill=\"#e08b6c\" opacity=\".7\">\n  <circle cx=\"258\" cy=\"51\" r=\"4.5\"/><circle cx=\"258\" cy=\"83\" r=\"4.5\"/><circle cx=\"258\" cy=\"115\" r=\"4.5\"/>\n  <circle cx=\"334\" cy=\"51\" r=\"4.5\"/><circle cx=\"334\" cy=\"83\" r=\"4.5\"/><circle cx=\"334\" cy=\"115\" r=\"4.5\"/>\n  <circle cx=\"296\" cy=\"60\" r=\"5\"/><circle cx=\"296\" cy=\"106\" r=\"5\"/></g>\n <path d=\"M370,36 L370,132\" stroke=\"#a8452a\" stroke-width=\"1.6\"/>\n <path d=\"M366,36 L374,36 M366,132 L374,132\" stroke=\"#a8452a\" stroke-width=\"1.6\"/>\n <text x=\"378\" y=\"88\" font-size=\"11\" font-weight=\"700\" fill=\"#a8452a\">부피↑↑</text>\n <text x=\"300\" y=\"156\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5f6672\">2:1 층간 물 흡수 → 입자 자체 팽창</text>\n <!-- active zone -->\n <g transform=\"translate(430,26)\">\n  <rect x=\"0\" y=\"0\" width=\"160\" height=\"34\" fill=\"#fbf3dd\" stroke=\"#8a6a1f\" stroke-width=\"1.6\"/>\n  <rect x=\"0\" y=\"34\" width=\"160\" height=\"52\" fill=\"#fbeee9\" stroke=\"#a8452a\" stroke-width=\"1.8\"/>\n  <rect x=\"0\" y=\"86\" width=\"160\" height=\"70\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1.4\"/>\n  <text x=\"80\" y=\"22\" text-anchor=\"middle\" font-size=\"10.5\">지표 · 증발/강우</text>\n  <text x=\"80\" y=\"58\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#a8452a\">활성영역</text>\n  <text x=\"80\" y=\"76\" text-anchor=\"middle\" font-size=\"10\" fill=\"#a8452a\">함수비 변화 반복 심도</text>\n  <text x=\"80\" y=\"112\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#1f5fa8\">함수비 일정</text>\n  <text x=\"80\" y=\"130\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#1f5fa8\">(안정 심도)</text>\n  <rect x=\"46\" y=\"-14\" width=\"68\" height=\"14\" fill=\"#4a5568\"/>\n  <text x=\"80\" y=\"-18\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\">기초</text>\n  <path d=\"M170,34 L170,86\" stroke=\"#2c6e49\" stroke-width=\"1.8\"/>\n  <path d=\"M166,34 L174,34 M166,86 L174,86\" stroke=\"#2c6e49\" stroke-width=\"1.8\"/>\n  <text x=\"180\" y=\"64\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2c6e49\">기초는</text>\n  <text x=\"180\" y=\"78\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2c6e49\">이 아래로</text>\n </g>\n</g>\n</svg>",
+   "a": "**그림 9 · 팽창 2단계와 활성영역**|**작도 요령** — 왼쪽 두 컷은 **선(점토판)+동그라미(물)**만으로 1·2단계 대비. 오른쪽은 **지층 3단(지표 / 활성영역 / 안정심도)**과 기초. **\"기초는 활성영역 아래로\"** 화살표 한 개가 대책의 결론입니다.",
+   "tag": "그림",
+   "src": "s8"
+  },
+  {
+   "id": "01-G84",
    "ch": "제1장 흙의 성질",
    "sec": "삼상관계 — 관계식 한 판",
    "type": "figure",
-   "q": "그림 10 · 삼상관계도 (V=1 다이어그램 · 모든 문제의 출발점)\n\n백지에 그려 보세요.",
+   "q": "삼상관계도\n\n백지에 그려 보세요.",
    "a": "**작도 요령** — 직사각형 3칸(공기/물/흙) 그리고 **Vs=1**로 놓습니다. 그러면 Vv=e, Vw=Se, Ws=Gsγw, Ww=Seγw가 자동으로 채워지고, 단위중량 4종이 **전부 이 그림에서 나옵니다**. 삼상 문제는 무조건 이 그림부터 그리고 시작.",
    "svg": "<svg viewBox=\"0 0 600 260\" role=\"img\" aria-label=\"삼상관계 다이어그램\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <text x=\"300\" y=\"18\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#5f6672\">왼쪽 = 중량 &nbsp;|&nbsp; 오른쪽 = 부피 &nbsp;(관례)</text>\n <rect x=\"215\" y=\"34\" width=\"150\" height=\"46\" fill=\"#f2f5f8\" stroke=\"#5f6672\" stroke-width=\"1.6\"/>\n <rect x=\"215\" y=\"80\" width=\"150\" height=\"56\" fill=\"#dbe8f5\" stroke=\"#1f5fa8\" stroke-width=\"1.6\"/>\n <rect x=\"215\" y=\"136\" width=\"150\" height=\"82\" fill=\"#d9d3c6\" stroke=\"#1b1d21\" stroke-width=\"1.8\"/>\n <text x=\"290\" y=\"62\" text-anchor=\"middle\" font-weight=\"700\">공기 (air)</text>\n <text x=\"290\" y=\"113\" text-anchor=\"middle\" font-weight=\"700\">물 (water)</text>\n <text x=\"290\" y=\"183\" text-anchor=\"middle\" font-weight=\"700\">흙 입자 (solid)</text>\n <!-- right volume -->\n <g stroke=\"#1f5fa8\" stroke-width=\"1.5\">\n  <path d=\"M375,34 L375,80\"/><path d=\"M371,34 L379,34 M371,80 L379,80\"/>\n  <path d=\"M375,80 L375,136\"/><path d=\"M371,136 L379,136\"/>\n  <path d=\"M375,136 L375,218\"/><path d=\"M371,218 L379,218\"/>\n  <path d=\"M420,34 L420,136\"/><path d=\"M416,34 L424,34 M416,136 L424,136\"/>\n  <path d=\"M465,34 L465,218\"/><path d=\"M461,34 L469,34 M461,218 L469,218\"/></g>\n <g fill=\"#1f5fa8\" font-size=\"12\">\n  <text x=\"384\" y=\"60\">V<tspan font-size=\"9\" dy=\"3\">a</tspan></text>\n  <text x=\"384\" y=\"112\">V<tspan font-size=\"9\" dy=\"3\">w</tspan> = Se</text>\n  <text x=\"384\" y=\"182\">V<tspan font-size=\"9\" dy=\"3\">s</tspan> = 1</text>\n  <text x=\"429\" y=\"88\" font-weight=\"700\">V<tspan font-size=\"9\" dy=\"3\">v</tspan> = e</text>\n  <text x=\"474\" y=\"128\" font-weight=\"700\">V = 1 + e</text></g>\n <!-- left weight -->\n <g stroke=\"#a8452a\" stroke-width=\"1.5\">\n  <path d=\"M205,80 L205,136\"/><path d=\"M201,80 L209,80 M201,136 L209,136\"/>\n  <path d=\"M205,136 L205,218\"/><path d=\"M201,218 L209,218\"/>\n  <path d=\"M160,80 L160,218\"/><path d=\"M156,80 L164,80 M156,218 L164,218\"/></g>\n <g fill=\"#a8452a\" font-size=\"12\" text-anchor=\"end\">\n  <text x=\"196\" y=\"112\">W<tspan font-size=\"9\" dy=\"3\">w</tspan> = Se·γ<tspan font-size=\"9\" dy=\"3\">w</tspan></text>\n  <text x=\"196\" y=\"182\">W<tspan font-size=\"9\" dy=\"3\">s</tspan> = G<tspan font-size=\"9\" dy=\"3\">s</tspan>·γ<tspan font-size=\"9\" dy=\"3\">w</tspan></text>\n  <text x=\"151\" y=\"152\" font-weight=\"700\">W = (G<tspan font-size=\"9\" dy=\"3\">s</tspan>+Se)γ<tspan font-size=\"9\" dy=\"3\">w</tspan></text></g>\n <text x=\"300\" y=\"244\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2c6e49\">Vs = 1 로 놓으면 모든 관계식이 한 줄로 나온다</text>\n</g>\n</svg>",
    "tag": "그림",
    "src": "s9"
   },
   {
-   "id": "01-R30",
+   "id": "01-G85",
    "ch": "제1장 흙의 성질",
-   "sec": "이 장의 척추 — 중력이냐 전기력이냐",
-   "type": "recall",
-   "q": "흙이 압축되는 것은 입자가 찌그러져서입니까?",
-   "a": "아닙니다. 흙입자도 물도 **비압축성**입니다. 압축되는 건 **사이의 공기가 빠지고 물이 빠져서**입니다. 이것이 **압밀의 본질**이고, 전단파괴도 입자가 잘려서가 아니라 **입자들이 서로 미끄러져 자리를 바꿔서**입니다.",
-   "tag": "인출",
-   "src": "s0"
+   "sec": "삼상관계 — 관계식 한 판",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 600 260\" role=\"img\" aria-label=\"삼상관계 다이어그램\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"12\" fill=\"#1b1d21\">\n <text x=\"300\" y=\"18\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#5f6672\">왼쪽 = 중량 &nbsp;|&nbsp; 오른쪽 = 부피 &nbsp;(관례)</text>\n <rect x=\"215\" y=\"34\" width=\"150\" height=\"46\" fill=\"#f2f5f8\" stroke=\"#5f6672\" stroke-width=\"1.6\"/>\n <rect x=\"215\" y=\"80\" width=\"150\" height=\"56\" fill=\"#dbe8f5\" stroke=\"#1f5fa8\" stroke-width=\"1.6\"/>\n <rect x=\"215\" y=\"136\" width=\"150\" height=\"82\" fill=\"#d9d3c6\" stroke=\"#1b1d21\" stroke-width=\"1.8\"/>\n <text x=\"290\" y=\"62\" text-anchor=\"middle\" font-weight=\"700\">공기 (air)</text>\n <text x=\"290\" y=\"113\" text-anchor=\"middle\" font-weight=\"700\">물 (water)</text>\n <text x=\"290\" y=\"183\" text-anchor=\"middle\" font-weight=\"700\">흙 입자 (solid)</text>\n <!-- right volume -->\n <g stroke=\"#1f5fa8\" stroke-width=\"1.5\">\n  <path d=\"M375,34 L375,80\"/><path d=\"M371,34 L379,34 M371,80 L379,80\"/>\n  <path d=\"M375,80 L375,136\"/><path d=\"M371,136 L379,136\"/>\n  <path d=\"M375,136 L375,218\"/><path d=\"M371,218 L379,218\"/>\n  <path d=\"M420,34 L420,136\"/><path d=\"M416,34 L424,34 M416,136 L424,136\"/>\n  <path d=\"M465,34 L465,218\"/><path d=\"M461,34 L469,34 M461,218 L469,218\"/></g>\n <g fill=\"#1f5fa8\" font-size=\"12\">\n  <text x=\"384\" y=\"60\">V<tspan font-size=\"9\" dy=\"3\">a</tspan></text>\n  <text x=\"384\" y=\"112\">V<tspan font-size=\"9\" dy=\"3\">w</tspan> = Se</text>\n  <text x=\"384\" y=\"182\">V<tspan font-size=\"9\" dy=\"3\">s</tspan> = 1</text>\n  <text x=\"429\" y=\"88\" font-weight=\"700\">V<tspan font-size=\"9\" dy=\"3\">v</tspan> = e</text>\n  <text x=\"474\" y=\"128\" font-weight=\"700\">V = 1 + e</text></g>\n <!-- left weight -->\n <g stroke=\"#a8452a\" stroke-width=\"1.5\">\n  <path d=\"M205,80 L205,136\"/><path d=\"M201,80 L209,80 M201,136 L209,136\"/>\n  <path d=\"M205,136 L205,218\"/><path d=\"M201,218 L209,218\"/>\n  <path d=\"M160,80 L160,218\"/><path d=\"M156,80 L164,80 M156,218 L164,218\"/></g>\n <g fill=\"#a8452a\" font-size=\"12\" text-anchor=\"end\">\n  <text x=\"196\" y=\"112\">W<tspan font-size=\"9\" dy=\"3\">w</tspan> = Se·γ<tspan font-size=\"9\" dy=\"3\">w</tspan></text>\n  <text x=\"196\" y=\"182\">W<tspan font-size=\"9\" dy=\"3\">s</tspan> = G<tspan font-size=\"9\" dy=\"3\">s</tspan>·γ<tspan font-size=\"9\" dy=\"3\">w</tspan></text>\n  <text x=\"151\" y=\"152\" font-weight=\"700\">W = (G<tspan font-size=\"9\" dy=\"3\">s</tspan>+Se)γ<tspan font-size=\"9\" dy=\"3\">w</tspan></text></g>\n <text x=\"300\" y=\"244\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2c6e49\">Vs = 1 로 놓으면 모든 관계식이 한 줄로 나온다</text>\n</g>\n</svg>",
+   "a": "**그림 10 · 삼상관계도 (V=1 다이어그램 · 모든 문제의 출발점)**|**작도 요령** — 직사각형 3칸(공기/물/흙) 그리고 **Vs=1**로 놓습니다. 그러면 Vv=e, Vw=Se, Ws=Gsγw, Ww=Seγw가 자동으로 채워지고, 단위중량 4종이 **전부 이 그림에서 나옵니다**. 삼상 문제는 무조건 이 그림부터 그리고 시작.",
+   "tag": "그림",
+   "src": "s9"
   },
   {
-   "id": "01-R31",
-   "ch": "제1장 흙의 성질",
-   "sec": "흙의 생성 — 잔적토와 퇴적토",
-   "type": "recall",
-   "q": "홍적층과 충적층은 압밀 거동이 어떻게 다릅니까?",
-   "a": "**홍적층**은 200만~1만년 전 퇴적으로 오래 눌려 **과압밀(OC) 거동**, **충적층**은 1만년 이후라 덜 눌려 **정규압밀(NC) 거동**입니다. 생성 시기 하나가 압밀 거동을 결정합니다.",
-   "tag": "인출",
-   "src": "s1"
-  },
-  {
-   "id": "01-R32",
-   "ch": "제1장 흙의 성질",
-   "sec": "점토광물 — 기본단위·3종·동형치환",
-   "type": "recall",
-   "q": "몬모릴로나이트의 표면적이 800 m²/g이라는 게 왜 중요합니까?",
-   "a": "표면적이 크면 **물을 붙잡을 자리가 많아** 확산이중층이 두꺼워지고, 반발력이 커져 **이산·팽창**으로 갑니다. 이 인과사슬 하나로 **활성도·팽창성·예민비**가 전부 설명됩니다.",
-   "tag": "인출",
-   "src": "s2"
-  },
-  {
-   "id": "01-R33",
-   "ch": "제1장 흙의 성질",
-   "sec": "확산이중층과 흡착수",
-   "type": "recall",
-   "q": "염분이 있으면 확산이중층은 두꺼워집니까, 얇아집니까?",
-   "a": "**얇아집니다.** 전해질 농도가 높으면 이중층이 압축되기 때문입니다. 그래서 해성점토는 반발력이 줄어 **면모구조**가 되고, 이것이 나중에 **Quick clay**의 출발점이 됩니다.",
-   "tag": "인출",
-   "src": "s3"
-  },
-  {
-   "id": "01-R34",
-   "ch": "제1장 흙의 성질",
-   "sec": "확산이중층과 흡착수",
-   "type": "recall",
-   "q": "석회로 팽창토를 안정처리하면 왜 팽창이 줄어듭니까?",
-   "a": "석회의 **Ca²⁺(2가 양이온)**이 기존 1가 양이온을 치환하면서 **확산이중층을 얇게** 만들기 때문입니다. 이중층이 얇아지면 반발력이 줄고 물을 붙잡는 힘도 줄어 **팽창성이 감소**합니다.",
-   "tag": "인출",
-   "src": "s3"
-  },
-  {
-   "id": "01-R35",
-   "ch": "제1장 흙의 성질",
-   "sec": "확산이중층과 흡착수",
-   "type": "recall",
-   "q": "함수비 시험을 150℃에서 하면 무엇이 잘못됩니까?",
-   "a": "**흡착수까지 증발**합니다. 흡착수는 **토립자의 일부**로 봐야 하는데 그것까지 물로 세어버리므로 **함수비가 과대평가**되고, 이후 간극비·포화도·단위중량 계산이 전부 틀어집니다.",
-   "tag": "인출",
-   "src": "s3"
-  },
-  {
-   "id": "01-R36",
-   "ch": "제1장 흙의 성질",
-   "sec": "면모구조 vs 이산구조 ★ 필수논점",
-   "type": "recall",
-   "q": "면모구조와 이산구조 중 압축성이 작은 쪽은?",
-   "a": "**압력 수준에 따라 역전됩니다.** 낮은 압력에서는 면모가 결합력 때문에 압축성이 작지만, **높은 압력에서는 결합이 깨지면서 성긴 구조가 무너져 면모가 오히려 압축성이 큽니다.** 이 역전을 안 쓰면 반쪽 답안입니다.",
-   "tag": "인출",
-   "src": "s4"
-  },
-  {
-   "id": "01-R37",
-   "ch": "제1장 흙의 성질",
-   "sec": "애터버그 한계 · PI · LI · 소성도",
-   "type": "recall",
-   "q": "액성지수와 과압밀비는 어떤 관계입니까?",
-   "a": "**반비례**입니다. 과압밀 점토는 과거에 더 큰 하중을 받아 간극비와 함수비가 작으므로 **LI가 작고 OCR은 큽니다**. 정규압밀은 반대로 LI가 1 부근이고 OCR은 1입니다.",
-   "tag": "인출",
-   "src": "s5"
-  },
-  {
-   "id": "01-R38",
-   "ch": "제1장 흙의 성질",
-   "sec": "애터버그 한계 · PI · LI · 소성도",
-   "type": "recall",
-   "q": "측정 결과 LL=40, PI=32가 나왔습니다. 어떻게 판단합니까?",
-   "a": "U선은 PI = 0.9(40−8) = **28.8**입니다. 측정값 32가 **U선을 넘었으므로 시험 오류**입니다. 재시험해야 합니다.",
-   "tag": "인출",
-   "src": "s5"
-  },
-  {
-   "id": "01-R39",
-   "ch": "제1장 흙의 성질",
-   "sec": "애터버그 한계 · PI · LI · 소성도",
-   "type": "recall",
-   "q": "액성지수와 상대밀도의 공통 구조를 한 문장으로 말하면?",
-   "a": "둘 다 **양 극단 사이에서 현재 상태가 어디에 있는지를 0~1로 정규화**한 지표입니다. LI는 **PL~LL 사이의 함수비**, Dr은 **e_min~e_max 사이의 간극비**를 봅니다.",
-   "tag": "인출",
-   "src": "s5"
-  },
-  {
-   "id": "01-R40",
-   "ch": "제1장 흙의 성질",
-   "sec": "활성도 ★ 필수논점",
-   "type": "recall",
-   "q": "활성도가 큰 흙이 팽창성도 큰 이유를 한 줄로 이으면?",
-   "a": "활성도가 크다 = 같은 점토 함유율에서 **소성지수가 크다** = 흡착수를 많이 붙잡는다 = **비표면적이 크다** = 몬모릴로나이트 계열이다. 그래서 물을 만나면 층간으로 물이 들어가 **팽창**합니다.",
-   "tag": "인출",
-   "src": "s6"
-  },
-  {
-   "id": "01-R41",
-   "ch": "제1장 흙의 성질",
-   "sec": "예민비 · Quick Clay · 틱소트로피 ★ 필수논점",
-   "type": "recall",
-   "q": "Quick Clay와 Quick Sand는 원인이 어떻게 다릅니까?",
-   "a": "**Quick Clay는 구조·화학**의 문제입니다 — 염분 용탈(Leaching)로 카드하우스의 결합력만 사라진 상태에서 교란되면 붕괴합니다. **Quick Sand는 수리**의 문제입니다 — 상향침투로 **유효응력이 0**이 됩니다. 결과는 둘 다 전단강도 상실로 같습니다.",
-   "tag": "인출",
-   "src": "s7"
-  },
-  {
-   "id": "01-R42",
-   "ch": "제1장 흙의 성질",
-   "sec": "예민비 · Quick Clay · 틱소트로피 ★ 필수논점",
-   "type": "recall",
-   "q": "Quick clay 대책을 발생 3조건에서 끌어내면?",
-   "a": "**조건 하나만 끊으면 됩니다.** ①예민비 → **지반개량(고결·치환)**으로 결합력 회복 ②LI > 1 → **배수·프리로딩**으로 함수비 저감 ③동적하중 → **발파·항타 진동 관리**와 이격거리 확보.",
-   "tag": "인출",
-   "src": "s7"
-  },
-  {
-   "id": "01-R43",
-   "ch": "제1장 흙의 성질",
-   "sec": "팽창토와 활성영역 ★ 필수논점",
-   "type": "recall",
-   "q": "팽창토 대책에서 기초를 활성영역 아래로 내리는 이유는?",
-   "a": "활성영역은 **계절적 함수비 변화가 반복되는 심도**라 팽창·수축이 되풀이됩니다. 그 아래는 함수비가 안정적이므로 **체적변화가 기초에 전달되지 않습니다**.",
-   "tag": "인출",
-   "src": "s8"
-  },
-  {
-   "id": "01-R44",
+   "id": "01-R100",
    "ch": "제1장 흙의 성질",
    "sec": "삼상관계 — 관계식 한 판",
    "type": "recall",
@@ -464,7 +894,7 @@
    "src": "s9"
   },
   {
-   "id": "01-R45",
+   "id": "01-R101",
    "ch": "제1장 흙의 성질",
    "sec": "삼상관계 — 관계식 한 판",
    "type": "recall",
@@ -474,7 +904,7 @@
    "src": "s9"
   },
   {
-   "id": "01-R46",
+   "id": "01-R102",
    "ch": "제1장 흙의 성질",
    "sec": "통일분류법 상세 — 문자 두 개가 정해지는 규칙",
    "type": "recall",
@@ -484,7 +914,7 @@
    "src": "sUC"
   },
   {
-   "id": "01-R47",
+   "id": "01-R103",
    "ch": "제1장 흙의 성질",
    "sec": "군지수와 AASHTO — 노상토 적부를 숫자 하나로",
    "type": "recall",
@@ -494,7 +924,147 @@
    "src": "sGI"
   },
   {
-   "id": "01-T83",
+   "id": "01-R86",
+   "ch": "제1장 흙의 성질",
+   "sec": "이 장의 척추 — 중력이냐 전기력이냐",
+   "type": "recall",
+   "q": "흙이 압축되는 것은 입자가 찌그러져서입니까?",
+   "a": "아닙니다. 흙입자도 물도 **비압축성**입니다. 압축되는 건 **사이의 공기가 빠지고 물이 빠져서**입니다. 이것이 **압밀의 본질**이고, 전단파괴도 입자가 잘려서가 아니라 **입자들이 서로 미끄러져 자리를 바꿔서**입니다.",
+   "tag": "인출",
+   "src": "s0"
+  },
+  {
+   "id": "01-R87",
+   "ch": "제1장 흙의 성질",
+   "sec": "흙의 생성 — 잔적토와 퇴적토",
+   "type": "recall",
+   "q": "홍적층과 충적층은 압밀 거동이 어떻게 다릅니까?",
+   "a": "**홍적층**은 200만~1만년 전 퇴적으로 오래 눌려 **과압밀(OC) 거동**, **충적층**은 1만년 이후라 덜 눌려 **정규압밀(NC) 거동**입니다. 생성 시기 하나가 압밀 거동을 결정합니다.",
+   "tag": "인출",
+   "src": "s1"
+  },
+  {
+   "id": "01-R88",
+   "ch": "제1장 흙의 성질",
+   "sec": "점토광물 — 기본단위·3종·동형치환",
+   "type": "recall",
+   "q": "몬모릴로나이트의 표면적이 800 m²/g이라는 게 왜 중요합니까?",
+   "a": "표면적이 크면 **물을 붙잡을 자리가 많아** 확산이중층이 두꺼워지고, 반발력이 커져 **이산·팽창**으로 갑니다. 이 인과사슬 하나로 **활성도·팽창성·예민비**가 전부 설명됩니다.",
+   "tag": "인출",
+   "src": "s2"
+  },
+  {
+   "id": "01-R89",
+   "ch": "제1장 흙의 성질",
+   "sec": "확산이중층과 흡착수",
+   "type": "recall",
+   "q": "염분이 있으면 확산이중층은 두꺼워집니까, 얇아집니까?",
+   "a": "**얇아집니다.** 전해질 농도가 높으면 이중층이 압축되기 때문입니다. 그래서 해성점토는 반발력이 줄어 **면모구조**가 되고, 이것이 나중에 **Quick clay**의 출발점이 됩니다.",
+   "tag": "인출",
+   "src": "s3"
+  },
+  {
+   "id": "01-R90",
+   "ch": "제1장 흙의 성질",
+   "sec": "확산이중층과 흡착수",
+   "type": "recall",
+   "q": "석회로 팽창토를 안정처리하면 왜 팽창이 줄어듭니까?",
+   "a": "석회의 **Ca²⁺(2가 양이온)**이 기존 1가 양이온을 치환하면서 **확산이중층을 얇게** 만들기 때문입니다. 이중층이 얇아지면 반발력이 줄고 물을 붙잡는 힘도 줄어 **팽창성이 감소**합니다.",
+   "tag": "인출",
+   "src": "s3"
+  },
+  {
+   "id": "01-R91",
+   "ch": "제1장 흙의 성질",
+   "sec": "확산이중층과 흡착수",
+   "type": "recall",
+   "q": "함수비 시험을 150℃에서 하면 무엇이 잘못됩니까?",
+   "a": "**흡착수까지 증발**합니다. 흡착수는 **토립자의 일부**로 봐야 하는데 그것까지 물로 세어버리므로 **함수비가 과대평가**되고, 이후 간극비·포화도·단위중량 계산이 전부 틀어집니다.",
+   "tag": "인출",
+   "src": "s3"
+  },
+  {
+   "id": "01-R92",
+   "ch": "제1장 흙의 성질",
+   "sec": "면모구조 vs 이산구조 ★ 필수논점",
+   "type": "recall",
+   "q": "면모구조와 이산구조 중 압축성이 작은 쪽은?",
+   "a": "**압력 수준에 따라 역전됩니다.** 낮은 압력에서는 면모가 결합력 때문에 압축성이 작지만, **높은 압력에서는 결합이 깨지면서 성긴 구조가 무너져 면모가 오히려 압축성이 큽니다.** 이 역전을 안 쓰면 반쪽 답안입니다.",
+   "tag": "인출",
+   "src": "s4"
+  },
+  {
+   "id": "01-R93",
+   "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "recall",
+   "q": "액성지수와 과압밀비는 어떤 관계입니까?",
+   "a": "**반비례**입니다. 과압밀 점토는 과거에 더 큰 하중을 받아 간극비와 함수비가 작으므로 **LI가 작고 OCR은 큽니다**. 정규압밀은 반대로 LI가 1 부근이고 OCR은 1입니다.",
+   "tag": "인출",
+   "src": "s5"
+  },
+  {
+   "id": "01-R94",
+   "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "recall",
+   "q": "측정 결과 LL=40, PI=32가 나왔습니다. 어떻게 판단합니까?",
+   "a": "U선은 PI = 0.9(40−8) = **28.8**입니다. 측정값 32가 **U선을 넘었으므로 시험 오류**입니다. 재시험해야 합니다.",
+   "tag": "인출",
+   "src": "s5"
+  },
+  {
+   "id": "01-R95",
+   "ch": "제1장 흙의 성질",
+   "sec": "애터버그 한계 · PI · LI · 소성도",
+   "type": "recall",
+   "q": "액성지수와 상대밀도의 공통 구조를 한 문장으로 말하면?",
+   "a": "둘 다 **양 극단 사이에서 현재 상태가 어디에 있는지를 0~1로 정규화**한 지표입니다. LI는 **PL~LL 사이의 함수비**, Dr은 **e_min~e_max 사이의 간극비**를 봅니다.",
+   "tag": "인출",
+   "src": "s5"
+  },
+  {
+   "id": "01-R96",
+   "ch": "제1장 흙의 성질",
+   "sec": "활성도 ★ 필수논점",
+   "type": "recall",
+   "q": "활성도가 큰 흙이 팽창성도 큰 이유를 한 줄로 이으면?",
+   "a": "활성도가 크다 = 같은 점토 함유율에서 **소성지수가 크다** = 흡착수를 많이 붙잡는다 = **비표면적이 크다** = 몬모릴로나이트 계열이다. 그래서 물을 만나면 층간으로 물이 들어가 **팽창**합니다.",
+   "tag": "인출",
+   "src": "s6"
+  },
+  {
+   "id": "01-R97",
+   "ch": "제1장 흙의 성질",
+   "sec": "예민비 · Quick Clay · 틱소트로피 ★ 필수논점",
+   "type": "recall",
+   "q": "Quick Clay와 Quick Sand는 원인이 어떻게 다릅니까?",
+   "a": "**Quick Clay는 구조·화학**의 문제입니다 — 염분 용탈(Leaching)로 카드하우스의 결합력만 사라진 상태에서 교란되면 붕괴합니다. **Quick Sand는 수리**의 문제입니다 — 상향침투로 **유효응력이 0**이 됩니다. 결과는 둘 다 전단강도 상실로 같습니다.",
+   "tag": "인출",
+   "src": "s7"
+  },
+  {
+   "id": "01-R98",
+   "ch": "제1장 흙의 성질",
+   "sec": "예민비 · Quick Clay · 틱소트로피 ★ 필수논점",
+   "type": "recall",
+   "q": "Quick clay 대책을 발생 3조건에서 끌어내면?",
+   "a": "**조건 하나만 끊으면 됩니다.** ①예민비 → **지반개량(고결·치환)**으로 결합력 회복 ②LI > 1 → **배수·프리로딩**으로 함수비 저감 ③동적하중 → **발파·항타 진동 관리**와 이격거리 확보.",
+   "tag": "인출",
+   "src": "s7"
+  },
+  {
+   "id": "01-R99",
+   "ch": "제1장 흙의 성질",
+   "sec": "팽창토와 활성영역 ★ 필수논점",
+   "type": "recall",
+   "q": "팽창토 대책에서 기초를 활성영역 아래로 내리는 이유는?",
+   "a": "활성영역은 **계절적 함수비 변화가 반복되는 심도**라 팽창·수축이 되풀이됩니다. 그 아래는 함수비가 안정적이므로 **체적변화가 기초에 전달되지 않습니다**.",
+   "tag": "인출",
+   "src": "s8"
+  },
+  {
+   "id": "01-T139",
    "ch": "제1장 흙의 성질",
    "sec": "점토광물 — 기본단위·3종·동형치환",
    "type": "table",
@@ -504,7 +1074,7 @@
    "src": "s2"
   },
   {
-   "id": "01-T84",
+   "id": "01-T140",
    "ch": "제1장 흙의 성질",
    "sec": "면모구조 vs 이산구조 ★ 필수논점",
    "type": "table",
@@ -514,7 +1084,7 @@
    "src": "s4"
   },
   {
-   "id": "01-T85",
+   "id": "01-T141",
    "ch": "제1장 흙의 성질",
    "sec": "활성도 ★ 필수논점",
    "type": "table",
@@ -524,7 +1094,7 @@
    "src": "s6"
   },
   {
-   "id": "01-T86",
+   "id": "01-T142",
    "ch": "제1장 흙의 성질",
    "sec": "예민비 · Quick Clay · 틱소트로피 ★ 필수논점",
    "type": "table",
@@ -534,7 +1104,7 @@
    "src": "s7"
   },
   {
-   "id": "01-T87",
+   "id": "01-T143",
    "ch": "제1장 흙의 성질",
    "sec": "삼상관계 — 관계식 한 판",
    "type": "table",
@@ -544,7 +1114,7 @@
    "src": "s9"
   },
   {
-   "id": "01-T88",
+   "id": "01-T144",
    "ch": "제1장 흙의 성질",
    "sec": "통일분류법 상세 — 문자 두 개가 정해지는 규칙",
    "type": "table",
@@ -554,7 +1124,7 @@
    "src": "sUC"
   },
   {
-   "id": "01-T89",
+   "id": "01-T145",
    "ch": "제1장 흙의 성질",
    "sec": "통일분류법 상세 — 문자 두 개가 정해지는 규칙",
    "type": "table",
@@ -564,7 +1134,7 @@
    "src": "sUC"
   },
   {
-   "id": "01-T90",
+   "id": "01-T146",
    "ch": "제1장 흙의 성질",
    "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
    "type": "table",
@@ -574,7 +1144,7 @@
    "src": "s11"
   },
   {
-   "id": "01-T91",
+   "id": "01-T147",
    "ch": "제1장 흙의 성질",
    "sec": "실제 기출 — 개념 묶음별 (중복 묶고 + 넣을 것)",
    "type": "table",
@@ -584,7 +1154,7 @@
    "src": "s11"
   },
   {
-   "id": "01-S48",
+   "id": "01-S104",
    "ch": "제1장 흙의 성질",
    "sec": "흙의 생성 — 잔적토와 퇴적토",
    "type": "sal",
@@ -594,7 +1164,7 @@
    "src": "s1"
   },
   {
-   "id": "01-S49",
+   "id": "01-S105",
    "ch": "제1장 흙의 성질",
    "sec": "흙의 생성 — 잔적토와 퇴적토",
    "type": "sal",
@@ -604,7 +1174,7 @@
    "src": "s1"
   },
   {
-   "id": "01-S50",
+   "id": "01-S106",
    "ch": "제1장 흙의 성질",
    "sec": "점토광물 — 기본단위·3종·동형치환",
    "type": "sal",
@@ -614,7 +1184,7 @@
    "src": "s2"
   },
   {
-   "id": "01-S51",
+   "id": "01-S107",
    "ch": "제1장 흙의 성질",
    "sec": "점토광물 — 기본단위·3종·동형치환",
    "type": "sal",
@@ -624,7 +1194,7 @@
    "src": "s2"
   },
   {
-   "id": "01-S52",
+   "id": "01-S108",
    "ch": "제1장 흙의 성질",
    "sec": "점토광물 — 기본단위·3종·동형치환",
    "type": "sal",
@@ -634,7 +1204,7 @@
    "src": "s2"
   },
   {
-   "id": "01-S53",
+   "id": "01-S109",
    "ch": "제1장 흙의 성질",
    "sec": "확산이중층과 흡착수",
    "type": "sal",
@@ -644,7 +1214,7 @@
    "src": "s3"
   },
   {
-   "id": "01-S54",
+   "id": "01-S110",
    "ch": "제1장 흙의 성질",
    "sec": "확산이중층과 흡착수",
    "type": "sal",
@@ -654,7 +1224,7 @@
    "src": "s3"
   },
   {
-   "id": "01-S55",
+   "id": "01-S111",
    "ch": "제1장 흙의 성질",
    "sec": "확산이중층과 흡착수",
    "type": "sal",
@@ -664,7 +1234,7 @@
    "src": "s3"
   },
   {
-   "id": "01-S56",
+   "id": "01-S112",
    "ch": "제1장 흙의 성질",
    "sec": "면모구조 vs 이산구조 ★ 필수논점",
    "type": "sal",
@@ -674,7 +1244,7 @@
    "src": "s4"
   },
   {
-   "id": "01-S57",
+   "id": "01-S113",
    "ch": "제1장 흙의 성질",
    "sec": "애터버그 한계 · PI · LI · 소성도",
    "type": "sal",
@@ -684,7 +1254,7 @@
    "src": "s5"
   },
   {
-   "id": "01-S58",
+   "id": "01-S114",
    "ch": "제1장 흙의 성질",
    "sec": "애터버그 한계 · PI · LI · 소성도",
    "type": "sal",
@@ -694,7 +1264,7 @@
    "src": "s5"
   },
   {
-   "id": "01-S59",
+   "id": "01-S115",
    "ch": "제1장 흙의 성질",
    "sec": "애터버그 한계 · PI · LI · 소성도",
    "type": "sal",
@@ -704,7 +1274,7 @@
    "src": "s5"
   },
   {
-   "id": "01-S60",
+   "id": "01-S116",
    "ch": "제1장 흙의 성질",
    "sec": "애터버그 한계 · PI · LI · 소성도",
    "type": "sal",
@@ -714,7 +1284,7 @@
    "src": "s5"
   },
   {
-   "id": "01-S61",
+   "id": "01-S117",
    "ch": "제1장 흙의 성질",
    "sec": "애터버그 한계 · PI · LI · 소성도",
    "type": "sal",
@@ -724,7 +1294,7 @@
    "src": "s5"
   },
   {
-   "id": "01-S62",
+   "id": "01-S118",
    "ch": "제1장 흙의 성질",
    "sec": "애터버그 한계 · PI · LI · 소성도",
    "type": "sal",
@@ -734,7 +1304,7 @@
    "src": "s5"
   },
   {
-   "id": "01-S63",
+   "id": "01-S119",
    "ch": "제1장 흙의 성질",
    "sec": "활성도 ★ 필수논점",
    "type": "sal",
@@ -744,7 +1314,7 @@
    "src": "s6"
   },
   {
-   "id": "01-S64",
+   "id": "01-S120",
    "ch": "제1장 흙의 성질",
    "sec": "활성도 ★ 필수논점",
    "type": "sal",
@@ -754,7 +1324,7 @@
    "src": "s6"
   },
   {
-   "id": "01-S65",
+   "id": "01-S121",
    "ch": "제1장 흙의 성질",
    "sec": "예민비 · Quick Clay · 틱소트로피 ★ 필수논점",
    "type": "sal",
@@ -764,7 +1334,7 @@
    "src": "s7"
   },
   {
-   "id": "01-S66",
+   "id": "01-S122",
    "ch": "제1장 흙의 성질",
    "sec": "예민비 · Quick Clay · 틱소트로피 ★ 필수논점",
    "type": "sal",
@@ -774,7 +1344,7 @@
    "src": "s7"
   },
   {
-   "id": "01-S67",
+   "id": "01-S123",
    "ch": "제1장 흙의 성질",
    "sec": "예민비 · Quick Clay · 틱소트로피 ★ 필수논점",
    "type": "sal",
@@ -784,7 +1354,7 @@
    "src": "s7"
   },
   {
-   "id": "01-S68",
+   "id": "01-S124",
    "ch": "제1장 흙의 성질",
    "sec": "팽창토와 활성영역 ★ 필수논점",
    "type": "sal",
@@ -794,7 +1364,7 @@
    "src": "s8"
   },
   {
-   "id": "01-S69",
+   "id": "01-S125",
    "ch": "제1장 흙의 성질",
    "sec": "팽창토와 활성영역 ★ 필수논점",
    "type": "sal",
@@ -804,7 +1374,7 @@
    "src": "s8"
   },
   {
-   "id": "01-S70",
+   "id": "01-S126",
    "ch": "제1장 흙의 성질",
    "sec": "삼상관계 — 관계식 한 판",
    "type": "sal",
@@ -814,7 +1384,7 @@
    "src": "s9"
   },
   {
-   "id": "01-S71",
+   "id": "01-S127",
    "ch": "제1장 흙의 성질",
    "sec": "삼상관계 — 관계식 한 판",
    "type": "sal",
@@ -824,7 +1394,7 @@
    "src": "s9"
   },
   {
-   "id": "01-S72",
+   "id": "01-S128",
    "ch": "제1장 흙의 성질",
    "sec": "삼상관계 — 관계식 한 판",
    "type": "sal",
@@ -834,7 +1404,7 @@
    "src": "s9"
   },
   {
-   "id": "01-S73",
+   "id": "01-S129",
    "ch": "제1장 흙의 성질",
    "sec": "삼상관계 — 관계식 한 판",
    "type": "sal",
@@ -844,7 +1414,7 @@
    "src": "s9"
   },
   {
-   "id": "01-S74",
+   "id": "01-S130",
    "ch": "제1장 흙의 성질",
    "sec": "삼상관계 — 관계식 한 판",
    "type": "sal",
@@ -854,7 +1424,7 @@
    "src": "s9"
   },
   {
-   "id": "01-S75",
+   "id": "01-S131",
    "ch": "제1장 흙의 성질",
    "sec": "삼상관계 — 관계식 한 판",
    "type": "sal",
@@ -864,7 +1434,7 @@
    "src": "s9"
   },
   {
-   "id": "01-S76",
+   "id": "01-S132",
    "ch": "제1장 흙의 성질",
    "sec": "삼상관계 — 관계식 한 판",
    "type": "sal",
@@ -874,7 +1444,7 @@
    "src": "s9"
   },
   {
-   "id": "01-S77",
+   "id": "01-S133",
    "ch": "제1장 흙의 성질",
    "sec": "통일분류법 상세 — 문자 두 개가 정해지는 규칙",
    "type": "sal",
@@ -884,7 +1454,7 @@
    "src": "sUC"
   },
   {
-   "id": "01-S78",
+   "id": "01-S134",
    "ch": "제1장 흙의 성질",
    "sec": "통일분류법 상세 — 문자 두 개가 정해지는 규칙",
    "type": "sal",
@@ -894,7 +1464,7 @@
    "src": "sUC"
   },
   {
-   "id": "01-S79",
+   "id": "01-S135",
    "ch": "제1장 흙의 성질",
    "sec": "군지수와 AASHTO — 노상토 적부를 숫자 하나로",
    "type": "sal",
@@ -904,7 +1474,7 @@
    "src": "sGI"
   },
   {
-   "id": "01-S80",
+   "id": "01-S136",
    "ch": "제1장 흙의 성질",
    "sec": "군지수와 AASHTO — 노상토 적부를 숫자 하나로",
    "type": "sal",
@@ -914,7 +1484,7 @@
    "src": "sGI"
   },
   {
-   "id": "01-S81",
+   "id": "01-S137",
    "ch": "제1장 흙의 성질",
    "sec": "에이징 — 시간이 흙을 과압밀로 만든다",
    "type": "sal",
@@ -924,7 +1494,7 @@
    "src": "sAG"
   },
   {
-   "id": "01-S82",
+   "id": "01-S138",
    "ch": "제1장 흙의 성질",
    "sec": "에이징 — 시간이 흙을 과압밀로 만든다",
    "type": "sal",

@@ -32,6 +32,8 @@ os.makedirs(PKGDIR, exist_ok=True)
 W("app/src/main/AndroidManifest.xml", '''<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
@@ -416,36 +418,7 @@ W("app/src/main/res/drawable/ic_launcher_fg.xml", '''<vector xmlns:android="http
 </vector>
 ''')
 
-# ─────────────────────────────── Actions
-W(".github/workflows/build.yml", '''name: Build APK
-
-on:
-  push:
-    branches: [ main, master ]
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: '17'
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-      - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v4
-      - name: Build debug APK
-        run: gradle assembleDebug --no-daemon --stacktrace
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: toji-tteum-debug-apk
-          path: app/build/outputs/apk/debug/*.apk
-''')
+# Actions 워크플로우는 저장소 루트(.github/workflows/)에 있다 — 하위 폴더는 인식되지 않는다
 
 # ─────────────────────────────── assets = 웹앱 그대로
 os.makedirs(os.path.join(APP, "app/src/main/assets"), exist_ok=True)

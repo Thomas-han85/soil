@@ -10,7 +10,9 @@ import os, io, json, html
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOT = os.path.dirname(HERE)
-CARDS = json.load(io.open(os.path.join(BOT, "cards.json"), encoding="utf-8"))
+RAW = json.load(io.open(os.path.join(BOT, "cards.json"), encoding="utf-8"))
+CARDS = RAW["cards"] if isinstance(RAW, dict) else RAW
+VER = RAW.get("ver", 1) if isinstance(RAW, dict) else 1
 
 # 질문 문구 다듬기
 FIX = {
@@ -61,6 +63,8 @@ main{flex:1;display:flex;align-items:center;justify-content:center;padding:18px 
 .a{border-top:1px dashed var(--line);margin-top:18px;padding-top:16px;font-size:1.02rem;line-height:1.8}
 .a b{color:var(--rust)}
 .a .ln{margin:5px 0}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;margin-bottom:12px}
+.fig svg{max-width:100%;height:auto;display:block;margin:0 auto}
 .a table{border-collapse:collapse;width:100%;font-size:.9rem;margin-top:6px}
 .a td{border:1px solid var(--line);padding:5px 8px;vertical-align:top}
 .a tr:first-child td{background:var(--blueF);color:var(--blue);font-weight:700}
@@ -193,7 +197,8 @@ function render(){
     + '<div class="meta"><span class="bdg '+bc+'">'+cur.tag+'</span>'
     + '<span class="bdg b-n">'+cur.sec+'</span>'+mark
     + '<span class="hint" style="margin-left:auto">'+cur.id+'</span></div>'
-    + '<p class="q">'+cur.q+'</p>'
+    + '<p class="q">'+cur.q.replace(/
+/g,'<br>')+'</p>'
     + '<p class="hint">소리 내어 답해 보세요. 막혀도 버티는 게 효과입니다.</p>'
     + '<div class="timer" id="tm">3</div>'
     + '<div id="ans"></div>'
@@ -218,7 +223,8 @@ function reveal(){
   shown = true; hush();
   if(tmr){ clearInterval(tmr); tmr=null; }
   var t=document.getElementById('tm'); if(t) t.style.display='none';
-  document.getElementById('ans').innerHTML = '<div class="a">'+fmtAns(cur.a)+'</div>';
+  var extra = cur.svg ? '<div class="fig">'+cur.svg+'</div>' : '';
+  document.getElementById('ans').innerHTML = '<div class="a">'+extra+fmtAns(cur.a)+'</div>';
   document.getElementById('acts').innerHTML =
       '<button class="ok" onclick="mark(2)">막힘없이 <span class="kb">(1)</span></button>'
     + '<button class="mid" onclick="mark(1)">겨우 떠올림 <span class="kb">(2)</span></button>'
@@ -271,7 +277,37 @@ document.addEventListener('keydown', function(e){
   else if(e.key === 'n' || e.key === 'N') render();
 });
 
+/* 자동 업데이트 — 저장소의 cards.json 이 더 새 버전이면 받아서 쓴다.
+   실패하면 내장 카드를 그대로 쓰므로 오프라인에서도 문제 없다. */
+var SRC = 'https://raw.githubusercontent.com/Thomas-han85/soil/main/cards.json';
+var VER_LOCAL = __VER__;
+function applyUpdate(d){
+  if(!d || !d.cards || !d.cards.length) return false;
+  var v = d.ver || 0;
+  if(v <= VER_LOCAL && CARDS.length >= d.cards.length) return false;
+  CARDS = d.cards; VER_LOCAL = v;
+  try{ localStorage.setItem('toji_cards', JSON.stringify(d)); }catch(e){}
+  return true;
+}
+function checkUpdate(silent){
+  var el = document.getElementById('upd');
+  if(el && !silent) el.textContent = '확인 중…';
+  fetch(SRC + '?t=' + Date.now(), {cache:'no-store'})
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      var changed = applyUpdate(d);
+      if(el) el.textContent = changed ? ('갱신됨 v'+VER_LOCAL+' · '+CARDS.length+'장') : ('최신 v'+VER_LOCAL);
+      if(changed){ render(); }
+    })
+    .catch(function(){ if(el) el.textContent = '오프라인'; });
+}
 window.addEventListener('DOMContentLoaded', function(){
+  /* 저장된 갱신본이 있으면 먼저 적용 */
+  try{
+    var c = JSON.parse(localStorage.getItem('toji_cards')||'null');
+    if(c) applyUpdate(c);
+  }catch(e){}
+  setTimeout(function(){ checkUpdate(true); }, 800);
   if(LOCK){
     document.body.classList.add('lock');
     var f = document.querySelector('footer'); if(f) f.style.display = 'none';
@@ -308,11 +344,13 @@ body = (
  '<main id="stage"></main>'
  '<footer><div class="row">%s</div>'
  '<div class="row" style="margin-top:6px">%s'
+ '<button class="chip" onclick="checkUpdate()">↻ 업데이트</button>'
+ '<span class="kb" id="upd" style="margin-left:4px"></span>'
  '<button class="chip" onclick="resetAll()">기록 초기화</button>'
  '<span class="cnt" id="cnt"></span></div></footer>'
 ) % (len(CARDS), chips_tag, chips_sec)
 
-js = JS.replace("__DATA__", json.dumps(CARDS, ensure_ascii=False))
+js = JS.replace("__DATA__", json.dumps(CARDS, ensure_ascii=False)).replace("__VER__", str(VER))
 out = ('<!doctype html><html lang="ko"><head><meta charset="utf-8">'
        '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
        '<title>토질 틈틈봇</title><style>%s</style></head><body>%s<script>%s</script></body></html>'

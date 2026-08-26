@@ -192,8 +192,7 @@ function render(){
     + '<div class="meta"><span class="bdg '+bc+'">'+cur.tag+'</span>'
     + '<span class="bdg b-n">'+cur.sec+'</span>'+mark
     + '<span class="hint" style="margin-left:auto">'+cur.id+'</span></div>'
-    + '<p class="q">'+cur.q.replace(/
-/g,'<br>')+'</p>'
+    + '<p class="q">'+cur.q.replace(/\n/g,'<br>')+'</p>'
     + (cur.qsvg ? '<div class="fig">'+cur.qsvg+'</div>' : '')
     + '<p class="hint">'+(cur.type==='figure' ? '손으로 그려 본 뒤 눌러 보세요. 축·범례·단위까지.' : (cur.type==='answer' ? '넣을 항목을 나열해 본 뒤 눌러 보세요.' : '머릿속에서 먼저 답한 뒤 눌러 보세요. 막혀도 버티는 게 효과입니다.'))+'</p>'
     + '<div id="ans"></div>'

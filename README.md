@@ -77,19 +77,30 @@ Service Worker는 **네트워크 우선**이라 푸시 직후 새로고침하면
 
 ---
 
-## 처음 한 번 — 저장소 연결
+## 저장소
 
-```bash
-git init
-git add -A
-git commit -m "토질 틈틈봇 초기"
-git branch -M main
-git remote add origin https://github.com/<계정>/toji-bot.git
-git push -u origin main
-```
+**https://github.com/Thomas-han85/soil**
 
-그다음 GitHub에서 **Settings → Pages → Source: GitHub Actions** 로 바꾸면
-`https://<계정>.github.io/toji-bot/` 에서 열린다.
+| 갈래 | 경로 | 배포 |
+|---|---|---|
+| 웹앱(PWA) | 루트 `index.html` | Actions → GitHub Pages → `https://thomas-han85.github.io/soil/` |
+| 안드로이드 | `android/` | Actions → APK Artifact `toji-tteum-debug-apk` |
+
+Pages를 켜려면 한 번만: **Settings → Pages → Source: GitHub Actions**
+
+## 안드로이드 — 잠금화면 학습
+
+휴대폰 **화면을 켤 때마다** 카드 한 장이 잠금화면 위에 뜬다. 이게 틈틈봇의 핵심이다.
+
+- **OverlayService** — 포그라운드 서비스, `SCREEN_ON` 감지 (최소 간격 60초)
+- **LockScreenActivity** — `showWhenLocked`·`turnScreenOn`, 잠금화면 위 WebView 카드
+- **BootReceiver** — 재부팅 후 자동 재시작
+- **TTS 브리지** — 카드가 뜨면 **질문을 읽어준다**. 답을 보면 멈춘다. 운전 중·손 못 쓸 때도 인출이 걸린다
+
+**설치 후 권한 두 개**를 반드시 켠다 — `다른 앱 위에 표시`(오버레이), `알림`.
+둘 다 켜야 화면 켤 때 카드가 뜬다.
+
+APK 받기: Actions 탭 → **Build APK** → Artifacts → `toji-tteum-debug-apk`
 
 ---
 

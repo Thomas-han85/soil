@@ -2,12 +2,18 @@ name: Build APK
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
+    paths:
+      - 'android/**'
+      - '.github/workflows/build-apk.yml'
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: android
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
@@ -25,4 +31,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: toji-tteum-debug-apk
-          path: app/build/outputs/apk/debug/*.apk
+          path: android/app/build/outputs/apk/debug/*.apk

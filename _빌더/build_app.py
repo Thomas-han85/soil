@@ -57,9 +57,6 @@ main{flex:1;display:flex;align-items:center;justify-content:center;padding:18px 
 .b-n{background:var(--bg);color:var(--sub);border:1px solid var(--line)}
 .q{font-size:1.3rem;font-weight:700;line-height:1.6;margin:0 0 6px}
 .hint{font-size:.82rem;color:var(--sub);font-family:var(--mono)}
-.timer{font-family:var(--mono);font-size:2.6rem;font-weight:700;color:var(--blue);
-  text-align:center;margin:22px 0 8px;letter-spacing:.05em}
-.timer.go{color:var(--ok)}
 .a{border-top:1px dashed var(--line);margin-top:18px;padding-top:16px;font-size:1.02rem;line-height:1.8}
 .a b{color:var(--rust)}
 .a .ln{margin:5px 0}
@@ -95,8 +92,7 @@ body.lock .q{font-size:1.36rem}
 body.lock main{padding:8px 10px}
 @media(max-width:560px){
   .card{padding:20px 18px 18px;border-radius:13px}
-  .q{font-size:1.15rem} .timer{font-size:2.1rem;margin:16px 0 6px}
-  .acts button{min-width:0;font-size:.94rem;padding:13px 10px}
+  .q{font-size:1.15rem}   .acts button{min-width:0;font-size:.94rem;padding:13px 10px}
   .kb{display:none}
 }
 """
@@ -182,14 +178,13 @@ function bold(x){
 function render(){
   var el = document.getElementById('stage');
   cur = pick(); shown = false;
-  if(tmr){ clearInterval(tmr); tmr=null; }
   if(!cur){
     el.innerHTML = '<div class="card done"><h2>이 범위는 다 끝냈습니다</h2>'
       + '<p>필터를 바꾸거나, 복습 예정일에 다시 오십시오.</p>'
       + '<div class="acts"><button class="show" onclick="resetFilter()">전체 보기</button></div></div>';
     stats(); return;
   }
-  var bc = {'인출':'b-t','살':'b-s','골격':'b-g','비교표':'b-c','갭B':'b-n'}[cur.tag] || 'b-n';
+  var bc = {'인출':'b-t','살':'b-s','골격':'b-g','비교표':'b-c','공식':'b-g','그림':'b-c','수치':'b-t','기준':'b-s','기출':'b-g','갭B':'b-n'}[cur.tag] || 'b-n';
   var v = st(cur.id);
   var mark = v ? (v.s==='x' ? '<span class="bdg b-s">복습</span>' : (v.n ? '<span class="bdg b-c">확인</span>' : '')) : '';
   el.innerHTML =
@@ -200,30 +195,19 @@ function render(){
     + '<p class="q">'+cur.q.replace(/
 /g,'<br>')+'</p>'
     + (cur.qsvg ? '<div class="fig">'+cur.qsvg+'</div>' : '')
-    + '<p class="hint">'+(cur.type==='figure' ? '손으로 그려 보세요. 축·범례·단위까지.' : (cur.type==='answer' ? '넣을 항목을 소리 내어 나열해 보세요.' : '소리 내어 답해 보세요. 막혀도 버티는 게 효과입니다.'))+'</p>'
-    + '<div class="timer" id="tm">3</div>'
+    + '<p class="hint">'+(cur.type==='figure' ? '손으로 그려 본 뒤 눌러 보세요. 축·범례·단위까지.' : (cur.type==='answer' ? '넣을 항목을 나열해 본 뒤 눌러 보세요.' : '머릿속에서 먼저 답한 뒤 눌러 보세요. 막혀도 버티는 게 효과입니다.'))+'</p>'
     + '<div id="ans"></div>'
     + '<div class="acts" id="acts">'
     +   '<button class="show" onclick="reveal()">답 보기 <span class="kb">(Space)</span></button>'
     +   '<button class="skip" onclick="render()">건너뛰기</button>'
     + '</div></div>';
   say(cur.q);
-  left = (cur.type === 'figure' || cur.type === 'answer') ? 6 : 3;
-  tmr = setInterval(function(){
-    left--;
-    var t = document.getElementById('tm');
-    if(!t){ clearInterval(tmr); return; }
-    if(left > 0){ t.textContent = left; }
-    else { t.textContent = '지금 답하세요'; t.classList.add('go'); t.style.fontSize='1.2rem'; clearInterval(tmr); tmr=null; }
-  }, 1000);
   stats();
 }
 
 function reveal(){
   if(shown || !cur) return;
   shown = true; hush();
-  if(tmr){ clearInterval(tmr); tmr=null; }
-  var t=document.getElementById('tm'); if(t) t.style.display='none';
   var extra = cur.svg ? '<div class="fig">'+cur.svg+'</div>' : '';
   document.getElementById('ans').innerHTML = '<div class="a">'+extra+fmtAns(cur.a)+'</div>';
   document.getElementById('acts').innerHTML =

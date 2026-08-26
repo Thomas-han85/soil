@@ -133,6 +133,55 @@ for chno, chname, fn in CHAPTERS:
                               "a": "**%s** — %s 에서 쓰는 식입니다.|%s" % (lhs, topic, t),
                               "tag": "공식", "src": sid})
 
+    # ───────────── ②-b 규칙 · 수치 — 식은 아니지만 외워야 하는 것
+    seen_r = set()
+    # 숫자 뒤에 단위·비교기호가 붙은 것만 = 외울 값이 있는 조각
+    UNITNUM = re.compile(r"(?:[0-9][0-9.,~/]*\s*(?:%|mm|cm|m|μm|Å|℃|kN|kPa|MPa|t/m|g/cm|배|종|개|h|일))|(?:[≥≤<>=]\s*[0-9])|(?:[0-9]+\.[0-9])")
+    for sid, stitle, body in secs:
+        topic = stitle.split("—")[0].strip()
+        # (1) fx 블록 중 식으로 안 잡힌 것 = 분류 규칙표 → 통으로 한 장
+        for m in re.finditer(r'<div class="fx sp"[^>]*>(.*?)</div>', body, re.S):
+            raw = bold(m.group(1))
+            raw = re.sub(r"^▸[^|]*\|", "", raw)
+            lines = [x.strip() for x in raw.split("|") if x.strip()]
+            if not lines: continue
+            if any(is_formula(re.sub(r"^\*\*|\*\*$", "", x).strip()) for x in lines):
+                continue                              # 식은 위에서 이미 카드가 됐다
+            head = re.sub(r"[*]", "", lines[0]).strip()
+            head = re.sub(r"\s*[—-]\s*.*$", "", head).strip() or topic
+            key = re.sub(r"[\s*]", "", raw)[:60]
+            if key in seen_r: continue
+            seen_r.add(key)
+            CARDS.append({"id": nid("N"), "ch": chname, "sec": stitle, "type": "rule",
+                          "q": "[%s]\n\n%s — 기준을 말해 보세요." % (topic, head),
+                          "a": "|".join(lines), "tag": "기준", "src": sid})
+        # (2) 살 안의 굵은 조각 중 "외워야 하는 수치" — 단위·비교기호를 동반한 것만
+        if "실제 기출" in stitle: continue
+        for m in re.finditer(r'<div class="(?:sal|gapb) sp"[^>]*>(.*?)</div>', body, re.S):
+            lab = re.search(r'class="lab">(.*?)</span>', m.group(1), re.S)
+            if not lab: continue
+            label = clean(lab.group(1))
+            mm = re.search(r"[—-]\s*(.+)$", label)
+            head = re.sub(r"\(.*?\)$", "", mm.group(1) if mm else label).strip()
+            inner = re.sub(r'<span class="lab">.*?</span>', "", m.group(1), flags=re.S)
+            for bm in re.finditer(r"<b>(.*?)</b>", inner, re.S):
+                t = bold(bm.group(1)).replace("**", "").strip(" ·")
+                if not (8 <= len(t) <= 110): continue
+                if is_formula(t) or t.count("=") > 2: continue
+                if any(k in t for k in ("대표 기출", "교시", "회 ", "갈래", "칸 ", "단계")): continue
+                if not UNITNUM.search(t): continue
+                if t.count("(") != t.count(")"): continue     # 괄호 잘린 조각
+                q = re.sub(r"[0-9][0-9.,~/]*", "◻︎", t)
+                if len(q.replace("◻︎", "").strip(" ·/=<>≥≤")) < 6: continue
+                key = re.sub(r"[\s]", "", q)          # 마스킹 결과가 같으면 중복
+                if key in seen_r or key in seen_f: continue
+                seen_r.add(key)
+                # 살 제목에 답이 이미 적혀 있으면 절 이름으로 바꾼다
+                nums = re.findall(r"[0-9][0-9.]*", t)
+                hd = topic if (head and any(n in head for n in nums if len(n) > 1)) else (head or topic)
+                CARDS.append({"id": nid("N"), "ch": chname, "sec": stitle, "type": "number",
+                              "q": "[%s]\n\n이 수치를 채워 보세요.\n\n%s" % (hd, q),
+                              "a": "**" + t + "**", "tag": "수치", "src": sid})
     # ───────────── ③ 그림 — 그리기 / 알아보기 양방향
     for sid, stitle, body in secs:
         for m in re.finditer(r"<figure>(.*?)</figure>", body, re.S):
@@ -197,11 +246,11 @@ for chno, chname, fn in CHAPTERS:
 
 # 우선순위 정렬 — 기출·공식·그림이 먼저
 ORDER = {"answer": 0, "formula": 1, "formula_id": 1, "figure": 2, "figure_id": 2,
-         "recall": 3, "table": 4, "sal": 5}
+         "number": 3, "rule": 4, "recall": 5, "table": 6, "sal": 7}
 CARDS.sort(key=lambda c: (ORDER.get(c["type"], 9), c["id"]))
 
 out = os.path.join(BOT, "cards.json")
-json.dump({"ver": 3, "built": "2026-08-26", "cards": CARDS},
+json.dump({"ver": 4, "built": "2026-08-26", "cards": CARDS},
           io.open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 from collections import Counter

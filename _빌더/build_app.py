@@ -50,6 +50,8 @@ main{flex:1;display:flex;align-items:center;justify-content:center;padding:18px 
   border-radius:16px;padding:26px 26px 22px;box-shadow:0 6px 26px rgba(0,0,0,.07)}
 .meta{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
 .bdg{font-family:var(--mono);font-size:.68rem;font-weight:700;border-radius:5px;padding:2px 8px}
+.upd{margin-left:auto;background:rgba(255,255,255,.18);color:#fff;border:0;border-radius:999px;padding:6px 12px;font-size:.82rem;font-weight:700;cursor:pointer}
+.upd:active{background:rgba(255,255,255,.34)}
 .b-t{background:var(--blueF);color:var(--blue)}
 .b-s{background:var(--rustF);color:var(--rust)}
 .b-g{background:var(--okF);color:var(--ok)}
@@ -61,7 +63,22 @@ main{flex:1;display:flex;align-items:center;justify-content:center;padding:18px 
 .a b{color:var(--rust)}
 .a .ln{margin:5px 0}
 .fig{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;margin-bottom:12px}
-.fig svg{max-width:100%;height:auto;display:block;margin:0 auto}
+.fig svg{width:100%;max-width:100%;height:auto;display:block;margin:0 auto;cursor:zoom-in}
+.fig{position:relative}
+.fig::after{content:"눌러서 크게";position:absolute;right:8px;bottom:6px;font-size:.68rem;
+  color:var(--dim);background:var(--bg);padding:2px 7px;border-radius:999px;opacity:.85}
+#lens{position:fixed;inset:0;background:#0b1220;z-index:99;display:none}
+#lens.on{display:block}
+#lensBox{position:absolute;left:0;right:0;top:0;bottom:64px;overflow:auto;
+  -webkit-overflow-scrolling:touch;padding:12px}
+#lensIn{background:#fff;border-radius:12px;padding:12px;width:100%;margin:0 auto}
+#lensIn svg{width:100%;height:auto;display:block}
+.lensbar{position:absolute;left:0;right:0;bottom:0;height:64px;display:flex;gap:10px;
+  align-items:center;justify-content:center;background:#0b1220;border-top:1px solid #22304a}
+.lensbar button{background:#1d2b45;color:#e8eefc;border:0;border-radius:10px;
+  padding:10px 16px;font-size:1rem;font-weight:700;cursor:pointer}
+.lensbar button:active{background:#2b3d5e}
+.lensbar .zv{color:#8fa3c8;font-size:.85rem;min-width:52px;text-align:center}
 .a table{border-collapse:collapse;width:100%;font-size:.9rem;margin-top:6px}
 .a td{border:1px solid var(--line);padding:5px 8px;vertical-align:top}
 .a tr:first-child td{background:var(--blueF);color:var(--blue);font-weight:700}
@@ -254,6 +271,7 @@ function resetAll(){
 }
 
 document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){ lclose(); return; }
   if(e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); if(!shown) reveal(); }
   else if(e.key === '1' && shown) mark(2);
   else if(e.key === '2' && shown) mark(1);
@@ -265,25 +283,80 @@ document.addEventListener('keydown', function(e){
    실패하면 내장 카드를 그대로 쓰므로 오프라인에서도 문제 없다. */
 var SRC = 'https://raw.githubusercontent.com/Thomas-han85/soil/main/cards.json';
 var VER_LOCAL = __VER__;
-function applyUpdate(d){
+
+/* ── 그림 돋보기 ─────────────────────────────
+   확대는 폭을 늘리는 방식이다. 컨테이너 스크롤이 그대로 이동(pan)이 되므로
+   손으로 끄는 코드를 따로 두지 않아도 되고, 어디서든 어긋나지 않는다. */
+var lz = 1;
+function lpaint(){
+  var b = document.getElementById("lensIn");
+  if(b) b.style.width = (lz * 100) + "%";
+  var v = document.getElementById("zv");
+  if(v) v.textContent = Math.round(lz * 100) + "%";
+}
+function lzoom(d){ lz = Math.max(1, Math.min(8, lz * d)); lpaint(); }
+function lfit(){ lz = 1; lpaint(); var x = document.getElementById("lensBox"); if(x){ x.scrollTop = 0; x.scrollLeft = 0; } }
+function lclose(){ document.getElementById("lens").classList.remove("on"); hush(); }
+function lopen(svg){
+  var b = document.getElementById("lensIn");
+  b.innerHTML = "";
+  b.appendChild(svg.cloneNode(true));
+  lfit();
+  document.getElementById("lens").classList.add("on");
+}
+document.addEventListener("click", function(e){
+  var t = e.target;
+  if(!t || !t.closest) return;
+  if(t.closest("#lens")) return;              /* 돋보기 안에서는 다시 열지 않는다 */
+  var svg = t.closest("svg");
+  if(svg) { e.preventDefault(); lopen(svg); }
+});
+function ldist(e){
+  var a = e.touches[0], b = e.touches[1];
+  return Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
+}
+var lpd = 0;
+window.addEventListener("DOMContentLoaded", function(){
+  var box = document.getElementById("lensBox");
+  if(!box) return;
+  box.addEventListener("touchstart", function(e){
+    if(e.touches.length === 2) lpd = ldist(e);
+  }, {passive:true});
+  box.addEventListener("touchmove", function(e){
+    if(e.touches.length === 2){
+      e.preventDefault();
+      var d = ldist(e);
+      if(lpd > 0) lzoom(d / lpd);
+      lpd = d;
+    }
+  }, {passive:false});
+  box.addEventListener("touchend", function(){ lpd = 0; }, {passive:true});
+});
+function badge(t){
+  var b = document.getElementById('nb');
+  if(b) b.textContent = t ? ('제1장 · ' + t) : ('제1장 · ' + CARDS.length + '장');
+}
+function applyUpdate(d, force){
   if(!d || !d.cards || !d.cards.length) return false;
   var v = d.ver || 0;
-  if(v <= VER_LOCAL && CARDS.length >= d.cards.length) return false;
+  /* 같으면 넘어가고, 다르면 적용한다. 카드가 줄어드는 갱신도 갱신이다 */
+  if(!force && v === VER_LOCAL && CARDS.length === d.cards.length) return false;
   CARDS = d.cards; VER_LOCAL = v;
   try{ localStorage.setItem('toji_cards', JSON.stringify(d)); }catch(e){}
   return true;
 }
 function checkUpdate(silent){
   var el = document.getElementById('upd');
-  if(el && !silent) el.textContent = '확인 중…';
+  if(!silent) badge('확인 중…');
   fetch(SRC + '?t=' + Date.now(), {cache:'no-store'})
     .then(function(r){ return r.json(); })
     .then(function(d){
-      var changed = applyUpdate(d);
-      if(el) el.textContent = changed ? ('갱신됨 v'+VER_LOCAL+' · '+CARDS.length+'장') : ('최신 v'+VER_LOCAL);
+      var changed = applyUpdate(d, !silent);
+      badge(changed ? ('갱신됨 · '+CARDS.length+'장') : ('최신 · '+CARDS.length+'장'));
+      if(el) el.textContent = 'v'+VER_LOCAL;
       if(changed){ render(); }
     })
-    .catch(function(){ if(el) el.textContent = '오프라인'; });
+    .catch(function(){ if(!silent) badge('오프라인'); });
 }
 window.addEventListener('DOMContentLoaded', function(){
   /* 저장된 갱신본이 있으면 먼저 적용 */
@@ -322,7 +395,8 @@ chips_tag = '<button class="chip on" data-f="tag" data-v="">전체</button>' + "
 
 body = (
  '<header><div class="row"><h1>토질 틈틈봇</h1>'
- '<span class="bdg b-n" style="background:rgba(255,255,255,.16);color:#fff">제1장 · 살 %d장</span>'
+ '<button class="upd" onclick="checkUpdate()">↻ 업데이트</button>'
+ '<span class="bdg b-n" id="nb" style="background:rgba(255,255,255,.16);color:#fff">제1장 · %d장</span>'
  '<span class="st" id="st"></span></div>'
  '<div class="pbar"><i id="pb"></i></div></header>'
  '<main id="stage"></main>'
@@ -332,6 +406,14 @@ body = (
  '<span class="kb" id="upd" style="margin-left:4px"></span>'
  '<button class="chip" onclick="resetAll()">기록 초기화</button>'
  '<span class="cnt" id="cnt"></span></div></footer>'
+ '<div id="lens"><div id="lensBox"><div id="lensIn"></div></div>'
+ '<div class="lensbar">'
+ '<button onclick="lzoom(1/1.4)">−</button>'
+ '<span class="zv" id="zv">100%%</span>'
+ '<button onclick="lzoom(1.4)">＋</button>'
+ '<button onclick="lfit()">맞춤</button>'
+ '<button onclick="lclose()">닫기</button>'
+ '</div></div>'
 ) % (len(CARDS), chips_tag, chips_sec)
 
 js = JS.replace("__DATA__", json.dumps(CARDS, ensure_ascii=False)).replace("__VER__", str(VER))

@@ -252,15 +252,24 @@ for chno, chname, fn in CHAPTERS:
                           "q": "%s — 비교표를 채워 보세요" % head, "a": a, "tag": "비교표", "src": sid})
 
 # 우선순위 정렬 — 기출·공식·그림이 먼저
+import datetime as _dt
+STAMP = _dt.date.today().isoformat()
+
 ORDER = {"answer": 0, "formula": 1, "figure": 2, "figure_id": 2,
          "number": 3, "rule": 4, "recall": 5, "table": 6, "sal": 7}
 CARDS.sort(key=lambda c: (ORDER.get(c["type"], 9), c["id"]))
 
 out = os.path.join(BOT, "cards.json")
-json.dump({"ver": 4, "built": "2026-08-26", "cards": CARDS},
+prev = 0
+try:
+    prev = json.load(io.open(out, encoding="utf-8")).get("ver", 0)
+except Exception:
+    pass
+VER = prev + 1                      # 내용이 줄어드는 갱신도 있으니 번호는 무조건 올린다
+json.dump({"ver": VER, "built": STAMP, "cards": CARDS},
           io.open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 from collections import Counter
-print("✔ cards.json  카드 %d장" % len(CARDS))
+print("✔ cards.json  v%d · 카드 %d장" % (VER, len(CARDS)))
 print("   유형:", dict(Counter(c["type"] for c in CARDS)))
 print("   태그:", dict(Counter(c["tag"] for c in CARDS)))

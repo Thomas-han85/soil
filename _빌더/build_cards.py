@@ -18,6 +18,17 @@ BOT = os.path.dirname(HERE)
 ROOT = os.path.dirname(BOT)
 CHDIR = os.path.join(ROOT, "차량학습_이론서")
 
+def labelize(label, fallback):
+    """살 라벨을 카드 주제로 다듬는다. 없거나 너무 길면 절 이름으로 돌아간다."""
+    t = re.sub(r"^[^0-9A-Za-z가-힣]+", "", label)      # 앞의 이모지·기호
+    t = re.sub(r"^(?:살|답안 골격|갭B)\s*[—-]\s*", "", t)
+    t = re.sub(r"^G\d+\s*·\s*", "", t)
+    t = re.sub(r"\s*\([^)]*\)\s*$", "", t)            # 끝의 괄호 주석
+    t = re.sub(r"[★☆\s]+$", "", t)
+    t = t.strip(" ·—-")
+    if not t or len(t) > 44: return fallback
+    return t
+
 def clean(x):
     x = re.sub(r"<br\s*/?>", " / ", x)
     x = re.sub(r"<[^>]+>", "", x)
@@ -102,14 +113,17 @@ for chno, chname, fn in CHAPTERS:
     seen_f = set()
     for sid, stitle, body in secs:
         # fx 블록 + 살/골격 안의 굵은 식까지
+        sec_topic = stitle.split("—")[0].strip()
         chunks = []
         for m in re.finditer(r'<div class="fx sp"[^>]*>(.*?)</div>', body, re.S):
-            chunks.append(bold(m.group(1)))
+            chunks.append((bold(m.group(1)), sec_topic))
         for m in re.finditer(r'<div class="(?:sal|skel) sp"[^>]*>(.*?)</div>', body, re.S):
+            lab = re.search(r'class="lab">(.*?)</span>', m.group(1), re.S)
+            lb = labelize(clean(lab.group(1)), sec_topic) if lab else sec_topic
             inner = re.sub(r'<span class="lab">.*?</span>', "", m.group(1), flags=re.S)
             for bm in re.finditer(r"<b>(.*?)</b>", inner, re.S):
-                chunks.append(bold(bm.group(1)))
-        for raw in chunks:
+                chunks.append((bold(bm.group(1)), lb))
+        for raw, lb in chunks:
             raw = re.sub(r"^▸[^|]*\|", "", raw)
             for ln in raw.split("|"):
                 t = ln.strip().strip("·").strip()
@@ -120,19 +134,12 @@ for chno, chname, fn in CHAPTERS:
                 seen_f.add(key)
                 lhs = re.sub(r"[*]", "", t.split("=")[0]).strip()
                 lhs = re.sub(r"^[★▸]\s*", "", lhs)
-                topic = stitle.split("—")[0].strip()
-                # ⓐ 쓰기
-                qw = "[%s]\n\n%s 를 구하는 식을 써 보세요." % (topic, lhs)
-                qi = "이 식은 무엇이고 어디에 씁니까?\n\n%s" % t
+                topic = lb
+                rhs = t.split("=", 1)[1].strip().strip("·").strip()
+                # 좌변을 주고 우변을 채운다 — Se = ? → Gs·w
                 CARDS.append({"id": nid("F"), "ch": chname, "sec": stitle, "type": "formula",
-                              "q": qw,
+                              "q": "[%s]\n\n%s = ?" % (topic, lhs),
                               "a": "**" + t + "**", "tag": "공식", "src": sid})
-                # ⓑ 알아보기 — 식을 보여주고 무엇인지
-                CARDS.append({"id": nid("F"), "ch": chname, "sec": stitle, "type": "formula_id",
-                              "q": qi,
-                              "a": "**%s** — %s 에서 쓰는 식입니다.|%s" % (lhs, topic, t),
-                              "tag": "공식", "src": sid})
-
     # ───────────── ②-b 규칙 · 수치 — 식은 아니지만 외워야 하는 것
     seen_r = set()
     # 숫자 뒤에 단위·비교기호가 붙은 것만 = 외울 값이 있는 조각
@@ -245,7 +252,7 @@ for chno, chname, fn in CHAPTERS:
                           "q": "%s — 비교표를 채워 보세요" % head, "a": a, "tag": "비교표", "src": sid})
 
 # 우선순위 정렬 — 기출·공식·그림이 먼저
-ORDER = {"answer": 0, "formula": 1, "formula_id": 1, "figure": 2, "figure_id": 2,
+ORDER = {"answer": 0, "formula": 1, "figure": 2, "figure_id": 2,
          "number": 3, "rule": 4, "recall": 5, "table": 6, "sal": 7}
 CARDS.sort(key=lambda c: (ORDER.get(c["type"], 9), c["id"]))
 

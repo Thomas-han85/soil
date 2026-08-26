@@ -54,7 +54,8 @@ class LockScreenActivity : Activity() {
         web.addJavascriptInterface(TtsBridge(), "AndroidTTS")
         web.setBackgroundColor(Color.TRANSPARENT)
         /* lock=1 → 앱이 잠금화면 모드로 뜬다. 카드 한 장만 보여주고 필터/푸터를 숨긴다 */
-        web.loadUrl("file:///android_asset/index.html?lock=1")
+        web.webViewClient = ShellClient(this)
+        web.loadUrl(Shell.URL + "?lock=1")
 
         val lp = FrameLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,

@@ -35,8 +35,10 @@ class MainActivity : Activity() {
         web.settings.domStorageEnabled = true
         web.settings.allowFileAccess = true
         web.addJavascriptInterface(TtsBridge(), "AndroidTTS")
+        web.webViewClient = ShellClient(this)
         setContentView(web)
-        web.loadUrl("file:///android_asset/index.html")
+        web.loadUrl(Shell.URL)
+        Shell.refresh(this)
 
         requestNeededPermissions()
     }

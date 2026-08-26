@@ -82,6 +82,13 @@ footer .row{max-width:820px;margin:0 auto;display:flex;gap:7px;flex-wrap:wrap;al
 .done{text-align:center;padding:40px 20px}
 .done h2{font-size:1.4rem;margin:0 0 10px}
 .done p{color:var(--sub)}
+body.lock{background:transparent}
+body.lock header{background:transparent;padding:6px 12px 2px}
+body.lock header h1{font-size:.9rem;opacity:.85}
+body.lock .card{background:rgba(255,255,255,.97);border:0;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+@media (prefers-color-scheme:dark){body.lock .card{background:rgba(28,31,37,.97)}}
+body.lock .q{font-size:1.36rem}
+body.lock main{padding:8px 10px}
 @media(max-width:560px){
   .card{padding:20px 18px 18px;border-radius:13px}
   .q{font-size:1.15rem} .timer{font-size:2.1rem;margin:16px 0 6px}
@@ -100,6 +107,16 @@ function today(){ return ymd(new Date()); }
 function plus(n){ var d=new Date(); d.setDate(d.getDate()+n); return ymd(d); }
 
 var fSec='', fTag='', cur=null, shown=false, tmr=null, left=0, lastSec='', sessN=0;
+/* 잠금화면 모드 — LockScreenActivity가 ?lock=1 로 연다.
+   카드 한 장만 크게 보여주고 필터·푸터를 숨긴다 */
+var LOCK = /[?&]lock=1/.test(location.search);
+/* 안드로이드 네이티브 TTS — 손을 못 쓸 때 질문을 읽어준다 */
+var TTS = (typeof AndroidTTS !== 'undefined' && AndroidTTS.available && AndroidTTS.available());
+function say(t){
+  if(!TTS) return;
+  try{ AndroidTTS.speak(String(t).replace(/\*\*/g,'').replace(/<[^>]+>/g,' ')); }catch(e){}
+}
+function hush(){ if(TTS){ try{ AndroidTTS.stop(); }catch(e){} } }
 /* 간격 반복 — 24시간 뒤 복습이 가장 중요(Karpicke & Roediger 2008). 1 → 3 → 7 → 21일 */
 var STEPS = [1, 3, 7, 21];
 
@@ -184,6 +201,7 @@ function render(){
     +   '<button class="show" onclick="reveal()">답 보기 <span class="kb">(Space)</span></button>'
     +   '<button class="skip" onclick="render()">건너뛰기</button>'
     + '</div></div>';
+  say(cur.q);
   left = 3;
   tmr = setInterval(function(){
     left--;
@@ -197,7 +215,7 @@ function render(){
 
 function reveal(){
   if(shown || !cur) return;
-  shown = true;
+  shown = true; hush();
   if(tmr){ clearInterval(tmr); tmr=null; }
   var t=document.getElementById('tm'); if(t) t.style.display='none';
   document.getElementById('ans').innerHTML = '<div class="a">'+fmtAns(cur.a)+'</div>';
@@ -254,6 +272,10 @@ document.addEventListener('keydown', function(e){
 });
 
 window.addEventListener('DOMContentLoaded', function(){
+  if(LOCK){
+    document.body.classList.add('lock');
+    var f = document.querySelector('footer'); if(f) f.style.display = 'none';
+  }
   document.querySelectorAll('.chip').forEach(function(c){
     c.onclick = function(){
       var f = c.dataset.f;

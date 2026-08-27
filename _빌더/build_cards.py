@@ -255,6 +255,12 @@ for chno, chname, fn in CHAPTERS:
 import datetime as _dt
 STAMP = _dt.date.today().isoformat()
 
+# ── 수록 범위 : 수식 · 그림 · 개념 리뷰 질문 셋만
+#    나머지(살·답안골격·수치·기준·비교표)는 뽑는 코드를 남겨 두되 넣지 않는다.
+#    낭독본으로 흐름을 잡고, 틈틈봇은 손이 기억해야 하는 것만 묻는다.
+KEEP = {"formula", "figure", "figure_id", "recall"}
+CARDS = [c for c in CARDS if c["type"] in KEEP]
+
 ORDER = {"answer": 0, "formula": 1, "figure": 2, "figure_id": 2,
          "number": 3, "rule": 4, "recall": 5, "table": 6, "sal": 7}
 CARDS.sort(key=lambda c: (ORDER.get(c["type"], 9), c["id"]))

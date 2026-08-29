@@ -43,7 +43,9 @@ def bold(x):
     return re.sub(r"[ \t]+", " ", x).strip()
 
 CARDS = []
-CHAPTERS = [("01", "제1장 흙의 성질", "01_흙의성질.html")]
+CHAPTERS = [("01", "제1장 흙의 성질", "01_흙의성질.html"),
+            ("02", "제2장 지중응력", "02_지중응력.html"),
+            ("03", "제3장 투수", "03_투수.html")]
 
 for chno, chname, fn in CHAPTERS:
     p = os.path.join(CHDIR, fn)

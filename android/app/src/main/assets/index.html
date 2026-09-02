@@ -58,7 +58,13 @@ body{
 .tarrow{border:none;background:#eef3fa;color:#46586f;font-size:18px;font-weight:900;width:38px;height:38px;border-radius:50%;cursor:pointer;flex:0 0 auto}
 .tarrow:active{background:#dce6f5}
 .tarrow:disabled{opacity:.3}
-.cardhead .count{min-width:64px;text-align:center}
+.cardhead .count{min-width:64px;text-align:center;line-height:1.15}
+.cardhead .count b{font-size:17px;color:var(--accent)}
+.cardhead .count .of{font-size:13px}
+.cardhead .count .sub{display:block;font-size:10px;font-weight:700;opacity:.7;white-space:nowrap}
+.hbar{height:3px;background:var(--line)}
+.hbar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#5a9bff);
+  border-radius:0 3px 3px 0;transition:width .35s ease}
 
 .body{padding:18px 18px 6px;min-height:60vh}
 .meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;flex-wrap:wrap}
@@ -206,6 +212,7 @@ body.lock .q{font-size:21px}
       <div class="count" id="hCount">0 / 0</div>
       <button class="tarrow" id="tnext" onclick="App.skip()">→</button>
     </div>
+    <div class="hbar"><span id="hBar"></span></div>
 
     <div class="body" id="body"><!-- rendered --></div>
 
@@ -268,6 +275,16 @@ var LS = 'toji_bot_v1', S = {};
 try{ S = JSON.parse(Store.get(LS) || '{}'); }catch(e){ S = {}; }
 function save(){ Store.set(LS, JSON.stringify(S)); }
 
+/* 오늘 푼 장수 — 날짜가 바뀌면 저절로 0 부터 */
+var DAY = { d:'', n:0 };
+try{ DAY = JSON.parse(Store.get('toji_day') || 'null') || { d:'', n:0 }; }catch(e){}
+function dayN(){ return DAY.d === today() ? DAY.n : 0; }
+function dayUp(){
+  if(DAY.d !== today()){ DAY.d = today(); DAY.n = 0; }
+  DAY.n++;
+  try{ Store.set('toji_day', JSON.stringify(DAY)); }catch(e){}
+}
+
 function ymd(d){ return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
 function today(){ return ymd(new Date()); }
 function plus(n){ var d = new Date(); d.setDate(d.getDate() + n); return ymd(d); }
@@ -288,7 +305,7 @@ var SRC = 'https://raw.githubusercontent.com/Thomas-han85/soil/main/cards.json';
        표식 : function checkUpdate
    ──────────────────────────────────────────────────────────────── */
 /* 화면(껍데기) 판번호 — 빌드할 때 채워 넣는다. 원격 것과 다르면 화면을 갈아 끼운다 */
-var UI_BUILD = '0902-d344c78';
+var UI_BUILD = '0902-757941b';
 var UI_SRC = 'https://raw.githubusercontent.com/Thomas-han85/soil/main/index.html';
 
 function esc(s){ return String(s == null ? '' : s).replace(/[&<>]/g, function(m){ return ({'&':'&amp;','<':'&lt;','>':'&gt;'})[m]; }); }
@@ -326,7 +343,10 @@ var App = {
 
   /* ---------- 상태 판정 ---------- */
   st: function(id){ return S[id] || null; },
+  /* 다 익힘 — 「막힘없이」로 21일 간격까지 통과. 세 주는 걸린다 */
   done: function(c){ var v = this.st(c.id); return !!(v && v.s === 'o' && !v.n); },
+  /* 푼 것 — 한 번이라도 채점한 카드. 진도는 이걸로 센다 */
+  seen: function(c){ return !!this.st(c.id); },
   due: function(c){ var v = this.st(c.id); return !!(v && v.n && v.n <= today()); },
   fresh: function(c){ return !this.st(c.id); },
 
@@ -448,7 +468,8 @@ var App = {
     list.innerHTML = '';
     this.chapters().forEach(function(c){
       var pool = DATA.filter(function(x){ return !c.key || x.ch === c.key; });
-      var nd = pool.filter(function(x){ return self.done(x); }).length;
+      var nd = pool.filter(function(x){ return self.seen(x); }).length;
+      var nm = pool.filter(function(x){ return self.done(x); }).length;
       var pct = pool.length ? Math.round(nd / pool.length * 100) : 0;
       var row = document.createElement('div');
       row.className = 'catrow';
@@ -457,7 +478,7 @@ var App = {
         + '<div class="cname">' + esc(c.label) + ' (' + c.n + ')</div>'
         + '<div class="cbar"><span style="width:' + pct + '%"></span></div>'
         + '<div class="cprog">' + nd + '/' + pool.length + '</div>'
-        + '<div class="cdone">' + (pool.length && nd >= pool.length ? '✓' : '') + '</div>';
+        + '<div class="cdone">' + (pool.length && nm >= pool.length ? '✓' : '') + '</div>';
       row.onclick = function(){ self.startCh(c.key); };
       list.appendChild(row);
     });
@@ -630,6 +651,7 @@ var App = {
     S[c.id] = { s:(g === 0 ? 'x' : 'o'), n:(fin ? null : nx), i:i, w:(g === 0 ? 1 : (v.w || 0)) };
     this.lastSec = c.sec;
     this.sessN++;
+    dayUp();
     this.hist.push(c.id);
     if(this.hist.length > 30) this.hist.shift();
     save();
@@ -652,12 +674,19 @@ var App = {
   stats: function(){
     var self = this;
     var p = this.pool();
+    var nseen = p.filter(function(c){ return self.seen(c); }).length;
     var nd = p.filter(function(c){ return self.done(c); }).length;
     var ndue = p.filter(function(c){ return self.due(c); }).length;
     var nf = p.filter(function(c){ return self.fresh(c); }).length;
     document.getElementById('sDue').textContent = ndue + nf;
     document.getElementById('sAll').textContent = p.length;
-    document.getElementById('hCount').textContent = nd + ' / ' + p.length;
+    /* 진도는 「푼 것」으로 센다. 「다 익힘」은 21일이 지나야 오르므로
+       하루하루의 진도로는 쓸 수 없다 — 그건 ✓ 로 따로 보여준다 */
+    document.getElementById('hCount').innerHTML =
+        '<b>' + nseen + '</b><span class="of">/' + p.length + '</span>'
+      + '<span class="sub">오늘 ' + dayN() + (nd ? ' · ✓' + nd : '') + '</span>';
+    var bar = document.getElementById('hBar');
+    if(bar) bar.style.width = (p.length ? (nseen / p.length * 100) : 0) + '%';
     document.getElementById('verb').textContent = 'v' + VER_LOCAL;
   },
 

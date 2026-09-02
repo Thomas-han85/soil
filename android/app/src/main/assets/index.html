@@ -356,6 +356,62 @@ var App = {
     this.buildChips(); this.render();
   },
 
+  /* ---------- 풀던 자리 ----------
+     장만 기억하면 다시 열었을 때 보던 카드가 사라진다.
+     장·칩·카드·정답표시까지 한 덩어리로 남긴다. */
+  saveSpot: function(){
+    if(LOCK) return;                       /* 잠금화면은 자리를 건드리지 않는다 */
+    try{
+      Store.set('toji_spot', JSON.stringify({
+        ch:  this.fCh,
+        sec: this.fSec,
+        tag: this.fTag,
+        id:  this.cur ? this.cur.id : '',
+        sh:  this.shown ? 1 : 0
+      }));
+    }catch(e){}
+  },
+
+  loadSpot: function(){
+    try{ return JSON.parse(Store.get('toji_spot') || 'null'); }catch(e){ return null; }
+  },
+
+  /* 저장된 자리로 되돌아간다. 성공하면 true */
+  resume: function(){
+    var sp = this.loadSpot();
+    if(!sp) return false;
+    this.fCh = sp.ch || '';
+    this.fSec = sp.sec || '';
+    this.fTag = sp.tag || '';
+    /* 장이 통째로 사라졌으면(카드 갱신) 자리를 버린다 */
+    if(this.fCh && !DATA.some(function(c){ return c.ch === sp.ch; })) return false;
+    /* 칩 조합이 비어 있으면 칩만 푼다 — 장은 살린다 */
+    if(!this.pool().length){ this.fSec = ''; this.fTag = ''; }
+    if(!this.pool().length){ this.fCh = ''; }
+    if(!this.pool().length) return false;
+
+    this.openBoard();
+    this.hist = [];
+    this.buildChips();
+
+    var self = this;
+    var card = sp.id ? DATA.filter(function(c){
+      return c.id === sp.id && (!self.fCh || c.ch === self.fCh);
+    })[0] : null;
+    this.render(card || undefined);
+    if(card && sp.sh) this.reveal();
+    return true;
+  },
+
+  /* 카드 화면 켜기 — startCh 와 resume 이 같이 쓴다 */
+  openBoard: function(){
+    document.getElementById('menu').classList.remove('show');
+    document.getElementById('cardBox').style.display = '';
+    document.querySelector('.nav').style.display = '';
+    document.getElementById('chipsTag').style.display = '';
+    document.getElementById('chipsSec').style.display = '';
+  },
+
   /* ---------- 장 선택 화면 ---------- */
   chapters: function(){
     var order = [], cnt = {};
@@ -400,11 +456,7 @@ var App = {
     this.fCh = ch; this.fSec = ''; this.fTag = '';
     if(!this.pool().length){ if(!silent) this.toast('카드가 없습니다'); return; }
     Store.set('toji_ch', ch);
-    document.getElementById('menu').classList.remove('show');
-    document.getElementById('cardBox').style.display = '';
-    document.querySelector('.nav').style.display = '';
-    document.getElementById('chipsTag').style.display = '';
-    document.getElementById('chipsSec').style.display = '';
+    this.openBoard();
     this.hist = [];
     this.buildChips();
     this.render();
@@ -501,6 +553,7 @@ var App = {
            + '<br><br><button class="bigbtn" style="max-width:240px;margin:0 auto" onclick="App.clearFilter()">필터 모두 풀기</button></div>');
       document.getElementById('big').style.display = 'none';
       this.stats();
+      this.saveSpot();
       return;
     }
 
@@ -527,6 +580,7 @@ var App = {
 
     document.getElementById('tZoom').classList.toggle('on', !!(c.qsvg || c.svg));
     this.stats();
+    this.saveSpot();
   },
 
   reveal: function(){
@@ -545,6 +599,7 @@ var App = {
     document.getElementById('big').style.display = 'none';
     document.getElementById('grade').classList.add('show');
     r.scrollIntoView({ behavior:'smooth', block:'nearest' });
+    this.saveSpot();
   },
 
   /* g=2 막힘없이 / g=1 겨우 / g=0 못함
@@ -701,7 +756,8 @@ var App = {
           if(self.fCh && !DATA.some(function(c){ return c.ch === self.fCh; })) self.fCh = '';
           self.fSec = ''; self.fTag = '';
           if(document.getElementById('menu').classList.contains('show')) self.openMenu();
-          else { self.buildChips(); self.render(); }
+          /* 갱신 뒤에도 보던 카드로 돌아온다. 그 카드가 없어졌으면 새로 뽑는다 */
+          else if(!self.resume()){ self.buildChips(); self.render(); }
         }
         self.stats();
       })
@@ -740,12 +796,12 @@ var App = {
       document.querySelector('.nav').style.display = '';
       this.render();
     } else {
-      var last = Store.get('toji_ch');
-      if(last === null){ this.openMenu(); }
-      else {
-        this.fCh = last;
-        if(this.pool().length) this.startCh(last, true);
-        else this.openMenu();
+      /* 풀던 자리가 있으면 그대로 되살린다 — 장 선택 화면은 건너뛴다.
+         한 번도 장을 고른 적이 없을 때만 선택 화면으로 시작한다. */
+      if(!this.resume()){
+        var last = Store.get('toji_ch');
+        if(last !== null && (this.fCh = last, this.pool().length)) this.startCh(last, true);
+        else { this.fCh = ''; this.openMenu(); }
       }
     }
 

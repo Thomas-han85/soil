@@ -28,12 +28,22 @@ if MARK not in ui:
 payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
 ui = ui.replace(MARK, "var CARDS = %s;" % payload, 1)
 
+# 화면 판번호 — 카드를 뺀 나머지(=화면 자체)의 지문.
+# 이게 달라져야 앱이 화면을 갈아 끼운다. 카드만 바뀌면 화면은 그대로 둔다.
+import hashlib, datetime
+shell = io.open(UI, encoding="utf-8").read().replace(MARK, "")
+sig = hashlib.sha1(shell.encode("utf-8")).hexdigest()[:7]
+stamp = datetime.date.today().strftime("%m%d") + "-" + sig
+if "__UI_BUILD__" not in ui:
+    raise SystemExit("! ui_new.html 에 __UI_BUILD__ 자리가 없습니다")
+ui = ui.replace("__UI_BUILD__", stamp)
+
 io.open(OUT, "w", encoding="utf-8").write(ui)
 
 from collections import Counter
 cs = data["cards"]
 print("✔ 토질_틈틈봇.html  %d bytes" % len(ui))
-print("   카드 %d장 · ver %d" % (len(cs), data.get("ver", 0)))
+print("   카드 %d장 · ver %d · 화면 %s" % (len(cs), data.get("ver", 0), stamp))
 print("   장별:", dict(Counter(c["ch"] for c in cs)))
 print("   유형:", dict(Counter(c["type"] for c in cs)))
 print("   절 %d개" % len(set(c["sec"] for c in cs)))

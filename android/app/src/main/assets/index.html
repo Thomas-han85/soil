@@ -34,6 +34,7 @@ body{
 .topstrip .stat{font-size:12px;color:var(--sub);font-weight:600;text-align:right;line-height:1.5}
 .topstrip .stat b{color:var(--accent);font-variant-numeric:tabular-nums}
 .topstrip .upd{border:none;background:transparent;color:var(--accent);font-size:12px;font-weight:800;cursor:pointer;padding:2px 6px}
+.topstrip .uiver{font-size:10px;color:var(--sub);opacity:.55;text-align:right;letter-spacing:.2px}
 
 /* filter chips */
 .chips{display:flex;gap:7px;overflow-x:auto;padding:2px 4px 8px;scrollbar-width:none}
@@ -181,7 +182,8 @@ body.lock .q{font-size:21px}
   <div class="topstrip">
     <div class="since">토질 틈틈 학습 <b id="verb">v0</b></div>
     <div class="stat">오늘 볼 카드 <b id="sDue">0</b>장 · 전체 <b id="sAll">0</b>장<br>
-      <button class="upd" onclick="App.checkUpdate()">↻ 업데이트</button></div>
+      <button class="upd" onclick="App.checkUpdate()">↻ 업데이트</button>
+      <div class="uiver" id="uiver"></div></div>
   </div>
 
   <div class="chips" id="chipsTag"></div>
@@ -278,6 +280,9 @@ var LOCK = /[?&]lock=1/.test(location.search);
 
 /* 원격 카드 — 저장소의 cards.json 이 더 새 버전이면 받아서 쓴다 */
 var SRC = 'https://raw.githubusercontent.com/Thomas-han85/soil/main/cards.json';
+/* 화면(껍데기) 판번호 — 빌드할 때 채워 넣는다. 원격 것과 다르면 화면을 갈아 끼운다 */
+var UI_BUILD = '0902-d21494c';
+var UI_SRC = 'https://raw.githubusercontent.com/Thomas-han85/soil/main/index.html';
 
 function esc(s){ return String(s == null ? '' : s).replace(/[&<>]/g, function(m){ return ({'&':'&amp;','<':'&lt;','>':'&gt;'})[m]; }); }
 function bold(x){ return x.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*\*/g, ''); }
@@ -762,6 +767,37 @@ var App = {
         self.stats();
       })
       .catch(function(){ if(!silent) self.toast('오프라인입니다'); });
+    this.checkShell(silent);
+  },
+
+  /* 화면(껍데기) 갱신 — 카드와 따로 돈다.
+     Kotlin 쪽 Shell.refresh() 는 「다음 실행」에 반영되는 구조라,
+     버튼을 눌렀을 때 눈앞에서 바뀌게 하려면 여기서 직접 갈아 끼워야 한다. */
+  checkShell: function(silent){
+    var self = this;
+    if(this._shellBusy) return;
+    this._shellBusy = true;
+    fetch(UI_SRC + '?t=' + Date.now(), { cache:'no-store' })
+      .then(function(r){ return r.text(); })
+      .then(function(html){
+        self._shellBusy = false;
+        /* Kotlin 과 같은 안전장치 — 온전할 때만 교체한다 */
+        if(html.length < 50000) return;
+        if(html.indexOf('function checkUpdate') < 0
+           && html.indexOf('checkUpdate: function') < 0) return;
+        if(html.replace(/\s+$/, '').slice(-7) !== '</html>') return;
+        var m = html.match(/var UI_BUILD = '([^']*)'/);
+        if(!m || m[1] === UI_BUILD) return;           /* 같은 판이면 둘 것 */
+        self.saveSpot();                              /* 풀던 자리를 남기고 */
+        self.stopSpeak();
+        if(!silent) self.toast('새 화면을 적용합니다…');
+        setTimeout(function(){
+          try{
+            document.open(); document.write(html); document.close();
+          }catch(e){ try{ location.reload(); }catch(e2){} }
+        }, silent ? 0 : 700);
+      })
+      .catch(function(){ self._shellBusy = false; });
   },
 
   toast: function(msg){
@@ -804,6 +840,9 @@ var App = {
         else { this.fCh = ''; this.openMenu(); }
       }
     }
+
+    var uv = document.getElementById('uiver');
+    if(uv) uv.textContent = '화면 ' + UI_BUILD + ' · 카드 v' + VER_LOCAL;
 
     setTimeout(function(){ App.checkUpdate(true); }, 800);
 

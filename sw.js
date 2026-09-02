@@ -1,5 +1,5 @@
 /* 토질 틈틈봇 — 오프라인 캐시. VER를 올리면 새 버전이 즉시 반영된다. */
-var VER = 'toji-bot-v4';
+var VER = 'toji-bot-v5';
 var FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', function(e){
   self.skipWaiting();

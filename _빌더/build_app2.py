@@ -38,6 +38,15 @@ if "__UI_BUILD__" not in ui:
     raise SystemExit("! ui_new.html 에 __UI_BUILD__ 자리가 없습니다")
 ui = ui.replace("__UI_BUILD__", stamp)
 
+# 안드로이드 껍데기가 「온전한 화면」으로 판정하는 조건. 하나라도 어기면
+# 폰이 새 화면을 거부하고 옛 화면을 계속 쓴다 (겉으로는 아무 표시가 없다).
+need = [("50KB 넘기", len(ui.encode("utf-8")) > 50000),
+        ("표식 function checkUpdate", "function checkUpdate" in ui),
+        ("</html> 로 끝나기", ui.rstrip().endswith("</html>"))]
+bad = [n for n, ok in need if not ok]
+if bad:
+    raise SystemExit("! 껍데기가 거부할 화면입니다 — %s" % ", ".join(bad))
+
 io.open(OUT, "w", encoding="utf-8").write(ui)
 
 from collections import Counter

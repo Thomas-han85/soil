@@ -451,7 +451,16 @@ var App = {
       if(cnt[c.ch] === undefined){ cnt[c.ch] = 0; order.push(c.ch); }
       cnt[c.ch]++;
     });
-    order.sort();
+    // 「제1장…제13장」 은 숫자 순으로, 그 밖의 것(1교시 용어 틀)은 맨 앞에.
+    // 그냥 이름순으로 두면 「1교시 용어 틀」 이 10~13장 사이에 묻힌다.
+    order.sort(function(a, b){
+      var na = (a.match(/^제(\d+)장/) || [0, 0])[1] | 0;
+      var nb = (b.match(/^제(\d+)장/) || [0, 0])[1] | 0;
+      if(!na && !nb) return a < b ? -1 : 1;
+      if(!na) return -1;          /* 장이 아닌 것이 앞 */
+      if(!nb) return 1;
+      return na - nb;
+    });
     var list = [{ key:'', label:'전체', n:DATA.length }];
     order.forEach(function(ch, k){ list.push({ key:ch, label:ch, n:cnt[ch], idx:k + 1 }); });
     return list;

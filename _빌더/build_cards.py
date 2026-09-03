@@ -43,10 +43,21 @@ def bold(x):
     return re.sub(r"[ \t]+", " ", x).strip()
 
 CARDS = []
-CHAPTERS = [("01", "제1장 흙의 성질", "01_흙의성질.html"),
-            ("02", "제2장 지중응력", "02_지중응력.html"),
-            ("03", "제3장 투수", "03_투수.html"),
-            ("04", "제4장 압밀", "04_압밀.html")]
+# 장을 손으로 적지 않는다. 낭독본 폴더에 있는 것을 그대로 잡는다 —
+# 13장까지 늘어나는 동안 여기를 고치는 걸 잊으면 그 장 카드가 통째로 빠진다.
+CHNAME = {"01": "제1장 흙의 성질", "02": "제2장 지중응력", "03": "제3장 투수",
+          "04": "제4장 압밀", "05": "제5장 전단", "06": "제6장 토압·흙막이",
+          "07": "제7장 기초", "08": "제8장 연약지반·다짐", "09": "제9장 사면안정",
+          "10": "제10장 조사및시험", "11": "제11장 진동·내진",
+          "12": "제12장 암반역학", "13": "제13장 터널"}
+
+CHAPTERS = []
+for _f in sorted(os.listdir(CHDIR)):
+    if not _f.endswith(".html") or "_백업_" in _f or _f.startswith("00_"):
+        continue
+    _no = _f[:2]
+    if _no in CHNAME:
+        CHAPTERS.append((_no, CHNAME[_no], _f))
 
 for chno, chname, fn in CHAPTERS:
     p = os.path.join(CHDIR, fn)
@@ -196,14 +207,25 @@ for chno, chname, fn in CHAPTERS:
     for sid, stitle, body in secs:
         for m in re.finditer(r"<figure>(.*?)</figure>", body, re.S):
             inner = m.group(1)
+            # 그림 이름이 어디 붙어 있는지가 장마다 다르다.
+            #   04장 방식 : <span class="fignum">그림 N · 이름</span> + <figcaption>작도 요령…
+            #   5~13장    : <figcaption>그림 N — 이름</figcaption>
+            # fignum 만 찾으면 뒤쪽 방식의 그림이 통째로 빠진다.
             num = re.search(r'fignum">(.*?)</span>', inner, re.S)
             svg = re.search(r"(<svg.*?</svg>)", inner, re.S)
             cap = re.search(r"<figcaption[^>]*>(.*?)</figcaption>", inner, re.S)
-            if not (num and svg): continue
-            title = clean(num.group(1))
-            name = re.sub(r"^그림\s*\d+\s*·\s*", "", title)
+            if not svg: continue
+            if num:
+                title = clean(num.group(1))
+                note = bold(cap.group(1)) if cap else ""
+            elif cap:
+                title = clean(cap.group(1))
+                note = ""            # 캡션이 곧 이름이라 따로 둘 설명이 없다
+            else:
+                continue
+            name = re.sub(r"^그림\s*\d+\s*[·—\-–]\s*", "", title)
             name = re.sub(r"\s*\(.*?\)\s*$", "", name).strip()
-            note = bold(cap.group(1)) if cap else ""
+            if len(name) < 4: continue
             # ⓐ 그리기
             CARDS.append({"id": nid("G"), "ch": chname, "sec": stitle, "type": "figure",
                           "q": "%s\n\n백지에 그려 보세요." % name,

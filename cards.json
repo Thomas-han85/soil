@@ -1,6 +1,6 @@
 {
- "ver": 8,
- "built": "2026-08-29",
+ "ver": 9,
+ "built": "2026-09-03",
  "cards": [
   {
    "id": "01-F12",
@@ -1323,6 +1323,516 @@
    "src": "s11"
   },
   {
+   "id": "04-F01",
+   "ch": "제4장 압밀",
+   "sec": "압밀이란 무엇인가 — 시간이 걸리는 침하",
+   "type": "formula",
+   "q": "[압밀이란 무엇인가]\n\n체적변형계수 mv = ?",
+   "a": "**체적변형계수** mv = av / (1 + e₀)  [응력⁻¹]**",
+   "tag": "공식",
+   "src": "s1"
+  },
+  {
+   "id": "04-F02",
+   "ch": "제4장 압밀",
+   "sec": "압밀이란 무엇인가 — 시간이 걸리는 침하",
+   "type": "formula",
+   "q": "[압밀이란 무엇인가]\n\n투수계수 역산 k = ?",
+   "a": "**투수계수 역산** k = Cv · mv · γw**",
+   "tag": "공식",
+   "src": "s1"
+  },
+  {
+   "id": "04-F03",
+   "ch": "제4장 압밀",
+   "sec": "Terzaghi 1차원 압밀이론 — 가정과 방정식",
+   "type": "formula",
+   "q": "[Terzaghi 1차원 압밀이론]\n\n분자 = ?",
+   "a": "**분자 = **잘 빠지는 성질**(k)  /  분모 = **잘 눌리는 성질**(mv)**",
+   "tag": "공식",
+   "src": "s1b"
+  },
+  {
+   "id": "04-F04",
+   "ch": "제4장 압밀",
+   "sec": "Terzaghi 1차원 압밀이론 — 가정과 방정식",
+   "type": "formula",
+   "q": "[Terzaghi 1차원 압밀이론]\n\n실내 산정 : log t 법 Cv = ?",
+   "a": "**실내 산정 : **log t 법** Cv = 0.197 Hdr² / t₅₀  ·  **√t 법** Cv = 0.848 Hdr² / t₉₀**",
+   "tag": "공식",
+   "src": "s1b"
+  },
+  {
+   "id": "04-F05",
+   "ch": "제4장 압밀",
+   "sec": "Terzaghi 1차원 압밀이론 — 가정과 방정식",
+   "type": "formula",
+   "q": "[유도의 고비는 딱 한 군데]\n\nmv = ?",
+   "a": "**mv = av/(1+e₀)**",
+   "tag": "공식",
+   "src": "s1b"
+  },
+  {
+   "id": "04-F06",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "formula",
+   "q": "[압밀도와 시간계수 ★]\n\n암기 3개 : Tv(50) = ?",
+   "a": "**★ 암기 3개 : **Tv(50) = 0.197**  ·  **Tv(60) = 0.287**  ·  **Tv(90) = 0.848**",
+   "tag": "공식",
+   "src": "s1c"
+  },
+  {
+   "id": "04-F07",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "formula",
+   "q": "[압밀도와 시간계수 ★]\n\nU > 60 % : Tv = ?",
+   "a": "**U > 60 %** : Tv = 1.781 − 0.933 · log(100 − U%)**",
+   "tag": "공식",
+   "src": "s1c"
+  },
+  {
+   "id": "04-F08",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "formula",
+   "q": "[압밀도와 시간계수 ★]\n\n소요시간 : U → Tv → t = ?",
+   "a": "**소요시간** : U → Tv → **t = Tv·Hdr² / Cv**",
+   "tag": "공식",
+   "src": "s1c"
+  },
+  {
+   "id": "04-F09",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "formula",
+   "q": "[압밀도와 시간계수 ★]\n\n잔여 과잉간극수압 : Δu(t) = ?",
+   "a": "**잔여 과잉간극수압 : Δu(t) = Δu₀·(1 − U)**",
+   "tag": "공식",
+   "src": "s1c"
+  },
+  {
+   "id": "04-F10",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "formula",
+   "q": "[★ t ∝ Hdr², 연직배수공법의 유일한 근거]\n\nt = ?",
+   "a": "**t = Tv · Hdr² / Cv**",
+   "tag": "공식",
+   "src": "s1c"
+  },
+  {
+   "id": "04-F11",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "formula",
+   "q": "[실점 1순위 : 배수거리를 틀리면 답이 4배 틀린다]\n\n언제나 양면배수, Hdr = ?",
+   "a": "**언제나 양면배수, Hdr = 12.7 mm**",
+   "tag": "공식",
+   "src": "s1c"
+  },
+  {
+   "id": "04-F12",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "formula",
+   "q": "[등시곡선은 외우는 그림이 아니라 읽는 그림이다]\n\nU = ?",
+   "a": "**U = 1 − (∫₀2H u dz) / (∫₀2H ui dz)**",
+   "tag": "공식",
+   "src": "s1c"
+  },
+  {
+   "id": "04-F13",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "formula",
+   "q": "[배수재를 박는 순간 압밀도는 곱으로 합성된다]\n\nU = ?",
+   "a": "**U = 1 − (1 − Ur)(1 − Uz)**",
+   "tag": "공식",
+   "src": "s1c"
+  },
+  {
+   "id": "04-F14",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "formula",
+   "q": "[배수재를 박는 순간 압밀도는 곱으로 합성된다]\n\n1 − 0.2 × 0.5 = ?",
+   "a": "**1 − 0.2 × 0.5 = 90 %**",
+   "tag": "공식",
+   "src": "s1c"
+  },
+  {
+   "id": "04-F15",
+   "ch": "제4장 압밀",
+   "sec": "선행압밀하중 Pc와 과압밀비 ★★",
+   "type": "formula",
+   "q": "[Casagrande 작도 5단계]\n\nOCR = ?",
+   "a": "**OCR = Pc/P₀**",
+   "tag": "공식",
+   "src": "s2b"
+  },
+  {
+   "id": "04-F16",
+   "ch": "제4장 압밀",
+   "sec": "선행압밀하중 Pc와 과압밀비 ★★",
+   "type": "formula",
+   "q": "[UC는 왜 논리상 모순인가]\n\nu = ?",
+   "a": "**u = u_ss + u_e**",
+   "tag": "공식",
+   "src": "s2b"
+  },
+  {
+   "id": "04-F17",
+   "ch": "제4장 압밀",
+   "sec": "압축지수·재압축지수·체적변화계수",
+   "type": "formula",
+   "q": "[압축지수·재압축지수·체적변화계수]\n\n교란 : Cc = ?",
+   "a": "**교란 : **Cc = 0.007(LL − 10)** → **불교란 = 교란 × 1.3배**",
+   "tag": "공식",
+   "src": "s2c"
+  },
+  {
+   "id": "04-F18",
+   "ch": "제4장 압밀",
+   "sec": "압축지수·재압축지수·체적변화계수",
+   "type": "formula",
+   "q": "[압축지수·재압축지수·체적변화계수]\n\n② NAVFAC(1971) — 간극비 : Cc = ?",
+   "a": "**② NAVFAC(1971) — 간극비 : Cc = 1.15(e₀ − 0.35)**",
+   "tag": "공식",
+   "src": "s2c"
+  },
+  {
+   "id": "04-F19",
+   "ch": "제4장 압밀",
+   "sec": "압축지수·재압축지수·체적변화계수",
+   "type": "formula",
+   "q": "[압축지수·재압축지수·체적변화계수]\n\n③ 자연함수비 : Cc = ?",
+   "a": "**③ 자연함수비 : Cc = 0.01 wn**",
+   "tag": "공식",
+   "src": "s2c"
+  },
+  {
+   "id": "04-F20",
+   "ch": "제4장 압밀",
+   "sec": "압축지수·재압축지수·체적변화계수",
+   "type": "formula",
+   "q": "[압축지수·재압축지수·체적변화계수]\n\n침하량 : Sf = ?",
+   "a": "**침하량 : Sf = Δe/(1+e₀)·H = av/(1+e₀)·Δσ′·H = mv · Δσ′ · H**",
+   "tag": "공식",
+   "src": "s2c"
+  },
+  {
+   "id": "04-F21",
+   "ch": "제4장 압밀",
+   "sec": "압축지수·재압축지수·체적변화계수",
+   "type": "formula",
+   "q": "[그림 4를 왜 외우나]\n\n여기서 멈추지 말고 OCR = ?",
+   "a": "**여기서 멈추지 말고 OCR = Pc/P₀ 로 NC·OC까지 판정**",
+   "tag": "공식",
+   "src": "s2c"
+  },
+  {
+   "id": "04-F22",
+   "ch": "제4장 압밀",
+   "sec": "압축지수·재압축지수·체적변화계수",
+   "type": "formula",
+   "q": "[압밀시험이 25점으로 나오면]\n\n하중단계비 LIR = ?",
+   "a": "**하중단계비 LIR = 1**",
+   "tag": "공식",
+   "src": "s2c"
+  },
+  {
+   "id": "04-F23",
+   "ch": "제4장 압밀",
+   "sec": "압밀침하량 산정 ★★ — NC냐 OC냐",
+   "type": "formula",
+   "q": "[압밀침하량 산정 ★★]\n\nNC(정규압밀) : Sc = ?",
+   "a": "**NC(정규압밀)** : **Sc = Cc/(1+e₀) · H · log[(σ₀′+Δσ)/σ₀′]**",
+   "tag": "공식",
+   "src": "s3"
+  },
+  {
+   "id": "04-F24",
+   "ch": "제4장 압밀",
+   "sec": "압밀침하량 산정 ★★ — NC냐 OC냐",
+   "type": "formula",
+   "q": "[압밀침하량 산정 ★★]\n\nSc = ?",
+   "a": "**Sc = Cs/(1+e₀) · H · log[(σ₀′+Δσ)/σ₀′]**",
+   "tag": "공식",
+   "src": "s3"
+  },
+  {
+   "id": "04-F25",
+   "ch": "제4장 압밀",
+   "sec": "압밀침하량 산정 ★★ — NC냐 OC냐",
+   "type": "formula",
+   "q": "[압밀침하량 산정 ★★]\n\nSc = ?",
+   "a": "**Sc = CsH/(1+e₀) · log(σm′/σ₀′) + CcH/(1+e₀) · log[(σ₀′+Δσ)/σm′]**",
+   "tag": "공식",
+   "src": "s3"
+  },
+  {
+   "id": "04-F26",
+   "ch": "제4장 압밀",
+   "sec": "압밀침하량 산정 ★★ — NC냐 OC냐",
+   "type": "formula",
+   "q": "[판정을 먼저 하지 않으면 식 자체가 틀린다]\n\nOCR = ?",
+   "a": "**OCR = Pc/σ₀′ 판정**",
+   "tag": "공식",
+   "src": "s3"
+  },
+  {
+   "id": "04-F27",
+   "ch": "제4장 압밀",
+   "sec": "압밀침하량 산정 ★★ — NC냐 OC냐",
+   "type": "formula",
+   "q": "[압밀침하량 산정 5단계]\n\nSc = ?",
+   "a": "**Sc = ΣSi**",
+   "tag": "공식",
+   "src": "s3"
+  },
+  {
+   "id": "04-F28",
+   "ch": "제4장 압밀",
+   "sec": "압밀침하량 산정 ★★ — NC냐 OC냐",
+   "type": "formula",
+   "q": "[압밀침하량 산정 5단계]\n\nt = ?",
+   "a": "**t = TvH²/Cv**",
+   "tag": "공식",
+   "src": "s3"
+  },
+  {
+   "id": "04-F29",
+   "ch": "제4장 압밀",
+   "sec": "압밀계수 Cv 산정 — √t법과 log t법",
+   "type": "formula",
+   "q": "[압밀계수 Cv 산정]\n\nCv = ?",
+   "a": "**Cv = 0.848·H² / t₉₀**",
+   "tag": "공식",
+   "src": "s3b"
+  },
+  {
+   "id": "04-F30",
+   "ch": "제4장 압밀",
+   "sec": "압밀계수 Cv 산정 — √t법과 log t법",
+   "type": "formula",
+   "q": "[압밀계수 Cv 산정]\n\nCv = ?",
+   "a": "**Cv = 0.197·H² / t₅₀**",
+   "tag": "공식",
+   "src": "s3b"
+  },
+  {
+   "id": "04-F31",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "formula",
+   "q": "[압밀속도와 시간 관리 · 강도증가]\n\nSkempton 강도증가율 : su/p′ = ?",
+   "a": "**Skempton 강도증가율** : **su/p′ = 0.11 + 0.0037·PI**  (PI > 10)**",
+   "tag": "공식",
+   "src": "s3c"
+  },
+  {
+   "id": "04-F32",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "formula",
+   "q": "[PBD의 위력도, 함정도 배수거리 하나로 설명된다]\n\nU = ?",
+   "a": "**U = 1−(1−Uv)(1−Uh)**",
+   "tag": "공식",
+   "src": "s3c"
+  },
+  {
+   "id": "04-F33",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "formula",
+   "q": "[t법(Taylor) 작도 5단계]\n\nCv = ?",
+   "a": "**Cv = 0.848 H² / t₉₀**",
+   "tag": "공식",
+   "src": "s3c"
+  },
+  {
+   "id": "04-F34",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "formula",
+   "q": "[log t법(Casagrande) 작도 5단계]\n\nt₁과 t₂ = ?",
+   "a": "**t₁과 t₂ = 4t₁**",
+   "tag": "공식",
+   "src": "s3c"
+  },
+  {
+   "id": "04-F35",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "formula",
+   "q": "[log t법(Casagrande) 작도 5단계]\n\nd₀와 d₁₀₀의 이등분점 = ?",
+   "a": "**d₀와 d₁₀₀의 이등분점 = d₅₀**",
+   "tag": "공식",
+   "src": "s3c"
+  },
+  {
+   "id": "04-F36",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "formula",
+   "q": "[log t법(Casagrande) 작도 5단계]\n\nCv = ?",
+   "a": "**Cv = 0.197 H² / t₅₀**",
+   "tag": "공식",
+   "src": "s3c"
+  },
+  {
+   "id": "04-F37",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "formula",
+   "q": "[작도에서 감점되는 네 자리]\n\ntan α′ = ?",
+   "a": "**tan α′ = 1.15 tan α**",
+   "tag": "공식",
+   "src": "s3c"
+  },
+  {
+   "id": "04-F38",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "formula",
+   "q": "[작도에서 감점되는 네 자리]\n\nt₉₀ = ?",
+   "a": "**t₉₀ = 7.3² = 53.3 min**",
+   "tag": "공식",
+   "src": "s3c"
+  },
+  {
+   "id": "04-F39",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "formula",
+   "q": "[그림 6를 왜 외우나]\n\nU = ?",
+   "a": "**U=90%(Tv=0.848)**",
+   "tag": "공식",
+   "src": "s3c"
+  },
+  {
+   "id": "04-F40",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "formula",
+   "q": "[그림 6를 왜 외우나]\n\nU = ?",
+   "a": "**U=50%(0.197)**",
+   "tag": "공식",
+   "src": "s3c"
+  },
+  {
+   "id": "04-F41",
+   "ch": "제4장 압밀",
+   "sec": "차압밀 — Δu=0 인데도 계속 가라앉는다",
+   "type": "formula",
+   "q": "[차압밀]\n\nCαε = ?",
+   "a": "**★ Cαε = Cα / (1 + ep)**  (김상규 식 8.29)**",
+   "tag": "공식",
+   "src": "s4"
+  },
+  {
+   "id": "04-F42",
+   "ch": "제4장 압밀",
+   "sec": "차압밀 — Δu=0 인데도 계속 가라앉는다",
+   "type": "formula",
+   "q": "[2차압밀이 실제로 문제가 되는 세 조건]\n\n이탄 0.06 = ?",
+   "a": "**이탄 0.06 = 무기질 점토 0.04의 1.5배**",
+   "tag": "공식",
+   "src": "s4"
+  },
+  {
+   "id": "04-F43",
+   "ch": "제4장 압밀",
+   "sec": "자중압밀과 대변형 ★ — Terzaghi가 안 통하는 초연약",
+   "type": "formula",
+   "q": "[★ Terzaghi의 가정 중 무엇이 깨지는가]\n\nk = ?",
+   "a": "**k = f(e), σ′ = f(e)**",
+   "tag": "공식",
+   "src": "s4b"
+  },
+  {
+   "id": "04-F44",
+   "ch": "제4장 압밀",
+   "sec": "자중압밀과 대변형 ★ — Terzaghi가 안 통하는 초연약",
+   "type": "formula",
+   "q": "[★ Terzaghi의 가정 중 무엇이 깨지는가]\n\n외부하중 = ?",
+   "a": "**외부하중 = 0, 초기 σ′ = 0**",
+   "tag": "공식",
+   "src": "s4b"
+  },
+  {
+   "id": "04-F45",
+   "ch": "제4장 압밀",
+   "sec": "자중압밀과 대변형 ★ — Terzaghi가 안 통하는 초연약",
+   "type": "formula",
+   "q": "[경계는 σ′로 긋고, 실무는 4단계로 간다]\n\n흙이 하중을 전달하지 못하므로 σ′ = ?",
+   "a": "**흙이 하중을 전달하지 못하므로 σ′ = 0**",
+   "tag": "공식",
+   "src": "s4b"
+  },
+  {
+   "id": "04-F46",
+   "ch": "제4장 압밀",
+   "sec": "자중압밀과 대변형 ★ — Terzaghi가 안 통하는 초연약",
+   "type": "formula",
+   "q": "[경계는 σ′로 긋고, 실무는 4단계로 간다]\n\nσ′ = ?",
+   "a": "**σ′ = 0, Stokes 법칙 지배**",
+   "tag": "공식",
+   "src": "s4b"
+  },
+  {
+   "id": "04-F47",
+   "ch": "제4장 압밀",
+   "sec": "자중압밀과 대변형 ★ — Terzaghi가 안 통하는 초연약",
+   "type": "formula",
+   "q": "[경계는 σ′로 긋고, 실무는 4단계로 간다]\n\n체적비 = ?",
+   "a": "**체적비 = (1 + et) / (1 + e₀) = Vt / V₀**",
+   "tag": "공식",
+   "src": "s4b"
+  },
+  {
+   "id": "04-F48",
+   "ch": "제4장 압밀",
+   "sec": "자중압밀과 대변형 ★ — Terzaghi가 안 통하는 초연약",
+   "type": "formula",
+   "q": "[첫 줄만 가로로 읽으면 경계가 그어진다]\n\n자중 : ΔP = ?",
+   "a": "**자중 : ΔP = 0, Δu ≠ 0**",
+   "tag": "공식",
+   "src": "s4b"
+  },
+  {
+   "id": "04-F49",
+   "ch": "제4장 압밀",
+   "sec": "자중압밀과 대변형 ★ — Terzaghi가 안 통하는 초연약",
+   "type": "formula",
+   "q": "[첫 줄만 가로로 읽으면 경계가 그어진다]\n\n침투 : ΔP = ?",
+   "a": "**침투 : ΔP = hpγw = Δu**",
+   "tag": "공식",
+   "src": "s4b"
+  },
+  {
+   "id": "04-F50",
+   "ch": "제4장 압밀",
+   "sec": "자중압밀과 대변형 ★ — Terzaghi가 안 통하는 초연약",
+   "type": "formula",
+   "q": "[첫 줄만 가로로 읽으면 경계가 그어진다]\n\n진공 : ΔP = ?",
+   "a": "**진공 : ΔP = 대기압, Δu = 0**",
+   "tag": "공식",
+   "src": "s4b"
+  },
+  {
+   "id": "04-F51",
+   "ch": "제4장 압밀",
+   "sec": "자중압밀과 대변형 ★ — Terzaghi가 안 통하는 초연약",
+   "type": "formula",
+   "q": "[첫 줄만 가로로 읽으면 경계가 그어진다]\n\nΔu = ?",
+   "a": "**Δu = 0**",
+   "tag": "공식",
+   "src": "s4b"
+  },
+  {
    "id": "01-G59",
    "ch": "제1장 흙의 성질",
    "sec": "점토광물 — 기본단위·3종·동형치환",
@@ -1937,6 +2447,182 @@
    "svg": "<svg viewBox=\"0 0 640 250\" role=\"img\" aria-label=\"흙댐 침윤선\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <g transform=\"translate(10,10)\">\n  <path d=\"M10,180 L100,50 L200,50 L290,180 Z\" fill=\"#efe9dc\" stroke=\"#1b1d21\" stroke-width=\"2\"/>\n  <path d=\"M10,180 L300,180\" stroke=\"#8a8578\" stroke-width=\"5\"/>\n  <path d=\"M10,86 L64,86\" stroke=\"#1f5fa8\" stroke-width=\"2\"/>\n  <path d=\"M10,86 L10,180 L64,180 Z\" fill=\"#cfe0f0\" opacity=\".55\"/>\n  <path d=\"M64,86 C120,104 190,142 262,176\" fill=\"none\" stroke=\"#a8452a\" stroke-width=\"2.6\"/>\n  <text x=\"150\" y=\"126\" font-size=\"11\" font-weight=\"700\" fill=\"#a8452a\">침윤선</text>\n  <circle cx=\"262\" cy=\"176\" r=\"4\" fill=\"#a8452a\"/>\n  <text x=\"252\" y=\"200\" font-size=\"10.5\" font-weight=\"700\" fill=\"#a8452a\">하류사면 노출 ✗</text>\n  <text x=\"150\" y=\"222\" text-anchor=\"middle\" font-weight=\"700\">(a) 배수층 없음 — 위험</text>\n </g>\n <g transform=\"translate(340,10)\">\n  <path d=\"M10,180 L100,50 L200,50 L290,180 Z\" fill=\"#efe9dc\" stroke=\"#1b1d21\" stroke-width=\"2\"/>\n  <path d=\"M10,180 L300,180\" stroke=\"#8a8578\" stroke-width=\"5\"/>\n  <path d=\"M10,86 L64,86\" stroke=\"#1f5fa8\" stroke-width=\"2\"/>\n  <path d=\"M10,86 L10,180 L64,180 Z\" fill=\"#cfe0f0\" opacity=\".55\"/>\n  <rect x=\"212\" y=\"168\" width=\"72\" height=\"12\" fill=\"#2c6e49\" opacity=\".6\" stroke=\"#2c6e49\" stroke-width=\"1.4\"/>\n  <text x=\"248\" y=\"196\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2c6e49\">수평배수층</text>\n  <path d=\"M64,86 C110,118 168,156 214,172\" fill=\"none\" stroke=\"#a8452a\" stroke-width=\"2.6\"/>\n  <text x=\"140\" y=\"122\" font-size=\"11\" font-weight=\"700\" fill=\"#a8452a\">침윤선이 안쪽으로</text>\n  <text x=\"150\" y=\"222\" text-anchor=\"middle\" font-weight=\"700\">(b) 배수층 설치 — 안전</text>\n </g>\n</g>\n</svg>",
    "tag": "그림",
    "src": "s5"
+  },
+  {
+   "id": "04-G80",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "figure",
+   "q": "Terzaghi 스프링 모델\n\n백지에 그려 보세요.",
+   "a": "**작도 요령** — 세 칸만 그립니다. 각 칸에 **Δu**와 **Δσ′**를 적어 넣으면 설명이 저절로 됩니다. **스프링 = 흙 골격 · 물 = 간극수 · 밸브 = 배수조건.** 압밀의 정의를 물으면 이 그림부터 그리고 시작하십시오.",
+   "svg": "<svg viewBox=\"0 0 640 250\" role=\"img\" aria-label=\"스프링과 피스톤으로 표현한 압밀 모델 3단계\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <text x=\"106\" y=\"16\" text-anchor=\"middle\" font-weight=\"700\">t = 0 (재하 직후)</text>\n <text x=\"320\" y=\"16\" text-anchor=\"middle\" font-weight=\"700\">0 &lt; t &lt; ∞ (압밀 중)</text>\n <text x=\"534\" y=\"16\" text-anchor=\"middle\" font-weight=\"700\">t = ∞ (압밀 완료)</text>\n <g stroke=\"#1b1d21\" stroke-width=\"1.6\" fill=\"none\">\n  <rect x=\"46\" y=\"52\" width=\"120\" height=\"150\"/><rect x=\"260\" y=\"52\" width=\"120\" height=\"150\"/><rect x=\"474\" y=\"52\" width=\"120\" height=\"150\"/>\n </g>\n <g fill=\"#e8f0f9\"><rect x=\"48\" y=\"80\" width=\"116\" height=\"120\"/><rect x=\"262\" y=\"88\" width=\"116\" height=\"112\"/><rect x=\"476\" y=\"98\" width=\"116\" height=\"102\"/></g>\n <g stroke=\"#1f5fa8\" stroke-width=\"1.4\" fill=\"none\">\n  <path d=\"M60,80 l14,-9 l14,18 l14,-18 l14,18 l14,-9\"/>\n  <path d=\"M274,88 l14,-9 l14,18 l14,-18 l14,18 l14,-9\"/>\n  <path d=\"M488,98 l14,-9 l14,18 l14,-18 l14,18 l14,-9\"/>\n </g>\n <g stroke=\"#1b1d21\" stroke-width=\"2\" fill=\"#fff\">\n  <rect x=\"46\" y=\"62\" width=\"120\" height=\"14\"/><rect x=\"260\" y=\"70\" width=\"120\" height=\"14\"/><rect x=\"474\" y=\"80\" width=\"120\" height=\"14\"/>\n </g>\n <g stroke=\"#a8452a\" stroke-width=\"2.2\" fill=\"none\" marker-end=\"url(#ar4)\">\n  <path d=\"M106,30 L106,58\"/><path d=\"M320,30 L320,66\"/><path d=\"M534,30 L534,76\"/>\n </g>\n <defs><marker id=\"ar4\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#a8452a\"/></marker></defs>\n <g font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">\n  <text x=\"118\" y=\"42\">Δσ</text><text x=\"332\" y=\"42\">Δσ</text><text x=\"546\" y=\"42\">Δσ</text>\n </g>\n <g stroke=\"#2c6e49\" stroke-width=\"1.6\" fill=\"none\">\n  <circle cx=\"106\" cy=\"69\" r=\"4\"/><circle cx=\"320\" cy=\"77\" r=\"4\"/><circle cx=\"534\" cy=\"87\" r=\"4\"/>\n </g>\n <g font-size=\"10.5\" fill=\"#2c6e49\"><text x=\"118\" y=\"72\">밸브 닫힘</text><text x=\"332\" y=\"80\">조금 열림</text><text x=\"546\" y=\"90\">완전 열림</text></g>\n <g font-size=\"11\" text-anchor=\"middle\">\n  <text x=\"106\" y=\"222\" fill=\"#1f5fa8\" font-weight=\"700\">Δu = Δσ</text><text x=\"106\" y=\"238\" fill=\"#5f6672\">σ′ 증가 = 0</text>\n  <text x=\"320\" y=\"222\" fill=\"#1f5fa8\" font-weight=\"700\">Δu 감소 중</text><text x=\"320\" y=\"238\" fill=\"#5f6672\">Δσ = Δu + Δσ′</text>\n  <text x=\"534\" y=\"222\" fill=\"#a8452a\" font-weight=\"700\">Δu = 0</text><text x=\"534\" y=\"238\" fill=\"#5f6672\">Δσ′ = Δσ</text>\n </g>\n</g></svg>",
+   "tag": "그림",
+   "src": "s1c"
+  },
+  {
+   "id": "04-G81",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 640 250\" role=\"img\" aria-label=\"스프링과 피스톤으로 표현한 압밀 모델 3단계\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <text x=\"106\" y=\"16\" text-anchor=\"middle\" font-weight=\"700\">t = 0 (재하 직후)</text>\n <text x=\"320\" y=\"16\" text-anchor=\"middle\" font-weight=\"700\">0 &lt; t &lt; ∞ (압밀 중)</text>\n <text x=\"534\" y=\"16\" text-anchor=\"middle\" font-weight=\"700\">t = ∞ (압밀 완료)</text>\n <g stroke=\"#1b1d21\" stroke-width=\"1.6\" fill=\"none\">\n  <rect x=\"46\" y=\"52\" width=\"120\" height=\"150\"/><rect x=\"260\" y=\"52\" width=\"120\" height=\"150\"/><rect x=\"474\" y=\"52\" width=\"120\" height=\"150\"/>\n </g>\n <g fill=\"#e8f0f9\"><rect x=\"48\" y=\"80\" width=\"116\" height=\"120\"/><rect x=\"262\" y=\"88\" width=\"116\" height=\"112\"/><rect x=\"476\" y=\"98\" width=\"116\" height=\"102\"/></g>\n <g stroke=\"#1f5fa8\" stroke-width=\"1.4\" fill=\"none\">\n  <path d=\"M60,80 l14,-9 l14,18 l14,-18 l14,18 l14,-9\"/>\n  <path d=\"M274,88 l14,-9 l14,18 l14,-18 l14,18 l14,-9\"/>\n  <path d=\"M488,98 l14,-9 l14,18 l14,-18 l14,18 l14,-9\"/>\n </g>\n <g stroke=\"#1b1d21\" stroke-width=\"2\" fill=\"#fff\">\n  <rect x=\"46\" y=\"62\" width=\"120\" height=\"14\"/><rect x=\"260\" y=\"70\" width=\"120\" height=\"14\"/><rect x=\"474\" y=\"80\" width=\"120\" height=\"14\"/>\n </g>\n <g stroke=\"#a8452a\" stroke-width=\"2.2\" fill=\"none\" marker-end=\"url(#ar4)\">\n  <path d=\"M106,30 L106,58\"/><path d=\"M320,30 L320,66\"/><path d=\"M534,30 L534,76\"/>\n </g>\n <defs><marker id=\"ar4\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#a8452a\"/></marker></defs>\n <g font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">\n  <text x=\"118\" y=\"42\">Δσ</text><text x=\"332\" y=\"42\">Δσ</text><text x=\"546\" y=\"42\">Δσ</text>\n </g>\n <g stroke=\"#2c6e49\" stroke-width=\"1.6\" fill=\"none\">\n  <circle cx=\"106\" cy=\"69\" r=\"4\"/><circle cx=\"320\" cy=\"77\" r=\"4\"/><circle cx=\"534\" cy=\"87\" r=\"4\"/>\n </g>\n <g font-size=\"10.5\" fill=\"#2c6e49\"><text x=\"118\" y=\"72\">밸브 닫힘</text><text x=\"332\" y=\"80\">조금 열림</text><text x=\"546\" y=\"90\">완전 열림</text></g>\n <g font-size=\"11\" text-anchor=\"middle\">\n  <text x=\"106\" y=\"222\" fill=\"#1f5fa8\" font-weight=\"700\">Δu = Δσ</text><text x=\"106\" y=\"238\" fill=\"#5f6672\">σ′ 증가 = 0</text>\n  <text x=\"320\" y=\"222\" fill=\"#1f5fa8\" font-weight=\"700\">Δu 감소 중</text><text x=\"320\" y=\"238\" fill=\"#5f6672\">Δσ = Δu + Δσ′</text>\n  <text x=\"534\" y=\"222\" fill=\"#a8452a\" font-weight=\"700\">Δu = 0</text><text x=\"534\" y=\"238\" fill=\"#5f6672\">Δσ′ = Δσ</text>\n </g>\n</g></svg>",
+   "a": "**그림 1 · Terzaghi 스프링 모델 (압밀을 설명하는 고전 도해 · 통째로 외울 것)**|**작도 요령** — 세 칸만 그립니다. 각 칸에 **Δu**와 **Δσ′**를 적어 넣으면 설명이 저절로 됩니다. **스프링 = 흙 골격 · 물 = 간극수 · 밸브 = 배수조건.** 압밀의 정의를 물으면 이 그림부터 그리고 시작하십시오.",
+   "tag": "그림",
+   "src": "s1c"
+  },
+  {
+   "id": "04-G82",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "figure",
+   "q": "과잉간극수압의 등시곡선 (isochrone) — 깊이·시간에 따른 소산\n\n백지에 그려 보세요.",
+   "a": "**작도 요령** — 처음 **직사각형**에서 줄어든 **면적 비율이 곧 평균 압밀도 U**입니다. 그래서 압밀도를 수압으로 정의할 수 있습니다. **배수면이 가장 빠르고 중앙이 가장 늦다**는 것도 여기서 바로 읽힙니다. 곡선 서너 개면 말로 열 줄 할 것이 끝납니다.",
+   "svg": "<svg viewBox=\"0 0 620 260\" role=\"img\" aria-label=\"깊이에 따른 과잉간극수압 분포가 시간에 따라 줄어드는 등시곡선\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <path d=\"M90,30 L90,215\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M90,215 L520,215\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"56\" y=\"125\" transform=\"rotate(-90 56,125)\" text-anchor=\"middle\">깊이 z</text>\n <text x=\"305\" y=\"243\" text-anchor=\"middle\">과잉간극수압 Δu</text>\n <path d=\"M90,30 L470,30\" stroke=\"#5f6672\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n <text x=\"478\" y=\"34\" font-size=\"10.5\" fill=\"#5f6672\">Δu = Δσ (t=0)</text>\n <path d=\"M470,30 L470,215\" stroke=\"#a8452a\" stroke-width=\"2.4\"/>\n <text x=\"482\" y=\"130\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">t = 0</text>\n <path d=\"M90,30 C300,60 380,110 400,215\" stroke=\"#1f5fa8\" stroke-width=\"2\" fill=\"none\"/>\n <path d=\"M90,30 C230,70 290,120 300,215\" stroke=\"#1f5fa8\" stroke-width=\"2\" fill=\"none\"/>\n <path d=\"M90,30 C170,75 195,125 195,215\" stroke=\"#1f5fa8\" stroke-width=\"2\" fill=\"none\"/>\n <path d=\"M90,30 C120,80 122,130 118,215\" stroke=\"#2c6e49\" stroke-width=\"2\" fill=\"none\"/>\n <g font-size=\"10\" fill=\"#1f5fa8\">\n  <text x=\"406\" y=\"120\">T=0.05</text><text x=\"306\" y=\"120\">0.2</text><text x=\"200\" y=\"120\">0.5</text>\n </g>\n <text x=\"122\" y=\"105\" font-size=\"10\" fill=\"#2c6e49\" font-weight=\"700\">T=0.9</text>\n <g stroke=\"#2c6e49\" stroke-width=\"2.4\"><path d=\"M84,30 L96,30\"/><path d=\"M84,215 L96,215\"/></g>\n <text x=\"16\" y=\"34\" font-size=\"10.5\" fill=\"#2c6e49\" font-weight=\"700\">배수면</text>\n <text x=\"6\" y=\"219\" font-size=\"10.5\" fill=\"#2c6e49\" font-weight=\"700\">배수면(양면)</text>\n <text x=\"300\" y=\"196\" font-size=\"11\" fill=\"#5f6672\">← 면적이 줄어든 만큼이 <tspan font-weight=\"700\">압밀도 U</tspan></text>\n</g></svg>",
+   "tag": "그림",
+   "src": "s1c"
+  },
+  {
+   "id": "04-G83",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 620 260\" role=\"img\" aria-label=\"깊이에 따른 과잉간극수압 분포가 시간에 따라 줄어드는 등시곡선\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <path d=\"M90,30 L90,215\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M90,215 L520,215\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"56\" y=\"125\" transform=\"rotate(-90 56,125)\" text-anchor=\"middle\">깊이 z</text>\n <text x=\"305\" y=\"243\" text-anchor=\"middle\">과잉간극수압 Δu</text>\n <path d=\"M90,30 L470,30\" stroke=\"#5f6672\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/>\n <text x=\"478\" y=\"34\" font-size=\"10.5\" fill=\"#5f6672\">Δu = Δσ (t=0)</text>\n <path d=\"M470,30 L470,215\" stroke=\"#a8452a\" stroke-width=\"2.4\"/>\n <text x=\"482\" y=\"130\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">t = 0</text>\n <path d=\"M90,30 C300,60 380,110 400,215\" stroke=\"#1f5fa8\" stroke-width=\"2\" fill=\"none\"/>\n <path d=\"M90,30 C230,70 290,120 300,215\" stroke=\"#1f5fa8\" stroke-width=\"2\" fill=\"none\"/>\n <path d=\"M90,30 C170,75 195,125 195,215\" stroke=\"#1f5fa8\" stroke-width=\"2\" fill=\"none\"/>\n <path d=\"M90,30 C120,80 122,130 118,215\" stroke=\"#2c6e49\" stroke-width=\"2\" fill=\"none\"/>\n <g font-size=\"10\" fill=\"#1f5fa8\">\n  <text x=\"406\" y=\"120\">T=0.05</text><text x=\"306\" y=\"120\">0.2</text><text x=\"200\" y=\"120\">0.5</text>\n </g>\n <text x=\"122\" y=\"105\" font-size=\"10\" fill=\"#2c6e49\" font-weight=\"700\">T=0.9</text>\n <g stroke=\"#2c6e49\" stroke-width=\"2.4\"><path d=\"M84,30 L96,30\"/><path d=\"M84,215 L96,215\"/></g>\n <text x=\"16\" y=\"34\" font-size=\"10.5\" fill=\"#2c6e49\" font-weight=\"700\">배수면</text>\n <text x=\"6\" y=\"219\" font-size=\"10.5\" fill=\"#2c6e49\" font-weight=\"700\">배수면(양면)</text>\n <text x=\"300\" y=\"196\" font-size=\"11\" fill=\"#5f6672\">← 면적이 줄어든 만큼이 <tspan font-weight=\"700\">압밀도 U</tspan></text>\n</g></svg>",
+   "a": "**그림 2 · 과잉간극수압의 등시곡선 (isochrone) — 깊이·시간에 따른 소산**|**작도 요령** — 처음 **직사각형**에서 줄어든 **면적 비율이 곧 평균 압밀도 U**입니다. 그래서 압밀도를 수압으로 정의할 수 있습니다. **배수면이 가장 빠르고 중앙이 가장 늦다**는 것도 여기서 바로 읽힙니다. 곡선 서너 개면 말로 열 줄 할 것이 끝납니다.",
+   "tag": "그림",
+   "src": "s1c"
+  },
+  {
+   "id": "04-G84",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "figure",
+   "q": "압밀도 U와 시간계수 Tv\n\n백지에 그려 보세요.",
+   "a": "**작도 요령** — 외울 것은 **세 점뿐** — U=50%→0.197, 60%→0.287, **90%→0.848**. 소요시간 문제는 이걸로 다 풀립니다.|모양에서 하나 더 — **앞은 빠르고 뒤는 더디다.** 90→100%가 0→50%보다 오래 걸립니다. **잔류침하가 문제되는 이유이자, 90% 선에서 관리하는 이유**입니다.",
+   "svg": "<svg viewBox=\"0 0 620 250\" role=\"img\" aria-label=\"압밀도와 시간계수 관계 곡선\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <path d=\"M80,25 L80,205\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M80,205 L560,205\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"46\" y=\"115\" transform=\"rotate(-90 46,115)\" text-anchor=\"middle\">압밀도 U (%)</text>\n <text x=\"320\" y=\"234\" text-anchor=\"middle\">시간계수 T&#118; = C&#118;·t / H&#100;&#114;²</text>\n <path d=\"M80,205 C160,120 250,70 560,38\" stroke=\"#1f5fa8\" stroke-width=\"2.6\" fill=\"none\"/>\n <g stroke=\"#a8452a\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\">\n  <path d=\"M80,115 L188,115\"/><path d=\"M188,115 L188,205\"/>\n  <path d=\"M80,88 L246,88\"/><path d=\"M246,88 L246,205\"/>\n  <path d=\"M80,43 L440,43\"/><path d=\"M440,43 L440,205\"/>\n </g>\n <g font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">\n  <text x=\"188\" y=\"220\" text-anchor=\"middle\">0.197</text>\n  <text x=\"252\" y=\"220\" text-anchor=\"middle\">0.287</text>\n  <text x=\"440\" y=\"220\" text-anchor=\"middle\">0.848</text>\n </g>\n <g font-size=\"10.5\" fill=\"#5f6672\"><text x=\"72\" y=\"119\" text-anchor=\"end\">50</text><text x=\"72\" y=\"92\" text-anchor=\"end\">60</text><text x=\"72\" y=\"47\" text-anchor=\"end\">90</text><text x=\"72\" y=\"209\" text-anchor=\"end\">0</text></g>\n <rect x=\"330\" y=\"95\" width=\"216\" height=\"72\" rx=\"7\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1\"/>\n <text x=\"342\" y=\"114\" font-size=\"11\" font-weight=\"700\" fill=\"#1f5fa8\">이 세 점만 외운다</text>\n <text x=\"342\" y=\"132\" font-size=\"10.5\">U=50% → T&#118; = 0.197</text>\n <text x=\"342\" y=\"147\" font-size=\"10.5\">U=60% → T&#118; = 0.287</text>\n <text x=\"342\" y=\"162\" font-size=\"10.5\">U=90% → T&#118; = 0.848 <tspan fill=\"#a8452a\" font-weight=\"700\">← √t법</tspan></text>\n</g></svg>",
+   "tag": "그림",
+   "src": "s1c"
+  },
+  {
+   "id": "04-G85",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 620 250\" role=\"img\" aria-label=\"압밀도와 시간계수 관계 곡선\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <path d=\"M80,25 L80,205\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M80,205 L560,205\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"46\" y=\"115\" transform=\"rotate(-90 46,115)\" text-anchor=\"middle\">압밀도 U (%)</text>\n <text x=\"320\" y=\"234\" text-anchor=\"middle\">시간계수 T&#118; = C&#118;·t / H&#100;&#114;²</text>\n <path d=\"M80,205 C160,120 250,70 560,38\" stroke=\"#1f5fa8\" stroke-width=\"2.6\" fill=\"none\"/>\n <g stroke=\"#a8452a\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\">\n  <path d=\"M80,115 L188,115\"/><path d=\"M188,115 L188,205\"/>\n  <path d=\"M80,88 L246,88\"/><path d=\"M246,88 L246,205\"/>\n  <path d=\"M80,43 L440,43\"/><path d=\"M440,43 L440,205\"/>\n </g>\n <g font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">\n  <text x=\"188\" y=\"220\" text-anchor=\"middle\">0.197</text>\n  <text x=\"252\" y=\"220\" text-anchor=\"middle\">0.287</text>\n  <text x=\"440\" y=\"220\" text-anchor=\"middle\">0.848</text>\n </g>\n <g font-size=\"10.5\" fill=\"#5f6672\"><text x=\"72\" y=\"119\" text-anchor=\"end\">50</text><text x=\"72\" y=\"92\" text-anchor=\"end\">60</text><text x=\"72\" y=\"47\" text-anchor=\"end\">90</text><text x=\"72\" y=\"209\" text-anchor=\"end\">0</text></g>\n <rect x=\"330\" y=\"95\" width=\"216\" height=\"72\" rx=\"7\" fill=\"#e8f0f9\" stroke=\"#1f5fa8\" stroke-width=\"1\"/>\n <text x=\"342\" y=\"114\" font-size=\"11\" font-weight=\"700\" fill=\"#1f5fa8\">이 세 점만 외운다</text>\n <text x=\"342\" y=\"132\" font-size=\"10.5\">U=50% → T&#118; = 0.197</text>\n <text x=\"342\" y=\"147\" font-size=\"10.5\">U=60% → T&#118; = 0.287</text>\n <text x=\"342\" y=\"162\" font-size=\"10.5\">U=90% → T&#118; = 0.848 <tspan fill=\"#a8452a\" font-weight=\"700\">← √t법</tspan></text>\n</g></svg>",
+   "a": "**그림 3 · 압밀도 U와 시간계수 Tv (세 점만 외운다)**|**작도 요령** — 외울 것은 **세 점뿐** — U=50%→0.197, 60%→0.287, **90%→0.848**. 소요시간 문제는 이걸로 다 풀립니다.|모양에서 하나 더 — **앞은 빠르고 뒤는 더디다.** 90→100%가 0→50%보다 오래 걸립니다. **잔류침하가 문제되는 이유이자, 90% 선에서 관리하는 이유**입니다.",
+   "tag": "그림",
+   "src": "s1c"
+  },
+  {
+   "id": "04-G86",
+   "ch": "제4장 압밀",
+   "sec": "압축지수·재압축지수·체적변화계수",
+   "type": "figure",
+   "q": "e–log P 곡선과 Casagrande 작도\n\n백지에 그려 보세요.",
+   "a": "**작도 요령** — 작도 순서는 다섯 마디로 외웁니다 — **무릎에서 · 수평 · 접선 · 반으로 · 처녀선과 만나는 곳**.|그리고 **여기서 멈추지 말고 OCR = Pc/P₀ 로 NC·OC까지 판정**해야 점수가 됩니다.",
+   "svg": "<svg viewBox=\"0 0 640 290\" role=\"img\" aria-label=\"e log P 곡선에서 선행압밀하중을 구하는 카사그란데 작도\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <path d=\"M85,25 L85,235\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M85,235 L580,235\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"52\" y=\"130\" transform=\"rotate(-90 52,130)\" text-anchor=\"middle\">간극비 e</text>\n <text x=\"330\" y=\"264\" text-anchor=\"middle\">log P (유효응력)</text>\n <path d=\"M110,58 C180,62 230,68 268,80\" stroke=\"#1f5fa8\" stroke-width=\"2.4\" fill=\"none\"/>\n <path d=\"M268,80 C330,104 420,168 540,222\" stroke=\"#a8452a\" stroke-width=\"2.6\" fill=\"none\"/>\n <circle cx=\"268\" cy=\"80\" r=\"4\" fill=\"#8a6a1f\"/>\n <text x=\"200\" y=\"52\" font-size=\"10.5\" fill=\"#1f5fa8\" font-weight=\"700\">재압축 (기울기 C&#115;)</text>\n <text x=\"430\" y=\"200\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">처녀압축 (기울기 C&#99;)</text>\n <path d=\"M268,80 L390,80\" stroke=\"#2c6e49\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/>\n <path d=\"M268,80 L392,104\" stroke=\"#2c6e49\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/>\n <path d=\"M268,80 L386,92\" stroke=\"#8a6a1f\" stroke-width=\"1.8\"/>\n <text x=\"396\" y=\"84\" font-size=\"10\" fill=\"#2c6e49\">① 수평선</text>\n <text x=\"398\" y=\"110\" font-size=\"10\" fill=\"#2c6e49\">② 접선</text>\n <text x=\"392\" y=\"98\" font-size=\"10\" fill=\"#8a6a1f\" font-weight=\"700\">③ 이등분선</text>\n <text x=\"212\" y=\"76\" font-size=\"10\" fill=\"#8a6a1f\" font-weight=\"700\">최대곡률점(무릎)</text>\n <path d=\"M330,92 L330,235\" stroke=\"#8a6a1f\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/>\n <circle cx=\"330\" cy=\"92\" r=\"4.5\" fill=\"none\" stroke=\"#8a6a1f\" stroke-width=\"2\"/>\n <text x=\"330\" y=\"252\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#8a6a1f\">P&#99;</text>\n <text x=\"344\" y=\"88\" font-size=\"10\" fill=\"#8a6a1f\">④⑤ 처녀선 연장과 만나는 점</text>\n <rect x=\"404\" y=\"30\" width=\"176\" height=\"58\" rx=\"7\" fill=\"#fbf3dd\" stroke=\"#8a6a1f\" stroke-width=\"1\"/>\n <text x=\"414\" y=\"48\" font-size=\"10.5\" font-weight=\"700\" fill=\"#8a6a1f\">무릎에서 · 수평 · 접선 ·</text>\n <text x=\"414\" y=\"63\" font-size=\"10.5\" font-weight=\"700\" fill=\"#8a6a1f\">반으로 · 처녀선과 만나는 곳</text>\n <text x=\"414\" y=\"79\" font-size=\"10\" fill=\"#5f6672\">OCR = P&#99; / P₀ 로 판정</text>\n</g></svg>",
+   "tag": "그림",
+   "src": "s2c"
+  },
+  {
+   "id": "04-G87",
+   "ch": "제4장 압밀",
+   "sec": "압축지수·재압축지수·체적변화계수",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 640 290\" role=\"img\" aria-label=\"e log P 곡선에서 선행압밀하중을 구하는 카사그란데 작도\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <path d=\"M85,25 L85,235\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M85,235 L580,235\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"52\" y=\"130\" transform=\"rotate(-90 52,130)\" text-anchor=\"middle\">간극비 e</text>\n <text x=\"330\" y=\"264\" text-anchor=\"middle\">log P (유효응력)</text>\n <path d=\"M110,58 C180,62 230,68 268,80\" stroke=\"#1f5fa8\" stroke-width=\"2.4\" fill=\"none\"/>\n <path d=\"M268,80 C330,104 420,168 540,222\" stroke=\"#a8452a\" stroke-width=\"2.6\" fill=\"none\"/>\n <circle cx=\"268\" cy=\"80\" r=\"4\" fill=\"#8a6a1f\"/>\n <text x=\"200\" y=\"52\" font-size=\"10.5\" fill=\"#1f5fa8\" font-weight=\"700\">재압축 (기울기 C&#115;)</text>\n <text x=\"430\" y=\"200\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">처녀압축 (기울기 C&#99;)</text>\n <path d=\"M268,80 L390,80\" stroke=\"#2c6e49\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/>\n <path d=\"M268,80 L392,104\" stroke=\"#2c6e49\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/>\n <path d=\"M268,80 L386,92\" stroke=\"#8a6a1f\" stroke-width=\"1.8\"/>\n <text x=\"396\" y=\"84\" font-size=\"10\" fill=\"#2c6e49\">① 수평선</text>\n <text x=\"398\" y=\"110\" font-size=\"10\" fill=\"#2c6e49\">② 접선</text>\n <text x=\"392\" y=\"98\" font-size=\"10\" fill=\"#8a6a1f\" font-weight=\"700\">③ 이등분선</text>\n <text x=\"212\" y=\"76\" font-size=\"10\" fill=\"#8a6a1f\" font-weight=\"700\">최대곡률점(무릎)</text>\n <path d=\"M330,92 L330,235\" stroke=\"#8a6a1f\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/>\n <circle cx=\"330\" cy=\"92\" r=\"4.5\" fill=\"none\" stroke=\"#8a6a1f\" stroke-width=\"2\"/>\n <text x=\"330\" y=\"252\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#8a6a1f\">P&#99;</text>\n <text x=\"344\" y=\"88\" font-size=\"10\" fill=\"#8a6a1f\">④⑤ 처녀선 연장과 만나는 점</text>\n <rect x=\"404\" y=\"30\" width=\"176\" height=\"58\" rx=\"7\" fill=\"#fbf3dd\" stroke=\"#8a6a1f\" stroke-width=\"1\"/>\n <text x=\"414\" y=\"48\" font-size=\"10.5\" font-weight=\"700\" fill=\"#8a6a1f\">무릎에서 · 수평 · 접선 ·</text>\n <text x=\"414\" y=\"63\" font-size=\"10.5\" font-weight=\"700\" fill=\"#8a6a1f\">반으로 · 처녀선과 만나는 곳</text>\n <text x=\"414\" y=\"79\" font-size=\"10\" fill=\"#5f6672\">OCR = P&#99; / P₀ 로 판정</text>\n</g></svg>",
+   "a": "**그림 4 · e–log P 곡선과 Casagrande 작도 (그대로 외워 그릴 것 ★)**|**작도 요령** — 작도 순서는 다섯 마디로 외웁니다 — **무릎에서 · 수평 · 접선 · 반으로 · 처녀선과 만나는 곳**.|그리고 **여기서 멈추지 말고 OCR = Pc/P₀ 로 NC·OC까지 판정**해야 점수가 됩니다.",
+   "tag": "그림",
+   "src": "s2c"
+  },
+  {
+   "id": "04-G88",
+   "ch": "제4장 압밀",
+   "sec": "압축지수·재압축지수·체적변화계수",
+   "type": "figure",
+   "q": "시료 교란이 e–log P 곡선에 미치는 영향\n\n백지에 그려 보세요.",
+   "a": "**작도 요령** — 교란되면 **무릎이 뭉개져 Pc가 작게** 나옵니다. 그러면 NC로 오판 → 침하 과대 → **불필요한 개량비**. 반대 방향으로 틀리기도 하므로 **교란은 양방향으로 위험**합니다.|Schmertmann 보정은 **교란과 무관하게 곡선들이 0.42e₀에서 수렴**한다는 성질을 씁니다.",
+   "svg": "<svg viewBox=\"0 0 600 240\" role=\"img\" aria-label=\"양질 시료와 교란 시료의 곡선 비교\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <path d=\"M80,25 L80,195\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M80,195 L540,195\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"48\" y=\"110\" transform=\"rotate(-90 48,110)\" text-anchor=\"middle\">간극비 e</text>\n <text x=\"310\" y=\"222\" text-anchor=\"middle\">log P</text>\n <path d=\"M105,52 C180,58 225,66 258,80\" stroke=\"#1f5fa8\" stroke-width=\"2.4\" fill=\"none\"/>\n <path d=\"M258,80 C320,108 410,166 505,192\" stroke=\"#1f5fa8\" stroke-width=\"2.6\" fill=\"none\"/>\n <path d=\"M105,72 C190,84 280,110 380,148\" stroke=\"#a8452a\" stroke-width=\"2.2\" fill=\"none\" stroke-dasharray=\"6 4\"/>\n <path d=\"M380,148 C430,166 470,182 505,192\" stroke=\"#a8452a\" stroke-width=\"2.2\" fill=\"none\" stroke-dasharray=\"6 4\"/>\n <circle cx=\"505\" cy=\"192\" r=\"5\" fill=\"none\" stroke=\"#2c6e49\" stroke-width=\"2\"/>\n <text x=\"452\" y=\"212\" font-size=\"10.5\" fill=\"#2c6e49\" font-weight=\"700\">0.42e₀ 에서 수렴</text>\n <text x=\"150\" y=\"46\" font-size=\"10.5\" fill=\"#1f5fa8\" font-weight=\"700\">양질 시료 — 무릎이 뚜렷</text>\n <text x=\"150\" y=\"98\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">교란 시료 — 무릎이 뭉개짐</text>\n <path d=\"M258,80 L258,195\" stroke=\"#1f5fa8\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/>\n <path d=\"M196,96 L196,195\" stroke=\"#a8452a\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/>\n <text x=\"258\" y=\"210\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#1f5fa8\" font-weight=\"700\">참 P&#99;</text>\n <text x=\"188\" y=\"210\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">겉보기 P&#99;</text>\n <path d=\"M196,168 L252,168\" stroke=\"#8a6a1f\" stroke-width=\"1.6\" marker-end=\"url(#ar5)\"/>\n <defs><marker id=\"ar5\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#8a6a1f\"/></marker></defs>\n <text x=\"224\" y=\"162\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a6a1f\" font-weight=\"700\">과소평가</text>\n</g></svg>",
+   "tag": "그림",
+   "src": "s2c"
+  },
+  {
+   "id": "04-G89",
+   "ch": "제4장 압밀",
+   "sec": "압축지수·재압축지수·체적변화계수",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 600 240\" role=\"img\" aria-label=\"양질 시료와 교란 시료의 곡선 비교\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <path d=\"M80,25 L80,195\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M80,195 L540,195\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"48\" y=\"110\" transform=\"rotate(-90 48,110)\" text-anchor=\"middle\">간극비 e</text>\n <text x=\"310\" y=\"222\" text-anchor=\"middle\">log P</text>\n <path d=\"M105,52 C180,58 225,66 258,80\" stroke=\"#1f5fa8\" stroke-width=\"2.4\" fill=\"none\"/>\n <path d=\"M258,80 C320,108 410,166 505,192\" stroke=\"#1f5fa8\" stroke-width=\"2.6\" fill=\"none\"/>\n <path d=\"M105,72 C190,84 280,110 380,148\" stroke=\"#a8452a\" stroke-width=\"2.2\" fill=\"none\" stroke-dasharray=\"6 4\"/>\n <path d=\"M380,148 C430,166 470,182 505,192\" stroke=\"#a8452a\" stroke-width=\"2.2\" fill=\"none\" stroke-dasharray=\"6 4\"/>\n <circle cx=\"505\" cy=\"192\" r=\"5\" fill=\"none\" stroke=\"#2c6e49\" stroke-width=\"2\"/>\n <text x=\"452\" y=\"212\" font-size=\"10.5\" fill=\"#2c6e49\" font-weight=\"700\">0.42e₀ 에서 수렴</text>\n <text x=\"150\" y=\"46\" font-size=\"10.5\" fill=\"#1f5fa8\" font-weight=\"700\">양질 시료 — 무릎이 뚜렷</text>\n <text x=\"150\" y=\"98\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">교란 시료 — 무릎이 뭉개짐</text>\n <path d=\"M258,80 L258,195\" stroke=\"#1f5fa8\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/>\n <path d=\"M196,96 L196,195\" stroke=\"#a8452a\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/>\n <text x=\"258\" y=\"210\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#1f5fa8\" font-weight=\"700\">참 P&#99;</text>\n <text x=\"188\" y=\"210\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">겉보기 P&#99;</text>\n <path d=\"M196,168 L252,168\" stroke=\"#8a6a1f\" stroke-width=\"1.6\" marker-end=\"url(#ar5)\"/>\n <defs><marker id=\"ar5\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#8a6a1f\"/></marker></defs>\n <text x=\"224\" y=\"162\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a6a1f\" font-weight=\"700\">과소평가</text>\n</g></svg>",
+   "a": "**그림 5 · 시료 교란이 e–log P 곡선에 미치는 영향**|**작도 요령** — 교란되면 **무릎이 뭉개져 Pc가 작게** 나옵니다. 그러면 NC로 오판 → 침하 과대 → **불필요한 개량비**. 반대 방향으로 틀리기도 하므로 **교란은 양방향으로 위험**합니다.|Schmertmann 보정은 **교란과 무관하게 곡선들이 0.42e₀에서 수렴**한다는 성질을 씁니다.",
+   "tag": "그림",
+   "src": "s2c"
+  },
+  {
+   "id": "04-G90",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "figure",
+   "q": "Cv 산정 — √t법과 log t법 작도\n\n백지에 그려 보세요.",
+   "a": "**작도 요령** — 차이는 **어느 압밀도를 기준으로 삼느냐**입니다. √t법은 **U=90%(Tv=0.848)**, log t법은 **U=50%(0.197)**.|눈여겨볼 자리는 각각 하나 — √t법은 **1.15배 선**, log t법은 **시간비 1:4로 찾는 d₀**. 두 값이 다르면 **log t법이 실제와 더 부합**합니다.",
+   "svg": "<svg viewBox=\"0 0 640 250\" role=\"img\" aria-label=\"루트t법과 log t법 작도 비교\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11\" fill=\"#1b1d21\">\n <text x=\"160\" y=\"16\" text-anchor=\"middle\" font-weight=\"700\">√t 법 (Taylor) — U=90%</text>\n <path d=\"M60,30 L60,200\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n <path d=\"M60,200 L300,200\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n <text x=\"34\" y=\"118\" transform=\"rotate(-90 34,118)\" text-anchor=\"middle\" font-size=\"10\">침하 d</text>\n <text x=\"180\" y=\"222\" text-anchor=\"middle\" font-size=\"10\">√t</text>\n <path d=\"M60,50 C110,72 150,96 300,168\" stroke=\"#1f5fa8\" stroke-width=\"2.2\" fill=\"none\"/>\n <path d=\"M60,50 L250,164\" stroke=\"#5f6672\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/>\n <path d=\"M60,50 L290,168\" stroke=\"#a8452a\" stroke-width=\"1.5\"/>\n <text x=\"196\" y=\"126\" font-size=\"9.5\" fill=\"#5f6672\">초기직선</text>\n <text x=\"240\" y=\"152\" font-size=\"9.5\" fill=\"#a8452a\" font-weight=\"700\">1.15배 선</text>\n <circle cx=\"171\" cy=\"112\" r=\"4\" fill=\"none\" stroke=\"#2c6e49\" stroke-width=\"2\"/>\n <path d=\"M171,112 L171,200\" stroke=\"#2c6e49\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/>\n <text x=\"171\" y=\"214\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c6e49\" font-weight=\"700\">√t₉₀</text>\n <circle cx=\"60\" cy=\"50\" r=\"3.5\" fill=\"#8a6a1f\"/><text x=\"40\" y=\"46\" font-size=\"9.5\" fill=\"#8a6a1f\">d₀</text>\n <text x=\"340\" y=\"16\" text-anchor=\"middle\" font-weight=\"700\">log t 법 (Casagrande) — U=50%</text>\n <path d=\"M360,30 L360,200\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n <path d=\"M360,200 L620,200\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n <text x=\"500\" y=\"222\" text-anchor=\"middle\" font-size=\"10\">log t</text>\n <path d=\"M368,48 C400,56 424,68 452,96\" stroke=\"#1f5fa8\" stroke-width=\"2.2\" fill=\"none\"/>\n <path d=\"M452,96 C480,126 500,142 528,152\" stroke=\"#1f5fa8\" stroke-width=\"2.2\" fill=\"none\"/>\n <path d=\"M528,152 C560,160 590,166 616,172\" stroke=\"#1f5fa8\" stroke-width=\"2.2\" fill=\"none\"/>\n <path d=\"M430,74 L520,146\" stroke=\"#5f6672\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/>\n <path d=\"M500,142 L616,168\" stroke=\"#5f6672\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/>\n <path d=\"M360,40 L616,40\" stroke=\"#8a6a1f\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/>\n <text x=\"366\" y=\"37\" font-size=\"9.5\" fill=\"#8a6a1f\" font-weight=\"700\">d₀ (1:4 시간비로)</text>\n <path d=\"M360,150 L616,150\" stroke=\"#a8452a\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/>\n <text x=\"366\" y=\"147\" font-size=\"9.5\" fill=\"#a8452a\" font-weight=\"700\">d₁₀₀ (두 직선 교점)</text>\n <path d=\"M360,95 L616,95\" stroke=\"#2c6e49\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/>\n <text x=\"366\" y=\"92\" font-size=\"9.5\" fill=\"#2c6e49\" font-weight=\"700\">d₅₀ = (d₀+d₁₀₀)/2</text>\n <circle cx=\"451\" cy=\"95\" r=\"4\" fill=\"none\" stroke=\"#2c6e49\" stroke-width=\"2\"/>\n <path d=\"M451,95 L451,200\" stroke=\"#2c6e49\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n <text x=\"451\" y=\"214\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c6e49\" font-weight=\"700\">t₅₀</text>\n</g></svg>",
+   "tag": "그림",
+   "src": "s3c"
+  },
+  {
+   "id": "04-G91",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 640 250\" role=\"img\" aria-label=\"루트t법과 log t법 작도 비교\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11\" fill=\"#1b1d21\">\n <text x=\"160\" y=\"16\" text-anchor=\"middle\" font-weight=\"700\">√t 법 (Taylor) — U=90%</text>\n <path d=\"M60,30 L60,200\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n <path d=\"M60,200 L300,200\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n <text x=\"34\" y=\"118\" transform=\"rotate(-90 34,118)\" text-anchor=\"middle\" font-size=\"10\">침하 d</text>\n <text x=\"180\" y=\"222\" text-anchor=\"middle\" font-size=\"10\">√t</text>\n <path d=\"M60,50 C110,72 150,96 300,168\" stroke=\"#1f5fa8\" stroke-width=\"2.2\" fill=\"none\"/>\n <path d=\"M60,50 L250,164\" stroke=\"#5f6672\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/>\n <path d=\"M60,50 L290,168\" stroke=\"#a8452a\" stroke-width=\"1.5\"/>\n <text x=\"196\" y=\"126\" font-size=\"9.5\" fill=\"#5f6672\">초기직선</text>\n <text x=\"240\" y=\"152\" font-size=\"9.5\" fill=\"#a8452a\" font-weight=\"700\">1.15배 선</text>\n <circle cx=\"171\" cy=\"112\" r=\"4\" fill=\"none\" stroke=\"#2c6e49\" stroke-width=\"2\"/>\n <path d=\"M171,112 L171,200\" stroke=\"#2c6e49\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/>\n <text x=\"171\" y=\"214\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c6e49\" font-weight=\"700\">√t₉₀</text>\n <circle cx=\"60\" cy=\"50\" r=\"3.5\" fill=\"#8a6a1f\"/><text x=\"40\" y=\"46\" font-size=\"9.5\" fill=\"#8a6a1f\">d₀</text>\n <text x=\"340\" y=\"16\" text-anchor=\"middle\" font-weight=\"700\">log t 법 (Casagrande) — U=50%</text>\n <path d=\"M360,30 L360,200\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n <path d=\"M360,200 L620,200\" stroke=\"#1b1d21\" stroke-width=\"1.4\"/>\n <text x=\"500\" y=\"222\" text-anchor=\"middle\" font-size=\"10\">log t</text>\n <path d=\"M368,48 C400,56 424,68 452,96\" stroke=\"#1f5fa8\" stroke-width=\"2.2\" fill=\"none\"/>\n <path d=\"M452,96 C480,126 500,142 528,152\" stroke=\"#1f5fa8\" stroke-width=\"2.2\" fill=\"none\"/>\n <path d=\"M528,152 C560,160 590,166 616,172\" stroke=\"#1f5fa8\" stroke-width=\"2.2\" fill=\"none\"/>\n <path d=\"M430,74 L520,146\" stroke=\"#5f6672\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/>\n <path d=\"M500,142 L616,168\" stroke=\"#5f6672\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/>\n <path d=\"M360,40 L616,40\" stroke=\"#8a6a1f\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/>\n <text x=\"366\" y=\"37\" font-size=\"9.5\" fill=\"#8a6a1f\" font-weight=\"700\">d₀ (1:4 시간비로)</text>\n <path d=\"M360,150 L616,150\" stroke=\"#a8452a\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/>\n <text x=\"366\" y=\"147\" font-size=\"9.5\" fill=\"#a8452a\" font-weight=\"700\">d₁₀₀ (두 직선 교점)</text>\n <path d=\"M360,95 L616,95\" stroke=\"#2c6e49\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/>\n <text x=\"366\" y=\"92\" font-size=\"9.5\" fill=\"#2c6e49\" font-weight=\"700\">d₅₀ = (d₀+d₁₀₀)/2</text>\n <circle cx=\"451\" cy=\"95\" r=\"4\" fill=\"none\" stroke=\"#2c6e49\" stroke-width=\"2\"/>\n <path d=\"M451,95 L451,200\" stroke=\"#2c6e49\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n <text x=\"451\" y=\"214\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2c6e49\" font-weight=\"700\">t₅₀</text>\n</g></svg>",
+   "a": "**그림 6 · Cv 산정 — √t법과 log t법 작도**|**작도 요령** — 차이는 **어느 압밀도를 기준으로 삼느냐**입니다. √t법은 **U=90%(Tv=0.848)**, log t법은 **U=50%(0.197)**.|눈여겨볼 자리는 각각 하나 — √t법은 **1.15배 선**, log t법은 **시간비 1:4로 찾는 d₀**. 두 값이 다르면 **log t법이 실제와 더 부합**합니다.",
+   "tag": "그림",
+   "src": "s3c"
+  },
+  {
+   "id": "04-G92",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "figure",
+   "q": "침하의 3성분과 시간이력\n\n백지에 그려 보세요.",
+   "a": "**작도 요령** — 세 성분으로 나누는 것이 답안의 출발점입니다. **사질토는 Si가 사실상 전부**, **점성토는 Sc가 지배**, **유기질토·이탄은 Ss가 무시 못 할 만큼** 커집니다.|문제에서 **어떤 흙인지 보고 어느 성분을 중심으로 쓸지** 정하는 것이 첫 판단입니다.",
+   "svg": "<svg viewBox=\"0 0 620 240\" role=\"img\" aria-label=\"즉시침하 1차압밀침하 2차압축의 시간 이력\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <path d=\"M80,28 L80,190\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M80,28 L560,28\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"48\" y=\"110\" transform=\"rotate(-90 48,110)\" text-anchor=\"middle\">침하량 S</text>\n <text x=\"320\" y=\"218\" text-anchor=\"middle\">log t (시간)</text>\n <path d=\"M80,28 L80,58\" stroke=\"#2c6e49\" stroke-width=\"3\"/>\n <path d=\"M80,58 C150,72 210,118 300,150\" stroke=\"#1f5fa8\" stroke-width=\"2.6\" fill=\"none\"/>\n <path d=\"M300,150 C380,162 460,170 550,178\" stroke=\"#a8452a\" stroke-width=\"2.4\" fill=\"none\"/>\n <g stroke=\"#5f6672\" stroke-width=\"1\" stroke-dasharray=\"3 3\">\n  <path d=\"M80,58 L560,58\"/><path d=\"M80,150 L560,150\"/>\n </g>\n <path d=\"M300,150 L300,190\" stroke=\"#8a6a1f\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/>\n <text x=\"300\" y=\"204\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#8a6a1f\" font-weight=\"700\">t₁₀₀</text>\n <g font-size=\"10.5\">\n  <text x=\"92\" y=\"46\" fill=\"#2c6e49\" font-weight=\"700\">S&#105; 즉시침하 — 재하와 동시</text>\n  <text x=\"150\" y=\"110\" fill=\"#1f5fa8\" font-weight=\"700\">S&#99; 1차압밀침하 — 물이 빠지며</text>\n  <text x=\"380\" y=\"196\" fill=\"#a8452a\" font-weight=\"700\">S&#115; 2차압축 — Δu=0 인데도 계속</text>\n </g>\n <rect x=\"386\" y=\"42\" width=\"176\" height=\"60\" rx=\"7\" fill=\"#e7f2ea\" stroke=\"#2c6e49\" stroke-width=\"1\"/>\n <text x=\"396\" y=\"60\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2c6e49\">S&#116; = S&#105; + S&#99; + S&#115;</text>\n <text x=\"396\" y=\"76\" font-size=\"10\">사질토 : S&#105; 가 대부분</text>\n <text x=\"396\" y=\"91\" font-size=\"10\">점성토 : S&#99; 가 지배</text>\n</g></svg>",
+   "tag": "그림",
+   "src": "s3c"
+  },
+  {
+   "id": "04-G93",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 620 240\" role=\"img\" aria-label=\"즉시침하 1차압밀침하 2차압축의 시간 이력\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <path d=\"M80,28 L80,190\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M80,28 L560,28\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <text x=\"48\" y=\"110\" transform=\"rotate(-90 48,110)\" text-anchor=\"middle\">침하량 S</text>\n <text x=\"320\" y=\"218\" text-anchor=\"middle\">log t (시간)</text>\n <path d=\"M80,28 L80,58\" stroke=\"#2c6e49\" stroke-width=\"3\"/>\n <path d=\"M80,58 C150,72 210,118 300,150\" stroke=\"#1f5fa8\" stroke-width=\"2.6\" fill=\"none\"/>\n <path d=\"M300,150 C380,162 460,170 550,178\" stroke=\"#a8452a\" stroke-width=\"2.4\" fill=\"none\"/>\n <g stroke=\"#5f6672\" stroke-width=\"1\" stroke-dasharray=\"3 3\">\n  <path d=\"M80,58 L560,58\"/><path d=\"M80,150 L560,150\"/>\n </g>\n <path d=\"M300,150 L300,190\" stroke=\"#8a6a1f\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/>\n <text x=\"300\" y=\"204\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#8a6a1f\" font-weight=\"700\">t₁₀₀</text>\n <g font-size=\"10.5\">\n  <text x=\"92\" y=\"46\" fill=\"#2c6e49\" font-weight=\"700\">S&#105; 즉시침하 — 재하와 동시</text>\n  <text x=\"150\" y=\"110\" fill=\"#1f5fa8\" font-weight=\"700\">S&#99; 1차압밀침하 — 물이 빠지며</text>\n  <text x=\"380\" y=\"196\" fill=\"#a8452a\" font-weight=\"700\">S&#115; 2차압축 — Δu=0 인데도 계속</text>\n </g>\n <rect x=\"386\" y=\"42\" width=\"176\" height=\"60\" rx=\"7\" fill=\"#e7f2ea\" stroke=\"#2c6e49\" stroke-width=\"1\"/>\n <text x=\"396\" y=\"60\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2c6e49\">S&#116; = S&#105; + S&#99; + S&#115;</text>\n <text x=\"396\" y=\"76\" font-size=\"10\">사질토 : S&#105; 가 대부분</text>\n <text x=\"396\" y=\"91\" font-size=\"10\">점성토 : S&#99; 가 지배</text>\n</g></svg>",
+   "a": "**그림 7 · 침하의 3성분과 시간이력**|**작도 요령** — 세 성분으로 나누는 것이 답안의 출발점입니다. **사질토는 Si가 사실상 전부**, **점성토는 Sc가 지배**, **유기질토·이탄은 Ss가 무시 못 할 만큼** 커집니다.|문제에서 **어떤 흙인지 보고 어느 성분을 중심으로 쓸지** 정하는 것이 첫 판단입니다.",
+   "tag": "그림",
+   "src": "s3c"
+  },
+  {
+   "id": "04-G94",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "figure",
+   "q": "배수거리 단축의 효과 — 연직배수공법(PBD)의 원리\n\n백지에 그려 보세요.",
+   "a": "**작도 요령** — 압밀 시간은 **배수거리의 제곱**에 비례합니다. 층 두께 10m면 Hdr=5m로 **수 년**. 1m 간격으로 PBD를 박으면 Hdr≈0.5m로 **1/100 → 수 개월**.|이 한 줄이 **연직배수공법의 근거**입니다. 다만 **스미어 존·웰 저항**으로 이론만큼은 안 줄어든다는 점도 함께 적으십시오.",
+   "svg": "<svg viewBox=\"0 0 620 240\" role=\"img\" aria-label=\"자연 압밀과 연직배수재를 설치한 경우의 배수거리 비교\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <text x=\"160\" y=\"18\" text-anchor=\"middle\" font-weight=\"700\">자연 상태 — 연직 배수</text>\n <rect x=\"60\" y=\"34\" width=\"200\" height=\"120\" fill=\"#e8f0f9\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M60,34 L260,34\" stroke=\"#2c6e49\" stroke-width=\"3\"/>\n <path d=\"M60,154 L260,154\" stroke=\"#2c6e49\" stroke-width=\"3\"/>\n <g stroke=\"#1f5fa8\" stroke-width=\"1.6\" marker-end=\"url(#ar6)\">\n  <path d=\"M110,94 L110,44\"/><path d=\"M110,94 L110,144\"/>\n  <path d=\"M210,94 L210,44\"/><path d=\"M210,94 L210,144\"/>\n </g>\n <defs><marker id=\"ar6\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#1f5fa8\"/></marker></defs>\n <path d=\"M160,34 L160,154\" stroke=\"#a8452a\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/>\n <text x=\"168\" y=\"98\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">H&#100;&#114; = H/2</text>\n <text x=\"160\" y=\"176\" text-anchor=\"middle\" font-size=\"10.5\">배수거리가 <tspan font-weight=\"700\">길다</tspan></text>\n <text x=\"160\" y=\"194\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">t ∝ H&#100;&#114;² → 수 년</text>\n <text x=\"450\" y=\"18\" text-anchor=\"middle\" font-weight=\"700\">PBD 설치 — 수평 배수</text>\n <rect x=\"350\" y=\"34\" width=\"200\" height=\"120\" fill=\"#e8f0f9\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M350,34 L550,34\" stroke=\"#2c6e49\" stroke-width=\"3\"/>\n <g stroke=\"#8a6a1f\" stroke-width=\"2.6\">\n  <path d=\"M382,34 L382,154\"/><path d=\"M414,34 L414,154\"/><path d=\"M446,34 L446,154\"/>\n  <path d=\"M478,34 L478,154\"/><path d=\"M510,34 L510,154\"/>\n </g>\n <g stroke=\"#1f5fa8\" stroke-width=\"1.4\" marker-end=\"url(#ar6)\">\n  <path d=\"M398,74 L386,74\"/><path d=\"M398,74 L410,74\"/>\n  <path d=\"M462,114 L450,114\"/><path d=\"M462,114 L474,114\"/>\n </g>\n <text x=\"450\" y=\"176\" text-anchor=\"middle\" font-size=\"10.5\">배수거리가 <tspan font-weight=\"700\">짧다</tspan> (간격의 절반)</text>\n <text x=\"450\" y=\"194\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#2c6e49\" font-weight=\"700\">수 개월로 단축</text>\n <text x=\"450\" y=\"214\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5f6672\">※ 스미어 존·웰 저항은 별도 고려</text>\n</g></svg>",
+   "tag": "그림",
+   "src": "s3c"
+  },
+  {
+   "id": "04-G95",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "figure_id",
+   "q": "이 그림은 무엇입니까?",
+   "qsvg": "<svg viewBox=\"0 0 620 240\" role=\"img\" aria-label=\"자연 압밀과 연직배수재를 설치한 경우의 배수거리 비교\">\n<g font-family=\"-apple-system,Segoe UI,Malgun Gothic,sans-serif\" font-size=\"11.5\" fill=\"#1b1d21\">\n <text x=\"160\" y=\"18\" text-anchor=\"middle\" font-weight=\"700\">자연 상태 — 연직 배수</text>\n <rect x=\"60\" y=\"34\" width=\"200\" height=\"120\" fill=\"#e8f0f9\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M60,34 L260,34\" stroke=\"#2c6e49\" stroke-width=\"3\"/>\n <path d=\"M60,154 L260,154\" stroke=\"#2c6e49\" stroke-width=\"3\"/>\n <g stroke=\"#1f5fa8\" stroke-width=\"1.6\" marker-end=\"url(#ar6)\">\n  <path d=\"M110,94 L110,44\"/><path d=\"M110,94 L110,144\"/>\n  <path d=\"M210,94 L210,44\"/><path d=\"M210,94 L210,144\"/>\n </g>\n <defs><marker id=\"ar6\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#1f5fa8\"/></marker></defs>\n <path d=\"M160,34 L160,154\" stroke=\"#a8452a\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/>\n <text x=\"168\" y=\"98\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">H&#100;&#114; = H/2</text>\n <text x=\"160\" y=\"176\" text-anchor=\"middle\" font-size=\"10.5\">배수거리가 <tspan font-weight=\"700\">길다</tspan></text>\n <text x=\"160\" y=\"194\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#a8452a\" font-weight=\"700\">t ∝ H&#100;&#114;² → 수 년</text>\n <text x=\"450\" y=\"18\" text-anchor=\"middle\" font-weight=\"700\">PBD 설치 — 수평 배수</text>\n <rect x=\"350\" y=\"34\" width=\"200\" height=\"120\" fill=\"#e8f0f9\" stroke=\"#1b1d21\" stroke-width=\"1.5\"/>\n <path d=\"M350,34 L550,34\" stroke=\"#2c6e49\" stroke-width=\"3\"/>\n <g stroke=\"#8a6a1f\" stroke-width=\"2.6\">\n  <path d=\"M382,34 L382,154\"/><path d=\"M414,34 L414,154\"/><path d=\"M446,34 L446,154\"/>\n  <path d=\"M478,34 L478,154\"/><path d=\"M510,34 L510,154\"/>\n </g>\n <g stroke=\"#1f5fa8\" stroke-width=\"1.4\" marker-end=\"url(#ar6)\">\n  <path d=\"M398,74 L386,74\"/><path d=\"M398,74 L410,74\"/>\n  <path d=\"M462,114 L450,114\"/><path d=\"M462,114 L474,114\"/>\n </g>\n <text x=\"450\" y=\"176\" text-anchor=\"middle\" font-size=\"10.5\">배수거리가 <tspan font-weight=\"700\">짧다</tspan> (간격의 절반)</text>\n <text x=\"450\" y=\"194\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#2c6e49\" font-weight=\"700\">수 개월로 단축</text>\n <text x=\"450\" y=\"214\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5f6672\">※ 스미어 존·웰 저항은 별도 고려</text>\n</g></svg>",
+   "a": "**그림 8 · 배수거리 단축의 효과 — 연직배수공법(PBD)의 원리**|**작도 요령** — 압밀 시간은 **배수거리의 제곱**에 비례합니다. 층 두께 10m면 Hdr=5m로 **수 년**. 1m 간격으로 PBD를 박으면 Hdr≈0.5m로 **1/100 → 수 개월**.|이 한 줄이 **연직배수공법의 근거**입니다. 다만 **스미어 존·웰 저항**으로 이론만큼은 안 줄어든다는 점도 함께 적으십시오.",
+   "tag": "그림",
+   "src": "s3c"
   },
   {
    "id": "01-R100",
@@ -2897,6 +3583,356 @@
    "a": "**① 강우 침투 → 습윤전선 하강 ② uw 상승(부압 해소) ③ 모관흡수력 감소 ④ 겉보기 점착력 (ua−uw)tanφb 소멸 ⑤ τ 감소 → Fs 저하 → 파괴.** 핵심은 **지하수위 상승 없이 습윤전선만 내려가도 무너진다**는 것이고, 형태는 **깊이 1~3 m의 얕은 무한사면 파괴, 주로 사질토**입니다. 입력값은 **불포화 투수계수 · SWCC · 초기 포화도**가 핵심이며 사면 형상·풍화 심도·강우강도와 지속시간이 더해집니다. 대책은 **침투 차단 — 표면보호·배수·식생·억지구조**입니다.",
    "tag": "인출",
    "src": "s8b"
+  },
+  {
+   "id": "04-R100",
+   "ch": "제4장 압밀",
+   "sec": "Terzaghi 1차원 압밀이론 — 가정과 방정식",
+   "type": "recall",
+   "q": "압밀방정식 유도에서 좌변(압력항)과 우변(체적항)의 종속변수를 어떻게 통일합니까?",
+   "a": "de = −av dσ′ 로 간극비를 응력으로 바꾸고, **전응력 일정** 가정에서 dσ′ = −d(Δu) 를 대입합니다. 그 결과 mv = av/(1+e₀) 가 나타나고 **k/(mvγw) = Cv** 로 묶여 **∂(Δu)/∂t = Cv∂²(Δu)/∂z²** 를 얻습니다.",
+   "tag": "인출",
+   "src": "s1b"
+  },
+  {
+   "id": "04-R101",
+   "ch": "제4장 압밀",
+   "sec": "Terzaghi 1차원 압밀이론 — 가정과 방정식",
+   "type": "recall",
+   "q": "Terzaghi 압밀방정식이 뜻하는 바를 말로 풀어 보세요.",
+   "a": "어떤 깊이에서 과잉간극수압이 시간에 따라 줄어드는 속도는, 그 지점에서 수압이 깊이 방향으로 얼마나 급하게 휘어 있는가에 비례한다는 뜻입니다. 비례상수가 압밀계수입니다. 수압 분포가 급하게 꺾인 곳일수록 물이 빨리 빠집니다.",
+   "tag": "인출",
+   "src": "s1b"
+  },
+  {
+   "id": "04-R102",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "recall",
+   "q": "압밀도 U를 변형률 기준·응력 기준으로 각각 정의하고, 두 정의가 일치하는 근거를 말하십시오.",
+   "a": "**변형률 기준** U = St / Sc (t시간 침하량 ÷ 최종 압밀침하량), **응력 기준** Uz = (Δu₀ − Δut) / Δu₀. 일치 근거는 **유효응력 원리** — 전응력이 일정하면 소산된 Δu 만큼 그대로 σ′ 가 증가하고, 침하는 σ′ 증가에 비례하기 때문입니다.",
+   "tag": "인출",
+   "src": "s1c"
+  },
+  {
+   "id": "04-R103",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "recall",
+   "q": "두께 8 m 점토층에서 하부가 모래인 경우와 암반인 경우, 같은 압밀도 도달 시간의 비는?",
+   "a": "**1 : 4**. 하부 모래 → 양면배수 Hdr = 4 m, 하부 암반 → 일면배수 Hdr = 8 m. **t ∝ Hdr²** 이므로 4² : 8² = 1 : 4 — 암반 위 점토층이 정확히 **4배** 오래 걸립니다.",
+   "tag": "인출",
+   "src": "s1c"
+  },
+  {
+   "id": "04-R104",
+   "ch": "제4장 압밀",
+   "sec": "압밀도와 시간계수 ★ — t ∝ H²",
+   "type": "recall",
+   "q": "일면배수와 양면배수의 소요시간은 몇 배 차이가 납니까? 왜 그렇습니까?",
+   "a": "네 배입니다. 시간은 배수거리의 제곱에 비례하는데, 양면배수는 배수거리가 층 두께의 절반이므로 일면배수의 절반입니다. 제곱하면 4분의 1이 되어 시간이 네 배 빨라집니다. 배수거리를 잘못 잡으면 답이 네 배 틀립니다.",
+   "tag": "인출",
+   "src": "s1c"
+  },
+  {
+   "id": "04-R105",
+   "ch": "제4장 압밀",
+   "sec": "압밀시험과 e–log P 곡선",
+   "type": "recall",
+   "q": "표준 압밀시험에서 LIR = 1로 하는 이유는? 작게 하면 무엇이 나빠집니까?",
+   "a": "LIR = Δσ′/σ′ᵢ이고 표준은 **1**이므로 다음 단계 하중은 전 단계의 **2배**입니다. 이유는 **Terzaghi 압밀이론이 잘 적용되게** 하기 위함입니다(Leonards, 1964).|\nLIR을 임의로, 특히 **작게** 선택하면 **압밀계수 Cv를 정확하게 측정하기 어렵게** 됩니다 — 곡선의 굴곡이 흐려져 logt법의 d₁₀₀·d₀를 잡기 어렵고 **2차압밀 성분이 섞여**들기 때문입니다.",
+   "tag": "인출",
+   "src": "s2"
+  },
+  {
+   "id": "04-R106",
+   "ch": "제4장 압밀",
+   "sec": "압밀시험과 e–log P 곡선",
+   "type": "recall",
+   "q": "시험실 e–log P 곡선의 초기 부분은 왜 직선이 아니라 완만한 곡선입니까?",
+   "a": "초기 부분이 **사실은 재압축곡선**이기 때문입니다. 공시체의 응력이력은 **ⓐ 퇴적(처녀압밀) → ⓑ 시료 채취(응력 감소 = 팽창) → ⓒ 시험실 재하(재압축)**이므로, 곡선 초기부는 일종의 재압축곡선이라 직선이 아닌 완만한 곡선이 됩니다.|\n실제로 이 초기 완만부는 **뒤의 재압축곡선들과 서로 평행**하며, Pc를 지나 정규압밀이 되는 순간 경사가 급증해 **원래의 처녀압밀곡선과 일치**합니다.",
+   "tag": "인출",
+   "src": "s2"
+  },
+  {
+   "id": "04-R107",
+   "ch": "제4장 압밀",
+   "sec": "선행압밀하중 Pc와 과압밀비 ★★",
+   "type": "recall",
+   "q": "Casagrande 작도법으로 Pc를 구하는 순서를 5단계로 말해 보십시오. 어느 단계에서 개인차가 생깁니까?",
+   "a": "① **곡률 최대점 a** 선택 → ② a에서 **수평선 ah** → ③ a에서 **접선 at** → ④ **∠hat의 2등분선 am** → ⑤ **처녀압축 직선부 연장**과 am의 **교점 b**, b의 가로좌표 = **Pc**.|\n개인차는 **①단계**에서 생깁니다 — 곡률 최대점을 눈으로 잡으므로 **개인차가 불가피**하며, 그래서 이 값은 참값이 아니라 **가장 확률이 큰(most probable) 값**으로 평가됩니다.|\n답안은 반드시 **OCR = Pc/P₀ → NC·OC 판정**까지 써야 닫힙니다.",
+   "tag": "인출",
+   "src": "s2b"
+  },
+  {
+   "id": "04-R108",
+   "ch": "제4장 압밀",
+   "sec": "선행압밀하중 Pc와 과압밀비 ★★",
+   "type": "recall",
+   "q": "시료가 교란되면 e–log P 곡선이 어떻게 달라지며, 침하량과 침하 시간을 각각 어느 쪽으로 잘못 예측합니까? 보정 방법은?",
+   "a": "교란되면 **기울기가 완만**해지고 무릎이 뭉개집니다. 그 결과|\n**Pc ↓ · Cc ↓ → 침하량 과소 예측** / **k ↓ · Cv ↓ → 침하 시간 과다 예측** — 「적게 가라앉는데 오래 걸린다」고 잘못 봅니다.|\n보정은 **Schmertmann** : 시험실 곡선상 **e = 0.42e₀** 점(교란과 무관하게 원지반 처녀압밀곡선이 반드시 지나는 점)을 잡아 **NC는 A와 직선 연결**, **OC는 A에서 재압축 평행선 → B → 0.42e₀점 C로 A–B–C 절곡**. **Cs는 교란과 무관하므로 보정하지 않습니다.**",
+   "tag": "인출",
+   "src": "s2b"
+  },
+  {
+   "id": "04-R109",
+   "ch": "제4장 압밀",
+   "sec": "선행압밀하중 Pc와 과압밀비 ★★",
+   "type": "recall",
+   "q": "OCR이 1보다 크면 무엇을 뜻하며, 침하 계산에서 어떻게 다릅니까?",
+   "a": "과거에 지금보다 큰 하중을 받은 적이 있다는 뜻입니다. 과압밀 상태이므로 재압축 구간에서는 압축성이 훨씬 작습니다. 최종응력이 선행압밀하중을 넘지 않으면 재압축지수만 써서 계산하고, 넘으면 두 구간으로 나눠 재압축지수와 압축지수를 각각 적용합니다.",
+   "tag": "인출",
+   "src": "s2b"
+  },
+  {
+   "id": "04-R110",
+   "ch": "제4장 압밀",
+   "sec": "압축지수·재압축지수·체적변화계수",
+   "type": "recall",
+   "q": "Cc의 경험식 3가지를 말하고, 액성한계 식은 어떤 흙에 적용 불가인지도 말해 보십시오.",
+   "a": "① **Terzaghi–Peck** : 불교란 **Cc = 0.009(LL−10)**(±30%, 예비설계), 교란 **0.007(LL−10)** → 불교란 = 교란×1.3|\n② **NAVFAC(1971)** : **Cc = 1.15(e₀ − 0.35)**|\n③ **자연함수비** : **Cc = 0.01 wn**|\n**적용 불가** : **St > 4 · LL > 100% · 유기질 함유량이 큰 점토** — 이런 흙은 Cc가 1을 훨씬 넘어 경험식이 크게 어긋납니다.|\n경험식이 필요한 이유는 압밀시험이 **최소 7일 걸리는 장시간·고가 시험**이기 때문이며, **적합성은 그다지 높지 않아 어디까지나 예비설계용**입니다.",
+   "tag": "인출",
+   "src": "s2c"
+  },
+  {
+   "id": "04-R111",
+   "ch": "제4장 압밀",
+   "sec": "압축지수·재압축지수·체적변화계수",
+   "type": "recall",
+   "q": "av와 mv의 관계식을 쓰고, 이 둘이 Cc와 다른 점을 계수와 지수의 차이로 설명해 보십시오. 압밀시험에서 투수계수는 어떻게 얻습니까?",
+   "a": "av = Δe/Δσ′, **mv = av/(1+e₀)**입니다.|\n**계수는 구간별 기울기가 각기 다른 비선형 기울기**, **지수는 구간별 기울기를 단순화한 선형 기울기**. av·mv는 산술눈금 e–P 곡선의 기울기라 **구간마다 값이 달라 실무 적용이 어렵고**, Cc는 e–log σ′에서 처녀압축부가 **직선**이 되므로 **한 값으로 전 구간을 대표**합니다.|\n투수계수는 **k = Cv·mv·γw**로 얻습니다 — 압밀시험은 이 식을 통해 **10⁻⁸ cm/sec 수준의 아주 작은 k도 측정**할 수 있게 해 줍니다.",
+   "tag": "인출",
+   "src": "s2c"
+  },
+  {
+   "id": "04-R112",
+   "ch": "제4장 압밀",
+   "sec": "압축지수·재압축지수·체적변화계수",
+   "type": "recall",
+   "q": "Cc와 mv 중 어느 것을 언제 씁니까?",
+   "a": "압축지수는 이-로그피 곡선의 기울기라 넓은 응력 범위에 걸쳐 쓸 수 있고 침하량 산정에 씁니다. 체적변화계수는 특정 응력 구간의 값이라 범위가 좁지만 압밀계수를 구할 때와 간이 침하 계산에 씁니다. 응력 변화가 크면 압축지수, 작으면 체적변화계수가 편합니다.",
+   "tag": "인출",
+   "src": "s2c"
+  },
+  {
+   "id": "04-R113",
+   "ch": "제4장 압밀",
+   "sec": "압밀침하량 산정 ★★ — NC냐 OC냐",
+   "type": "recall",
+   "q": "침하식이 NC용과 OC용으로 갈리는 판정 기준을 한 줄로?",
+   "a": "(σ₀′+Δσ)가 **Pc를 넘느냐**. 안 넘으면 Cs 1구간, 넘으면 **Cs(σ₀′→Pc) + Cc(Pc→σ₀′+Δσ) 2구간**. 그 앞에 **OCR = Pc/σ₀′ 판정**이 먼저.",
+   "tag": "인출",
+   "src": "s3"
+  },
+  {
+   "id": "04-R114",
+   "ch": "제4장 압밀",
+   "sec": "압밀침하량 산정 ★★ — NC냐 OC냐",
+   "type": "recall",
+   "q": "침하량 계산에서 응력은 점토층의 어느 깊이 값을 쓰며, 층이 두꺼우면?",
+   "a": "점토층 **중간 깊이**의 응력을 대표로. 두꺼우면 **대표성이 무너지므로 몇 개 층으로 분할 → 층별 계산 후 합산**(이인모 p307).",
+   "tag": "인출",
+   "src": "s3"
+  },
+  {
+   "id": "04-R115",
+   "ch": "제4장 압밀",
+   "sec": "압밀침하량 산정 ★★ — NC냐 OC냐",
+   "type": "recall",
+   "q": "층이 두꺼울 때 침하량을 어떻게 계산합니까?",
+   "a": "층을 여러 개로 나눠 각 층의 중앙 깊이에서 초기 유효응력과 증가응력을 구하고, 층별로 침하량을 계산해 더합니다. 한 덩어리로 계산하면 깊이에 따른 응력 변화를 반영하지 못해 오차가 커집니다.",
+   "tag": "인출",
+   "src": "s3"
+  },
+  {
+   "id": "04-R116",
+   "ch": "제4장 압밀",
+   "sec": "압밀계수 Cv 산정 — √t법과 log t법",
+   "type": "recall",
+   "q": "√t법과 log t법은 각각 어느 압밀도를 기준으로 하며, Tv는?",
+   "a": "√t법 = **U 90%, Tv=0.848** → Cv=0.848H²/t₉₀  /  log t법 = **U 50%, Tv=0.197** → Cv=0.197H²/t₅₀",
+   "tag": "인출",
+   "src": "s3b"
+  },
+  {
+   "id": "04-R117",
+   "ch": "제4장 압밀",
+   "sec": "압밀계수 Cv 산정 — √t법과 log t법",
+   "type": "recall",
+   "q": "두 방법으로 구한 Cv가 다르게 나왔습니다. 실무에서는?",
+   "a": "공기 산정은 **작은 Cv(안전측 = 소요시간 김)**. 최종 판단은 **침하판·간극수압계 계측 역산 Cv**. 시험값은 **초기 공정계획용**, 계측 역산값은 **관리용**.",
+   "tag": "인출",
+   "src": "s3b"
+  },
+  {
+   "id": "04-R118",
+   "ch": "제4장 압밀",
+   "sec": "압밀계수 Cv 산정 — √t법과 log t법",
+   "type": "recall",
+   "q": "√t법과 log t법 중 어느 것이 실제와 더 잘 맞습니까?",
+   "a": "log t법입니다. 정규압밀 범위에서 값이 더 작게 나오고 실측과 더 부합한다고 알려져 있습니다. 다만 √t법이 작도가 간편해 실무에서 함께 씁니다. 두 값이 크게 다르면 시료 상태나 작도를 다시 확인해야 합니다.",
+   "tag": "인출",
+   "src": "s3b"
+  },
+  {
+   "id": "04-R119",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "recall",
+   "q": "양면배수가 되면 압밀 소요시간은 일면배수에 비해?",
+   "a": "**1/4**. 배수거리가 D → D/2로 줄고, **t ∝ H²**이기 때문입니다. 압밀촉진 공법이 전부 **배수거리를 줄이는 공법**인 이유.",
+   "tag": "인출",
+   "src": "s3c"
+  },
+  {
+   "id": "04-R120",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "recall",
+   "q": "압밀이 진행되면 왜 강도가 오르며, 증가량은 어떤 식으로?",
+   "a": "과잉간극수압 소산 → **σ′ 증가** → su는 σ′에 비례하므로 함께 상승. **Δsu = (su/p′)·Δσ′·U**, 강도증가율은 **0.11+0.0037PI**(Skempton), 정규화는 **S·OCRm**(SHANSEP). 이것이 **단계성토의 근거**.",
+   "tag": "인출",
+   "src": "s3c"
+  },
+  {
+   "id": "04-R121",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "recall",
+   "q": "√t법에서 1.15배 보조선을 긋는 근거는 무엇이며, 그 선으로 무엇을 읽습니까?",
+   "a": "근거는 **이론곡선 √Tv-U가 U ≈ 60%까지 직선**이라는 성질입니다. 이 직선의 기울기를 1이라 할 때 **기울기 1/1.15**로 그은 직선이 이론곡선과 만나는 점의 평균 압밀도가 **90%**가 되기 때문입니다(tan α′ = 1.15 tan α).|작도 : 초기 직선부 연장 → 세로축 교점 **d₀** / 직선구간의 점 a에서 수평선 → 곡선과 교점 b, **ab = ℓ** / 같은 수평선 위 **1.15ℓ = 점 c** / **d₀c**가 실측곡선과 만나는 점의 좌표 = **(√t₉₀, d₉₀)**.|가로축 값을 **제곱**해 t₉₀을 얻고, Tv = 0.848을 써서 **Cv = 0.848 H² / t₉₀**. (백영식 p407~408, 김상규 p146~147)",
+   "tag": "인출",
+   "src": "s3c"
+  },
+  {
+   "id": "04-R122",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "recall",
+   "q": "log t법에서 d₀는 왜 직접 읽을 수 없으며 어떻게 결정합니까? dₛ ~ d₀의 침하는 무엇입니까?",
+   "a": "이유 두 가지 — ㉠ **반대수 방안지에는 t = 0을 나타낼 수 없고**, ㉡ **재하 즉시 일어나는 초기 침하량은 측정이 불가능**합니다.|따라서 **초기부를 포물선으로 가정**하고 **시간 비 1 : 4**를 씁니다 — t₁의 점 B와 **t₂ = 4t₁**의 점 C를 잡아 두 점의 **읽음 차 x**를 **B에서 위쪽으로 올린 값이 d₀**(측정 영점).|**dₛ ~ d₀ = 초기 압축**. 원인은 ㉠ 시료 표면이 평평하지 않아 **자리를 잡는 침하**(이인모 p327), ㉡ **공기 간극의 압축**(백영식 p406, Taylor 1948). 두 책 모두 **현장에서는 일어나지 않아 공학적 의미가 없다**고 못박으므로 **침하량 산정에서 반드시 분리**합니다. S = Si + Sc(d₀~d₁₀₀) + Ss(d₁₀₀~df). (백영식 p405~406, 이인모 p327, 김상규 p148)",
+   "tag": "인출",
+   "src": "s3c"
+  },
+  {
+   "id": "04-R123",
+   "ch": "제4장 압밀",
+   "sec": "압밀속도와 시간 관리 · 강도증가",
+   "type": "recall",
+   "q": "압밀이 진행되면 강도가 왜 증가합니까? 식으로 말해 보세요.",
+   "a": "과잉간극수압이 빠지면서 유효응력이 커지기 때문입니다. 비배수전단강도의 증가분은 강도증가율에 유효응력 증가분과 압밀도를 곱한 값입니다. 이것이 단계성토의 근거입니다. 한 단계 쌓고 기다려 강도가 오른 뒤에 다음 단계를 쌓습니다.",
+   "tag": "인출",
+   "src": "s3c"
+  },
+  {
+   "id": "04-R124",
+   "ch": "제4장 압밀",
+   "sec": "차압밀 — Δu=0 인데도 계속 가라앉는다",
+   "type": "recall",
+   "q": "유효응력이 더 이상 변하지 않는데 흙이 계속 가라앉는 까닭을 설명해 보십시오.",
+   "a": "**1차압밀** — Δu가 소산되며 σ′가 커지고 그만큼 압축 → **물이 다 빠지면 끝난다.**|\n**2차압밀** — **Δu = 0**, σ′는 최종값에 **고정**. 그 고정된 σ′ 아래에서 **점토입자가 시간을 두고 자리를 다시 잡는다** = **추가 하중 없는 소성변형·Creep**.|\n**Rheology**로 설명되나 **정립된 이론은 없다** (김상규 p151)",
+   "tag": "인출",
+   "src": "s4"
+  },
+  {
+   "id": "04-R125",
+   "ch": "제4장 압밀",
+   "sec": "차압밀 — Δu=0 인데도 계속 가라앉는다",
+   "type": "recall",
+   "q": "Cα를 장기 시험 없이 추정하는 두 가지 방법을 말해 보십시오.",
+   "a": "**① Cα/Cc 비 이용** — 흙 종류에 따라 대략 일정. 입상토·암편 **0.02** / 셰일·이암 **0.03** / 무기질 점토·실트 **0.04** / 유기질 점토·실트 **0.05** / 이탄 **0.06** (범위 0.01~0.07, 무기질 평균 **0.04**). **이미 구한 Cc에 곱한다.**|\n**② 자연함수비로부터 추정** — Mesri(1973)의 **Cαε – 자연함수비 관계도** 이용. **자연함수비가 높을수록 Cα가 크다.**",
+   "tag": "인출",
+   "src": "s4"
+  },
+  {
+   "id": "04-R126",
+   "ch": "제4장 압밀",
+   "sec": "차압밀 — Δu=0 인데도 계속 가라앉는다",
+   "type": "recall",
+   "q": "연직배수재를 박아 1차압밀을 단축하면 총침하 관리가 쉬워집니까?",
+   "a": "**1차압밀만 보면 쉬워지지만, 2차압밀로 보면 오히려 불리합니다.**|\nSs ∝ **log(t₂/t₁)** 이므로, 배수재로 **t₁(1차압밀 종료 시점)을 앞당기면** 같은 공용기간 t₂에 대해 **로그 비율이 커진다**.|\n→ **남은 공용기간 전부가 2차압밀 구간**이 되어 총침하 중 2차압밀의 비중이 커진다. **유기질토·이탄에서 특히 크다.**|\n**대응** — 배수공법은 반드시 **과재하 프리로딩**과 함께, 그리고 **공용기간을 명시한 잔류침하 예측 + 계측**을 병행.",
+   "tag": "인출",
+   "src": "s4"
+  },
+  {
+   "id": "04-R127",
+   "ch": "제4장 압밀",
+   "sec": "차압밀 — Δu=0 인데도 계속 가라앉는다",
+   "type": "recall",
+   "q": "2차압밀이 1차압밀과 근본적으로 다른 점은 무엇입니까?",
+   "a": "1차압밀은 과잉간극수압이 빠지면서 일어나므로 유효응력이 변합니다. 2차압밀은 과잉간극수압이 이미 영이 되어 유효응력이 변하지 않는데도 계속 진행됩니다. 원인이 물의 배출이 아니라 흙 입자 골격의 점성 변형, 즉 크리프이기 때문입니다.",
+   "tag": "인출",
+   "src": "s4"
+  },
+  {
+   "id": "04-R128",
+   "ch": "제4장 압밀",
+   "sec": "자중압밀과 대변형 ★ — Terzaghi가 안 통하는 초연약",
+   "type": "recall",
+   "q": "준설매립 초연약 지반에서 Terzaghi 압밀이론의 어떤 가정이 깨집니까? 넷을 순서대로.",
+   "a": "**① 미소변형** — 침하가 층두께의 수십 % → 고정좌표(Eulerian)가 아니라 **이동좌표(Lagrangian)** 필요|\n**② k·압축성 일정** — e가 줄면 k도 줄어듦 → **k = f(e), σ′ = f(e)** 비선형|\n**③ 압밀층 두께 일정** — **배수거리 H가 계속 짧아져** Tv = Cvt/H²의 분모를 정할 수 없음|\n**④ 외부하중 재하 전제** — 자중압밀은 **외부하중 0 · 초기 σ′ 0**에서 출발. Terzaghi 식에 **자중으로 σ′가 생기는 항이 없다**|\n**★ 그래서 유한변형률 이론(Mikasa, Gibson)을 적용한다.**",
+   "tag": "인출",
+   "src": "s4b"
+  },
+  {
+   "id": "04-R129",
+   "ch": "제4장 압밀",
+   "sec": "자중압밀과 대변형 ★ — Terzaghi가 안 통하는 초연약",
+   "type": "recall",
+   "q": "유한변형 해석을 하면 최종침하량이 Terzaghi보다 크게 나옵니까?",
+   "a": "**여기가 함정입니다.** 강의자료 p157은 **“압밀속도는 차이가 있으나 최종침하량은 동일”**이라고 명시합니다.|\n두 이론이 갈리는 것은 **최종값이 아니라 도달 경로 = 압밀속도**입니다. 유한변형 해석에서는 압밀 진행에 따라 **배수거리가 짧아져 초기 압밀이 더 빠르게** 나오고 **실측 곡선에 더 가깝습니다.**|\n**★ 답안에서는** “최종침하량이 커진다”가 아니라 **“시간–침하 진행곡선(압밀속도)과 잔류침하 예측이 정확해진다”**고 써야 합니다.|\n잔류침하 관리가 목적인 준설매립 현장에서는 이 차이가 곧 **공기 판단의 차이**가 됩니다.",
+   "tag": "인출",
+   "src": "s4b"
+  },
+  {
+   "id": "04-R130",
+   "ch": "제4장 압밀",
+   "sec": "자중압밀과 대변형 ★ — Terzaghi가 안 통하는 초연약",
+   "type": "recall",
+   "q": "자중압밀이 일반 압밀과 다른 점은 무엇입니까?",
+   "a": "하중원이 외부가 아니라 지반 자신의 무게라는 점입니다. 그래서 초기 과잉간극수압을 어떻게 놓아야 할지가 애매하고, 압밀이 진행되면서 층 두께 자체가 크게 줄어듭니다. Terzaghi 이론은 미소변형과 층 두께 일정을 가정하므로 그대로 쓸 수 없고, 유한변형 압밀이론을 씁니다.",
+   "tag": "인출",
+   "src": "s4b"
+  },
+  {
+   "id": "04-R96",
+   "ch": "제4장 압밀",
+   "sec": "이 장의 척추 — 물이 빠지는 데 시간이 걸린다",
+   "type": "recall",
+   "q": "압밀 문제가 묻는 두 가지는 무엇이고, 각각 어떤 정수가 답합니까?",
+   "a": "얼마나 가라앉는가와 언제까지 가라앉는가입니다. 앞의 것은 압축지수 Cc가, 뒤의 것은 압밀계수 Cv가 답합니다. 문제를 읽을 때 둘 중 무엇을 묻는지부터 가려내면 쓸 식이 정해집니다.",
+   "tag": "인출",
+   "src": "s0"
+  },
+  {
+   "id": "04-R97",
+   "ch": "제4장 압밀",
+   "sec": "압밀이란 무엇인가 — 시간이 걸리는 침하",
+   "type": "recall",
+   "q": "같은 하중을 모래층과 점토층에 얹었을 때, 점토에서만 압밀이 문제가 되는 근본 이유는?",
+   "a": "투수계수 차이. 침하의 **크기**는 압축성이, **시간**은 투수계수가 정합니다. 모래 10⁻⁵ m/s 대 점토 10⁻⁹ m/s 이하 — 만 배 이상 차이이므로 모래는 재하 중 배수가 끝나 즉시침하로 종료되고, 점토는 하중이 전부 **과잉간극수압**으로 남습니다.",
+   "tag": "인출",
+   "src": "s1"
+  },
+  {
+   "id": "04-R98",
+   "ch": "제4장 압밀",
+   "sec": "압밀이란 무엇인가 — 시간이 걸리는 침하",
+   "type": "recall",
+   "q": "1차 압밀의 종료 시점을 한 문장으로 정의하고, 2차 압축과의 관계를 말하십시오.",
+   "a": "**Δu = 0**이 되는 시점이 1차 압밀의 종료입니다. 2차 압축은 Δu = 0 상태에서 골격의 **creep**으로 계속되는 침하이며, 1차 압밀 종료 후 시작으로 보면 **가정 A**(미소변형률·Terzaghi), 1차 압밀 중 동시 진행으로 보면 **가정 B**(유한변형률·비선형)입니다.",
+   "tag": "인출",
+   "src": "s1"
+  },
+  {
+   "id": "04-R99",
+   "ch": "제4장 압밀",
+   "sec": "Terzaghi 1차원 압밀이론 — 가정과 방정식",
+   "type": "recall",
+   "q": "Terzaghi 1차원 압밀이론의 기본 가정 6가지를 말하십시오.",
+   "a": "① 균질(homogeneous) ② 완전 포화 ③ 물 비압축성 ④ 흙 입자 비압축성 ⑤ 물의 흐름은 **연직 1방향**(압축 방향과 일치) ⑥ **Darcy 법칙 성립**. 여기에 등방성을 더해 **ID-HUS1**(Isotropic·Darcy·Homogeneous·Uncompressed·Saturated·1차원)로 외웁니다.",
+   "tag": "인출",
+   "src": "s1b"
   }
  ]
 }
